@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const Movie = props => {
   return (
@@ -8,6 +8,13 @@ const Movie = props => {
       <h4> {props.releasedate} </h4>
     </div>
   );
+};
+
+Movie.propTypes = {
+  movieTitle: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  releasedate: PropTypes.string.isRequired
+
 };
 
 export default Movie;

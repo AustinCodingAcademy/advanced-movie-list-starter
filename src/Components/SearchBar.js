@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import {
   FormGroup,
   ControlLabel,
@@ -21,4 +21,9 @@ const SearchBar = props => {
 
   );
 };
+
+SearchBar.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+};
+
 export default SearchBar;
