@@ -13,21 +13,35 @@ class App extends Component {
 
     super();
 
+    this.priv = "001c9b0a8ef1338a07d482eceb601f9c";
     this.state = {
       searchText: '',
       queryResults: [],
       movies: []
     };
 
+    this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
   }
 
-
-
   componentDidMount(){
+  }
 
-    let priv = "001c9b0a8ef1338a07d482eceb601f9c";
+  handleSearchBarChange(event){
+    this.setState({
+      searchText: event.target.value
+    });
 
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${priv}&query=Jack+Reacher`)
+    this.searchOMDB();
+  };
+
+  handleFormSubmit(evt){
+    evt.preventDefault();
+
+    this.searchOMDB();
+  }
+
+  searchOMDB(){
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.priv}&query=${this.state.searchText}`)
         .then((resp) => {
               this.setState({queryResults: resp.data.results});
               console.log(this.state.queryResults);
@@ -36,10 +50,6 @@ class App extends Component {
         .catch(err => console.log(err));
   }
 
-  handleSearchBarChange(){
-    console.log("Searchbar changed");
-  };
-
   render() {
     return (
         <MuiThemeProvider>
@@ -47,6 +57,8 @@ class App extends Component {
             <SearchBar
                 className="search-bar"
                 handleSearchBarChange={this.handleSearchBarChange}
+                handleSubmit={this.handleFormSubmit}
+                value={this.state.searchText}
             />
             <Divider className="divider"/>
             <Divider className=""/>
