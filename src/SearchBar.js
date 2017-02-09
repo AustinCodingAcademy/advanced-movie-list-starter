@@ -3,16 +3,19 @@
  */
 
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
-import FontAwesome from 'react-fontawesome';
+import IconButton from 'material-ui/IconButton';
+import SearchIcon from 'material-ui/svg-icons/action/search';
 
 const SearchBar = () => {
   return(
       <Paper className="search-paper">
         <TextField className="text-field"></TextField>
-        <FontAwesome name='search' />
+        <IconButton name="query">
+          <SearchIcon/>
+        </IconButton>
+
       </Paper>
   )
 
