@@ -1,3 +1,2 @@
-# Movie List
-
-A starter repo for the ACA Advanced Movie List app.
+### Brian's Movie List Checkpoint 
+- Completed with extensions
