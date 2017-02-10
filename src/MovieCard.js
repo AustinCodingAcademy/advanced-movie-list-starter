@@ -19,7 +19,7 @@ const style = {
 
 const MovieCard = (props) => {
 
-  function buildPosterUrl(){
+  function buildPosterUrl() {
     return `https://image.tmdb.org/t/p/w500${props.movie.poster_path}`;
   }
 
@@ -27,19 +27,19 @@ const MovieCard = (props) => {
 
   return (
 
-      <Paper style={style} zDepth={1}>
-        <img className="movie-card-poster" src={posterUrl}/>
-        <h3>{props.movie.title}</h3>
-        <MovieDialog
-            posterUrl={posterUrl}
-            movie={props.movie}
+    <Paper style={style} zDepth={1}>
+      <img className="movie-card-poster" src={posterUrl} />
+      <h3>{props.movie.title}</h3>
+      <MovieDialog
+        posterUrl={posterUrl}
+        movie={props.movie}
         />
-        <FlatButton className="movie-card-button"
-                    onClick={() => props.actionButton(props.movie)}
-                    label={props.buttonText}
-                    primary={true}/>
-      </Paper>
-  )
+      <FlatButton className="movie-card-button"
+        onClick={() => props.actionButton(props.movie)}
+        label={props.buttonText}
+        primary />
+    </Paper>
+  );
 };
 
 MovieCard.propTypes = {

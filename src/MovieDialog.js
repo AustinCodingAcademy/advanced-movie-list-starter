@@ -20,7 +20,7 @@ export default class MovieDialog extends React.Component {
   };
 
   handleOpen = () => {
-    console.log("open clicked");
+    console.log('open clicked');
     this.setState({open: true});
   };
 
@@ -31,35 +31,35 @@ export default class MovieDialog extends React.Component {
   render() {
     const actions = [
       <FlatButton
-          label="Close"
-          primary={true}
-          onTouchTap={this.handleClose}
-          onClick={this.handleClose}
+        label="Close"
+        primary
+        onTouchTap={this.handleClose}
+        onClick={this.handleClose}
       />
     ];
 
     return (
-        <div>
-          <FlatButton className="movie-card-button"
-                      onClick={this.handleOpen}
-                      label="Details"
-                      primary={false}/>
-          <Dialog
-              actions={actions}
-              modal={true}
-              contentStyle={customContentStyle}
-              open={this.state.open}
-              autoScrollBodyContent={true}
+      <div>
+        <FlatButton className="movie-card-button"
+          onClick={this.handleOpen}
+          label="Details"
+          primary={false} />
+        <Dialog
+          actions={actions}
+          modal
+          contentStyle={customContentStyle}
+          open={this.state.open}
+          autoScrollBodyContent
           >
-            <section className="movie-dialog">
-              <img className="dialog-img" src={this.props.posterUrl}/>
-              <h2>{this.props.movie.title}</h2>
-              <h3>Released: {this.props.movie.release_date}</h3>
-              <p>{this.props.movie.overview}</p>
-            </section>
+          <section className="movie-dialog">
+            <img className="dialog-img" src={this.props.posterUrl} />
+            <h2>{this.props.movie.title}</h2>
+            <h3>Released: {this.props.movie.release_date}</h3>
+            <p>{this.props.movie.overview}</p>
+          </section>
 
-          </Dialog>
-        </div>
+        </Dialog>
+      </div>
     );
   }
 }

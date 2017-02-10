@@ -7,10 +7,10 @@ import FlatButton from 'material-ui/FlatButton';
 
 const CardActionBar = () => {
   return (
-      <divider className="movie-card-action-bar">
-        <FlatButton label="Primary" primary={true} />
-      </divider>
-  )
+    <divider className="movie-card-action-bar">
+      <FlatButton label="Primary" primary />
+    </divider>
+  );
 };
 
 export default CardActionBar;
