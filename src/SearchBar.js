@@ -24,8 +24,9 @@ const SearchBar = props => {
 };
 
 SearchBar.propTypes = {
+  onChange: React.PropTypes.func.isRequired,
+  getPopularMovies: React.PropTypes.func.isRequired,
   handleSubmit: React.PropTypes.func.isRequired,
-  showRocketFavs: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.func.isRequired
+  showRocketFavs: React.PropTypes.func.isRequired
 };
 export default SearchBar;

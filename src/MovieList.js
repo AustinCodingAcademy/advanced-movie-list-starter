@@ -18,6 +18,7 @@ const MovieList = props => {
 
 MovieList.propTypes = {
   movies: React.PropTypes.array.isRequired,
+  savedMovies: React.PropTypes.array.isRequired,
   onError: React.PropTypes.func.isRequired,
   rocketFaveHandle: React.PropTypes.func.isRequired
 };

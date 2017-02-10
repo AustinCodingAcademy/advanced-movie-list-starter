@@ -53,25 +53,33 @@ class App extends Component {
   }
   rocketFaveHandle(event, id) {
     event.preventDefault();
-    const movieArr = (this.state.movies.map(movieItem => {
+    const movieIdArr = (this.state.movies.map(movieItem => {
       return movieItem.id;
     }));
-    if (this.state.movies !== this.state.savedMovies) {
-      axios.post('http://localhost:4000/movies', (this.state.movies[movieArr.indexOf(id)]))
-        .then(resp => {
-          this.setState({
-            savedMovies: [...this.state.savedMovies, resp.data]
+    const savedMovieIdArr = (this.state.savedMovies.map(savedMovie => {
+      return savedMovie.id;
+    }));
+    if (savedMovieIdArr.indexOf(id) >= 0) {
+      // This movie id exists in my saved movies id array, so delete it from my db.json
+      axios.delete(`http://localhost:4000/movies/${this.state.savedMovies[movieIdArr.indexOf(id)]._id}`)
+          .then(resp => {
+            const newMovies = this.state.movies.filter(movie => movie.id !== this.state.movies[movieIdArr.indexOf(id)].id);
+            const newSavedMovies = this.state.savedMovies.filter(movie => movie.id !== (this.state.movies[movieIdArr.indexOf(id)].id));
+            this.setState({
+              movies: newMovies,
+              savedMovies: newSavedMovies
+            });
           });
-        });
     } else {
-      axios.delete(`http://localhost:4000/movies/${this.state.movies[movieArr.indexOf(id)]._id}`)
-        .then(resp => {
-          const newMovies = this.state.movies.filter(movie => movie.id !== (this.state.movies[movieArr.indexOf(id)].id));
-          this.setState({
-            movies: newMovies,
-            savedMovies: newMovies
+      // This movie id is not in my saved movies id array, so post it to my db.josn
+        axios.post('http://localhost:4000/movies', (this.state.movies[movieIdArr.indexOf(id)]))
+          .then(resp => {
+            const newMovies = this.state.movies.filter(movie => movie.id !== this.state.movies[movieIdArr.indexOf(id)].id);
+            this.setState({
+              movies: newMovies,
+              savedMovies: [...this.state.savedMovies, resp.data]
+            });
           });
-        });
     }
   }
   showRocketFavs() {
