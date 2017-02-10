@@ -14,12 +14,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://api.themoviedb.org/3/movie/popular?api_key=2dba200e2682e0f8903ed87b9c9e02d1')
-      .then(resp => {
-        this.setState({
-          movies: resp.data.results
-        });
-      });
+    this.getPopularMovies();
     axios.get('http://localhost:4000/movies')
       .then(resp => {
         this.setState({
@@ -27,8 +22,13 @@ class App extends Component {
         });
       });
   }
-  componentDidUpdate() {
-
+  getPopularMovies() {
+    axios.get('http://api.themoviedb.org/3/movie/popular?api_key=2dba200e2682e0f8903ed87b9c9e02d1')
+      .then(resp => {
+        this.setState({
+          movies: resp.data.results
+        });
+      });
   }
   handleSearchBarChange(event) {
     this.setState({
@@ -87,6 +87,7 @@ class App extends Component {
           name="searchBar"
           value={this.state.searchText}
           onChange={this.handleSearchBarChange.bind(this)}
+          getPopularMovies={this.getPopularMovies.bind(this)}
           handleSubmit={this.handleSubmit.bind(this)}
           showRocketFavs={this.showRocketFavs.bind(this)}
         />
