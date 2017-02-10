@@ -11,19 +11,23 @@ const MovieList = (props) => {
         {props.movies.map((movie, index) => {
           return <MovieCard
               key={index}
-              movie={movie}/>
+              movie={movie}
+              actionButton={props.actionButton}
+              buttonText={props.buttonText}
+          />
         })}
       </section>
   );
   return (
       <section className="movie-list">
-        <h3>No search results...</h3>
+        <h5>No results...</h5>
       </section>
   )
 };
 
 MovieList.propTypes = {
-  movies: React.PropTypes.array.isRequired
+  movies: React.PropTypes.array.isRequired,
+  actionButton: React.PropTypes.func.isRequired
 };
 
 export default MovieList;

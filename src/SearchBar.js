@@ -7,29 +7,41 @@ import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import IconButton from 'material-ui/IconButton';
 import SearchIcon from 'material-ui/svg-icons/action/search';
+import FlatButton from 'material-ui/FlatButton'
 
 const SearchBar = (props) => {
 
-  console.log(props);
+  return (
+      <section>
+        <Paper className="search-paper">
+          <form onSubmit={(event) => props.handleFormSubmit(event)} name="query">
+            <TextField className="text-field"
+                       placeholder="Enter a search term"
+                       name="searchText"
+                       onChange={(event) => props.handleSearchBarChange(event)}
+                       value={props.value}>
+            </TextField>
+            <IconButton className="search-bar-search-button" type="submit">
+              <SearchIcon/>
+            </IconButton>
+          </form>
+        </Paper>
+        <FlatButton onClick={() => props.handleClearSearchResults()}
+                    className="search-bar-clear-results"
+                    primary={true}>
+          Clear Search Results
+        </FlatButton>
+      </section>
 
-  return(
-      <Paper className="search-paper">
-          <TextField className="text-field"
-                     placeholder="Enter a search term..."
-                     name="searchText"
-                     onChange={(event) => props.handleSearchBarChange(event)}
-                     value={props.value}>
-          </TextField>
-          <IconButton name="query">
-            <SearchIcon/>
-          </IconButton>
-      </Paper>
+
   )
 
 };
 
 SearchBar.propTypes = {
   handleSearchBarChange: React.PropTypes.func.isRequired,
+  handleFormSubmit: React.PropTypes.func.isRequired,
+  handleClearSearchResults: React.PropTypes.func.isRequired,
   value: React.PropTypes.string
 };
 

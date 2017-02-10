@@ -4,10 +4,10 @@
 
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import CardActionBar from './CardActionBar';
+import FlatButton from 'material-ui/FlatButton';
 
 const style = {
-  height: 330,
+  height: 400,
   width: 300,
   margin: 20,
   textAlign: 'center',
@@ -25,13 +25,19 @@ const MovieCard = (props) => {
 
       <Paper style={style} zDepth={1}>
         <img className="movie-card-poster" src={buildPosterUrl()}/>
-        <CardActionBar/>
+        <h3>{props.movie.title}</h3>
+        <FlatButton className="movie-card-button"
+                    onClick={() => props.actionButton(props.movie)}
+                    label={props.buttonText}
+                    primary={true}/>
       </Paper>
   )
 };
 
 MovieCard.propTypes = {
-  movie: React.PropTypes.object.isRequired
+  movie: React.PropTypes.object.isRequired,
+  actionButton: React.PropTypes.func.isRequired,
+  buttonText: React.PropTypes.string.isRequired
 };
 
 export default MovieCard;

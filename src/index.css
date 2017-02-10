@@ -204,6 +204,10 @@ body {
   height: 250px;
 }
 
+.movie-card-button {
+  margin-top: 5px;
+}
+
 .movie-card-action-bar {
   position: absolute;
   right: 100px;
@@ -223,4 +227,20 @@ body {
   margin: 19px 0px 0px!important;
   margin-top: 100px;
   width: 55%;
+}
+
+.search-bar-clear-results {
+  position: relative;
+  left: 92px;
+  top: 7px;
+}
+
+.favorites-divider {
+  position:relative;
+  top: 4px;
+  width: 55%;
+}
+
+.search-bar-search-button {
+  top: 7px;
 }
