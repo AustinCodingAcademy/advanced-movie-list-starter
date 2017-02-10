@@ -1,3 +1,112 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "poster_path": "/ddxgMpRqIVq8RsEsuepG730TopA.jpg",
+      "adult": false,
+      "overview": "A short film by Christian Paolo Lat.",
+      "release_date": "2016-12-25",
+      "genre_ids": [],
+      "id": 432504,
+      "original_title": "Birds",
+      "original_language": "en",
+      "title": "Birds",
+      "backdrop_path": null,
+      "popularity": 1.127532,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0,
+      "_id": 2
+    },
+    {
+      "poster_path": "/dFuU0rTrbP9JluwA58f38esgAkB.jpg",
+      "adult": false,
+      "overview": "From 'The Workshop of the Film Form'.",
+      "release_date": "1971-01-01",
+      "genre_ids": [],
+      "id": 397936,
+      "original_title": "Test",
+      "original_language": "en",
+      "title": "Test",
+      "backdrop_path": null,
+      "popularity": 1,
+      "vote_count": 1,
+      "video": false,
+      "vote_average": 8,
+      "_id": 3
+    },
+    {
+      "poster_path": "/fxX41re6UnGB1wAE1saX8WQDH5t.jpg",
+      "adult": false,
+      "overview": "A instructional movie about getting a dog.",
+      "release_date": "",
+      "genre_ids": [],
+      "id": 278101,
+      "original_title": "Välkommen Valp",
+      "original_language": "sv",
+      "title": "Welcome Puppy",
+      "backdrop_path": "/7S4pKlauXmDyED23nvWGEdqeQF1.jpg",
+      "popularity": 1.145,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0,
+      "_id": 4
+    },
+    {
+      "poster_path": "/qE9tva8qYr6powTSJLzMWXcx4Yk.jpg",
+      "adult": false,
+      "overview": "A man is accidentally locked in a department store overnight and finds himself held at bay by six vicious Doberman guard dogs.",
+      "release_date": "1973-11-14",
+      "genre_ids": [
+        28,
+        18,
+        10770
+      ],
+      "id": 133174,
+      "original_title": "Trapped",
+      "original_language": "en",
+      "title": "Trapped",
+      "backdrop_path": "/utQHxnzmzKHs6rmf6zAcINjY8jb.jpg",
+      "popularity": 1.00027,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0,
+      "_id": 5
+    },
+    {
+      "poster_path": null,
+      "adult": false,
+      "overview": "Hungarian short film featured in 1967 New York Film Festival.",
+      "release_date": "1967-09-28",
+      "genre_ids": [],
+      "id": 421428,
+      "original_title": "Próbafelvétel",
+      "original_language": "hu",
+      "title": "Screen Test",
+      "backdrop_path": null,
+      "popularity": 1.000143,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0,
+      "_id": 6
+    },
+    {
+      "poster_path": "/d3smLLqhHRudYRKYvD4z8KuzFiM.jpg",
+      "adult": false,
+      "overview": "Vetró János, the lorry driver, is an alcoholic. His marriage is in pieces, his wife has a lover. Their son suffers an accident. The next day his wife moves out. In his desperation, Vetró drinks even more, and leaves his work as well.",
+      "release_date": "1962-09-08",
+      "genre_ids": [
+        18
+      ],
+      "id": 286617,
+      "original_title": "Próbaút",
+      "original_language": "en",
+      "title": "Test Trip",
+      "backdrop_path": null,
+      "popularity": 1.000147,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0,
+      "_id": 7
+    }
+  ]
 }

@@ -168,10 +168,13 @@ body {
   align-items: center;
 }
 
+.search-container {
+  height: 111px;
+}
+
 .search-bar {
   display: flex;
   flex-direction: row;
-  margin: 20px 20px 20px 20px;
   -webkit-justify-content: center;
   justify-content: center;
   text-align: center;
@@ -217,6 +220,8 @@ body {
 .search-paper {
   width: 350px;
   margin-top: 4px;
+  display: flex;
+  flex-direction: row;
 }
 
 .text-field {
@@ -224,8 +229,8 @@ body {
 }
 
 .divider {
-  margin: 19px 0px 0px!important;
-  margin-top: 100px;
+  position:relative;
+  top: 3px;
   width: 55%;
 }
 
@@ -237,10 +242,37 @@ body {
 
 .favorites-divider {
   position:relative;
-  top: 4px;
+  top: 6px;
   width: 55%;
 }
 
 .search-bar-search-button {
   top: 7px;
+}
+
+.movie-dialog {
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.dialog-img {
+  height: 250px;
+  width: 250px;
+}
+
+.search-bar-result-limit {
+ display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 40px;
+  left: 378px;
+}
+
+.search-bar-result-limit-text-field {
+  margin-left: 7px;
+  width: 30px!important;
 }

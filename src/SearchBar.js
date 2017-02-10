@@ -12,7 +12,7 @@ import FlatButton from 'material-ui/FlatButton'
 const SearchBar = (props) => {
 
   return (
-      <section>
+      <section className="search-container">
         <Paper className="search-paper">
           <form onSubmit={(event) => props.handleFormSubmit(event)} name="query">
             <TextField className="text-field"
@@ -31,6 +31,16 @@ const SearchBar = (props) => {
                     primary={true}>
           Clear Search Results
         </FlatButton>
+        <div className="search-bar-result-limit">
+          <p>Max Results: </p>
+          <TextField className="search-bar-result-limit-text-field"
+                     placeholder="5"
+                     name="limitResults"
+                     type="number"
+                     onChange={(event) => props.handleLimitResultChange(event)}
+                     value={props.maxQueryResults}>
+          </TextField>
+        </div>
       </section>
 
 
@@ -42,6 +52,8 @@ SearchBar.propTypes = {
   handleSearchBarChange: React.PropTypes.func.isRequired,
   handleFormSubmit: React.PropTypes.func.isRequired,
   handleClearSearchResults: React.PropTypes.func.isRequired,
+  handleLimitResultChange: React.PropTypes.func.isRequired,
+  maxQueryResults: React.PropTypes.number.isRequired,
   value: React.PropTypes.string
 };
 
