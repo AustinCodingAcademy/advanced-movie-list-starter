@@ -5,15 +5,20 @@ const MovieList = props => {
   return (
     <div className="row mainContainerRow">
       <div className="row resultMovieRow">
-          <Movie
-            movies={props.movies}
-          />
+        <Movie
+          movies={props.movies}
+          savedMovies={props.savedMovies}
+          onError={props.onError}
+          rocketFaveHandle={props.rocketFaveHandle}
+        />
       </div>
     </div>
   );
 };
 
 MovieList.propTypes = {
-  movies: React.PropTypes.array.isRequired
+  movies: React.PropTypes.array.isRequired,
+  onError: React.PropTypes.func.isRequired,
+  rocketFaveHandle: React.PropTypes.func.isRequired
 };
 export default MovieList;

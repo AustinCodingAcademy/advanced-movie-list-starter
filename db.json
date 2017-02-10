@@ -1,3 +1,109 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "poster_path": "/e1mjopzAS2KNsvpbpahQ1a6SkSn.jpg",
+      "adult": false,
+      "overview": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
+      "release_date": "2016-08-02",
+      "genre_ids": [
+        28,
+        80,
+        14,
+        878
+      ],
+      "id": 297761,
+      "original_title": "Suicide Squad",
+      "original_language": "en",
+      "title": "Suicide Squad",
+      "backdrop_path": "/34dxtTxMHGKw1njHpTjDqR8UBHd.jpg",
+      "popularity": 115.789628,
+      "vote_count": 4204,
+      "video": false,
+      "vote_average": 5.9,
+      "_id": 1
+    },
+    {
+      "poster_path": "/rXMWOZiCt6eMX22jWuTOSdQ98bY.jpg",
+      "adult": false,
+      "overview": "Though Kevin has evidenced 23 personalities to his trusted psychiatrist, Dr. Fletcher, there remains one still submerged who is set to materialize and dominate all the others. Compelled to abduct three teenage girls led by the willful, observant Casey, Kevin reaches a war for survival among all of those contained within him—as well as everyone around him—as the walls between his compartments shatter apart.",
+      "release_date": "2017-01-19",
+      "genre_ids": [
+        18,
+        27,
+        53
+      ],
+      "id": 381288,
+      "original_title": "Split",
+      "original_language": "en",
+      "title": "Split",
+      "backdrop_path": "/4G6FNNLSIVrwSRZyFs91hQ3lZtD.jpg",
+      "popularity": 66.702673,
+      "vote_count": 478,
+      "video": false,
+      "vote_average": 6.5,
+      "_id": 2
+    },
+    {
+      "poster_path": "/hLudzvGfpi6JlwUnsNhXwKKg4j.jpg",
+      "adult": false,
+      "overview": "Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat.",
+      "release_date": "2016-11-10",
+      "genre_ids": [
+        18,
+        878
+      ],
+      "id": 329865,
+      "original_title": "Arrival",
+      "original_language": "en",
+      "title": "Arrival",
+      "backdrop_path": "/yIZ1xendyqKvY3FGeeUYUd5X9Mm.jpg",
+      "popularity": 83.994692,
+      "vote_count": 1759,
+      "video": false,
+      "vote_average": 6.7,
+      "_id": 3
+    },
+    {
+      "poster_path": "/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
+      "adult": false,
+      "overview": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order. There's Max, a man of action and a man of few words, who seeks peace of mind following the loss of his wife and child in the aftermath of the chaos. And Furiosa, a woman of action and a woman who believes her path to survival may be achieved if she can make it across the desert back to her childhood homeland.",
+      "release_date": "2015-05-13",
+      "genre_ids": [
+        28,
+        12,
+        878,
+        53
+      ],
+      "id": 76341,
+      "original_title": "Mad Max: Fury Road",
+      "original_language": "en",
+      "title": "Mad Max: Fury Road",
+      "backdrop_path": "/phszHPFVhPHhMZgo0fWTKBDQsJA.jpg",
+      "popularity": 40.395839,
+      "vote_count": 6510,
+      "video": false,
+      "vote_average": 7.1,
+      "_id": 4
+    },
+    {
+      "poster_path": "/5vHssUeVe25bMrof1HyaPyWgaP.jpg",
+      "adult": false,
+      "overview": "After the sudden death of his beloved wife, John Wick receives one last gift from her, a beagle puppy named Daisy, and a note imploring him not to forget how to love. But John's mourning is interrupted when his 1969 Boss Mustang catches the eye of sadistic thug Iosef Tarasov who breaks into his house and steals it, beating John unconscious in the process. Unwittingly, he has just reawakened one of the most brutal assassins the underworld has ever known.",
+      "release_date": "2014-10-22",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 245891,
+      "original_title": "John Wick",
+      "original_language": "en",
+      "title": "John Wick",
+      "backdrop_path": "/mFb0ygcue4ITixDkdr7wm1Tdarx.jpg",
+      "popularity": 23.264068,
+      "vote_count": 2899,
+      "video": false,
+      "vote_average": 7,
+      "_id": 5
+    }
+  ]
 }
