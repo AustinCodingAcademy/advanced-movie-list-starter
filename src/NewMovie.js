@@ -8,19 +8,20 @@ class NewMovie extends React.Component {
   }
 
   addSelectedMovie () {
-    const { title, poster_path, overview, release_date } = {
+    const { title, poster_path, overview, release_date, rating } = {
       title: this.props.title,
       poster_path: this.props.poster,
       overview: this.props.overview,
-      release_date: this.props.releaseDate
+      release_date: this.props.releaseDate,
+      rating: 0
     };
     console.log({title, poster_path, overview, release_date});
-    this.props.addMovie({title, poster_path, overview, release_date});
+    this.props.addMovie({title, poster_path, overview, release_date, rating});
   }
 
   render() {
     return (
-        <div className="new-movie">
+        <div className="new-movie clear-fix">
           <MoviePoster poster={this.props.poster}/>
           <div>
             <h3>{this.props.title}</h3>

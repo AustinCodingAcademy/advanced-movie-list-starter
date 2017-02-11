@@ -23,7 +23,7 @@ input {
 }
 
 .new-movie {
-  height: 250px;
+  height: auto;
   width: 504px;
   margin: 10px auto;
 }
@@ -92,4 +92,10 @@ input {
 
 .remove-movie span {
   line-height: 25px;
+}
+
+.clear-fix:after {
+  display: block;
+  content: "";
+  clear: both;
 }
