@@ -29,9 +29,10 @@ class App extends Component {
     const savedMoviesIdArr = this.state.savedMovies.map(savedMovie => savedMovie.id);
     axios.get('http://api.themoviedb.org/3/movie/popular?api_key=2dba200e2682e0f8903ed87b9c9e02d1')
       .then(resp => {
-        const filteredMovies = resp.data.results.filter(resultsMovie => !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)]);
+        // Only return popular movies whos IDs are NOT found in my savedMovies
         this.setState({
-          movies: filteredMovies
+          movies: resp.data.results.filter(resultsMovie =>
+            !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)])
         });
       });
   }
@@ -42,13 +43,13 @@ class App extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    const searchText = this.state.searchText;
     const savedMoviesIdArr = this.state.savedMovies.map(savedMovie => savedMovie.id);
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=2dba200e2682e0f8903ed87b9c9e02d1&language=en-US&query=${searchText}&page=1&include_adult=false`)
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=2dba200e2682e0f8903ed87b9c9e02d1&language=en-US&query=${this.state.searchText}&page=1&include_adult=false`)
       .then(resp => {
-        const filteredMovies = resp.data.results.filter(resultsMovie => !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)]);
         this.setState({
-          movies: filteredMovies
+          // Only return searched movies whos IDs are NOT found in my savedMovies
+          movies: resp.data.results.filter(resultsMovie =>
+            !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)])
         });
       })
       .catch(err => {
@@ -67,21 +68,27 @@ class App extends Component {
       return savedMovie.id;
     }));
     if (savedMovieIdArr.indexOf(id) >= 0) {
-      // This movie id exists in my saved movies id array, so delete it from my db.json
+      // This movie ID exists in my saved movies ID array, so DELETE it from my db.json
       axios.delete(`http://localhost:4000/movies/${this.state.savedMovies[movieIdArr.indexOf(id)]._id}`)
           .then(resp => {
-            const newMovies = this.state.movies.filter(movie => movie.id !== this.state.movies[movieIdArr.indexOf(id)].id);
-            const newSavedMovies = this.state.savedMovies.filter(movie => movie.id !== (this.state.movies[movieIdArr.indexOf(id)].id));
+            // Remove movie object from both states (from the page and savedMovies)
+            const newMovies = this.state.movies.filter(movie => movie.id !==
+              this.state.movies[movieIdArr.indexOf(id)].id);
+            const newSavedMovies = this.state.savedMovies.filter(movie => movie.id !==
+              (this.state.movies[movieIdArr.indexOf(id)].id));
             this.setState({
               movies: newMovies,
               savedMovies: newSavedMovies
             });
           });
     } else {
-      // This movie id is not in my saved movies id array, so post it to my db.josn
+      // This movie ID is not in my saved movies ID array, so POST it to my db.josn
         axios.post('http://localhost:4000/movies', (this.state.movies[movieIdArr.indexOf(id)]))
           .then(resp => {
-            const newMovies = this.state.movies.filter(movie => movie.id !== this.state.movies[movieIdArr.indexOf(id)].id);
+            // Remove movie object from movie state (from the page) and
+            // concat it to savedMovies state
+            const newMovies = this.state.movies.filter(movie => movie.id !==
+              this.state.movies[movieIdArr.indexOf(id)].id);
             this.setState({
               movies: newMovies,
               savedMovies: [...this.state.savedMovies, resp.data]

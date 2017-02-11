@@ -11,6 +11,12 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.flexBoxCenterThis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .row, .App, .columnsContainer, .header > div {
   margin: 0;
   padding: 0;
@@ -59,7 +65,7 @@ body {
 .header > div > form > button:hover {
   border: .2em solid rgba(255,255,255,.5);
 }
-.searchBar, .searchBar:active {
+.searchBar {
   color: white;
   background-color: black;
   margin: 0 1em 0 auto;
@@ -73,14 +79,10 @@ body {
   text-align: left;
   transition: .5s;
 }
-.searchBar:focus {
+.searchBar:hover {
   border: .2em solid rgba(255,255,255,.5);
 }
 .noMovies {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   height: 79vh;
 }
 .noMovies h1 {
@@ -114,10 +116,6 @@ body {
   border-radius: 2em;
   color: white;
   font-size: 1.2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   transition: .5s;
 }
@@ -170,10 +168,6 @@ a#hiddenSaveText:hover {
   width: 100%;
   padding: .5em 1em;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   transition: .5s;
 }
 .movieColumnContents:hover > #movieTitle {
@@ -189,9 +183,6 @@ a#hiddenSaveText:hover {
   width: 100%;
   padding: 2em 0;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 #posterContainer img {
   height: 100%;

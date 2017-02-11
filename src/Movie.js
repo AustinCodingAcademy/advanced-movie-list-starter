@@ -2,6 +2,7 @@ import React from 'react';
 
 const Movie = props => {
   function rocketFavText(id) {
+    // Toggle the text of RocketFave section if that movie is a savedMovie or not
     const savedMovieIdArr = (props.savedMovies.map(savedMovie => {
       return savedMovie.id;
     }));
@@ -12,19 +13,20 @@ const Movie = props => {
     }
   }
   function checkLength() {
+    // If there are movies in the App.js movie state, then map over them
     if (props.movies.length) {
       return (
         props.movies.map((movieResult) => {
           return (
             <div
               key={movieResult.id}
-              className="col-xs-12 col-sm-6 col-md-3 movieColumn animated slideInUp"
+              className="col-xs-12 col-sm-6 col-lg-3 movieColumn animated fadeInUp"
             >
-              <div className="movieColumnContents">
-                <div id="movieTitle">
+              <div className="movieColumnContents flexBoxCenterThis">
+                <div id="movieTitle" className="flexBoxCenterThis">
                   <h3>{movieResult.original_title}</h3>
                 </div>
-                <div id="posterContainer">
+                <div id="posterContainer" className="flexBoxCenterThis">
                   <img
                     className="posterImg animated fadeIn"
                     onError={(event) => props.onError(event)}
@@ -59,10 +61,11 @@ const Movie = props => {
           );
         })
       )} else {
+      // If there are no movies in the movie state, return this placeholder div
       return (
-        <div className="col-xs-12 noMovies animated fadeIn">
-          <h1>Uh oh!</h1>
-          <p>Nothing to see here <i className="fa fa-frown-o" aria-hidden="false" /></p>
+        <div className="col-xs-12 flexBoxCenterThis noMovies animated fadeIn">
+          <h1>Hmm...</h1>
+          <p>Nothing to see here</p>
         </div>
       );
     }
