@@ -1,3 +1,39 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "title": "Rogue One: A Star Wars Story",
+      "poster_path": "https://image.tmdb.org/t/p/w154/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg",
+      "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+      "release_date": "2016-12-14",
+      "_id": 1
+    },
+    {
+      "title": "Man of Steel",
+      "poster_path": "https://image.tmdb.org/t/p/w154/xWlaTLnD8NJMTT9PGOD9z5re1SL.jpg",
+      "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
+      "release_date": "2013-06-12",
+      "_id": 2
+    },
+    {
+      "title": "Legally Blonde",
+      "poster_path": "https://image.tmdb.org/t/p/w154/1gAnkZNAd3HqgWL7aqSOQFwt7D1.jpg",
+      "overview": "Elle Woods has it all. She's the president of her sorority, a Hawaiian Tropic girl, Miss June in her campus calendar, and, above all, a natural blonde. She dates the cutest fraternity boy on campus and wants nothing more than to be Mrs. Warner Huntington III. But, there's just one thing stopping Warner from popping the question: Elle is too blonde.",
+      "release_date": "2001-07-13",
+      "_id": 3
+    },
+    {
+      "title": "The 40 Year Old Virgin",
+      "poster_path": "https://image.tmdb.org/t/p/w154/wAKUo12pRBGyFJQV27LFJoTvMU5.jpg",
+      "overview": "Andy Stitzer has a pleasant life with a nice apartment and a job stamping invoices at an electronics store. But at age 40, there's one thing Andy hasn't done, and it's really bothering his sex-obsessed male co-workers: Andy is still a virgin. Determined to help Andy get laid, the guys make it their mission to de-virginize him. But it all seems hopeless until Andy meets small business owner Trish, a single mom.",
+      "release_date": "2005-08-11",
+      "_id": 4
+    },
+    {
+      "title": "The Dark Knight",
+      "poster_path": "https://image.tmdb.org/t/p/w154/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg",
+      "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+      "release_date": "2008-07-16",
+      "_id": 5
+    }
+  ]
 }

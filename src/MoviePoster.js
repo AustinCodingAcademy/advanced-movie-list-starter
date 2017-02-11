@@ -1,18 +1,15 @@
 import React from 'react';
 
-class MoviePoster extends React.Component {
-  constructor() {
-    super();
-
-  }
-
-  render() {
+const MoviePoster = props => {
     return (
-      <div>
+      <div id="movie-poster">
         <img src={props.poster}/>
       </div>
     )
-  }
+}
+
+MoviePoster.propTypes = {
+  poster: React.PropTypes.string.isRequired
 }
 
 export default MoviePoster;

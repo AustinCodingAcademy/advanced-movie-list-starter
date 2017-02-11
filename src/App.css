@@ -1,3 +1,95 @@
 .App {
   text-align: center;
 }
+
+input {
+  width: 30%;
+  height: 35px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+#send-search {
+  height: 47px;
+  width: 50px;
+  background-color: lightblue;
+  border-radius: 5px;
+  color: white;
+  line-height: 47px;
+  display: inline-block;
+}
+
+.new-movie {
+  height: 250px;
+  width: 504px;
+  margin: 10px auto;
+}
+
+.new-movie > div:first-of-type {
+  float: left;
+  margin-right: 10px;
+}
+
+.new-movie > div:last-of-type {
+  float: left;
+  width: 340px;
+}
+
+#add-movie {
+  height: 30px;
+  width: 125px;
+  background-color: lightblue;
+  color: white;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+#add-movie span {
+  line-height: 30px;
+}
+
+.new-movie a {
+  margin-bottom: 20px;
+}
+
+#movie-list {
+  margin-top: 20px;
+  border-top: 10px solid black;
+}
+
+.movie {
+  width: 180px;
+  height: 350px;
+  float: left;
+  position: relative;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  margin: 10px;
+}
+
+.movie > div:first-of-type {
+  width: 154px;
+  margin: 0 auto;
+}
+
+.movie h4 {
+  margin: 5px 0;
+}
+
+.remove-movie {
+  height: 25px;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  bottom: 5px;
+  background-color: lightblue;
+  margin: 0 auto;
+  color: white;
+}
+
+.remove-movie span {
+  line-height: 25px;
+}
