@@ -15,6 +15,9 @@ class App extends Component {
   }
   componentDidMount() {
     this.getPopularMovies();
+    this.getSavedMovies();
+  }
+  getSavedMovies() {
     axios.get('http://localhost:4000/movies')
       .then(resp => {
         this.setState({
@@ -23,10 +26,12 @@ class App extends Component {
       });
   }
   getPopularMovies() {
+    const savedMoviesIdArr = this.state.savedMovies.map(savedMovie => savedMovie.id);
     axios.get('http://api.themoviedb.org/3/movie/popular?api_key=2dba200e2682e0f8903ed87b9c9e02d1')
       .then(resp => {
+        const filteredMovies = resp.data.results.filter(resultsMovie => !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)]);
         this.setState({
-          movies: resp.data.results
+          movies: filteredMovies
         });
       });
   }
@@ -37,18 +42,20 @@ class App extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    const movie = this.state.searchText;
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=2dba200e2682e0f8903ed87b9c9e02d1&language=en-US&query=${movie}&page=1&include_adult=false`)
+    const searchText = this.state.searchText;
+    const savedMoviesIdArr = this.state.savedMovies.map(savedMovie => savedMovie.id);
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=2dba200e2682e0f8903ed87b9c9e02d1&language=en-US&query=${searchText}&page=1&include_adult=false`)
       .then(resp => {
+        const filteredMovies = resp.data.results.filter(resultsMovie => !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)]);
         this.setState({
-          movies: resp.data.results
+          movies: filteredMovies
         });
       })
       .catch(err => {
         console.err(`Error ${err}`);
       });
   }
-  imgErrorHandle(event) {
+  handleImgError(event) {
     event.target.src = 'http://i.imgur.com/SUynOc5.png';
   }
   rocketFaveHandle(event, id) {
@@ -102,7 +109,7 @@ class App extends Component {
         <MovieList
           movies={this.state.movies}
           savedMovies={this.state.savedMovies}
-          onError={this.imgErrorHandle.bind(this)}
+          onError={this.handleImgError.bind(this)}
           rocketFaveHandle={this.rocketFaveHandle.bind(this)}
          />
       </div>

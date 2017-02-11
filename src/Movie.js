@@ -62,7 +62,7 @@ const Movie = props => {
       return (
         <div className="col-xs-12 noMovies animated fadeIn">
           <h1>Uh oh!</h1>
-          <p>No matches for that query <i className="fa fa-frown-o" aria-hidden="false" /></p>
+          <p>Nothing to see here <i className="fa fa-frown-o" aria-hidden="false" /></p>
         </div>
       );
     }

@@ -1,3 +1,26 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "poster_path": "/vEaHlJljhYqYjMc7HmNEOoq3UlU.jpg",
+      "adult": false,
+      "overview": "A science fiction fairytale about an extra-terrestrial who is left behind on Earth and is found by a young boy who befriends him. This heart-warming fantasy from Director Steven Spielberg became one of the most commercially successful films of all time.",
+      "release_date": "1982-04-03",
+      "genre_ids": [
+        878,
+        12,
+        10751,
+        14
+      ],
+      "id": 601,
+      "original_title": "E.T. the Extra-Terrestrial",
+      "original_language": "en",
+      "title": "E.T. the Extra-Terrestrial",
+      "backdrop_path": "/cmqIMSRzVQg4Pzm1nq6J9haQ5jO.jpg",
+      "popularity": 6.365101,
+      "vote_count": 1983,
+      "video": false,
+      "vote_average": 7.2,
+      "_id": 1
+    }
+  ]
 }
