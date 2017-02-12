@@ -1,3 +1,36 @@
-.App {
+#root {
   text-align: center;
+}
+.movie_poster {
+  height:150px;
+  display:block;
+  margin:auto;
+  margin-bottom: 8px;
+}
+.movie_item {
+  border: 1px solid black;
+}
+.movie_panel {
+  margin: auto;
+  text-align:center;
+  border: 0;
+  border-radius: 0px;
+}
+.movie_panel:hover {
+  box-shadow: 0px 2px 2px 0px silver;
+}
+.show-grid {
+  height:400px;
+  overflow: scroll;
+}
+.btn {
+  width:90px;
+  border: 0;
+  font-size:12px;
+  color:#3d3d5c;
+  font-weight: bold;
+}
+.header {
+  font-size:30px;
+  background-color: #7FDBFF;
 }
