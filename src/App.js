@@ -20,6 +20,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.loadMovies();
+  }
+
+  loadMovies() {
     axios.get('http://localhost:4000/movies')
     .then(resp => {
       this.setState({
@@ -113,7 +117,7 @@ class App extends Component {
   handleUpdateMovie(_id, newAttributes) {
     axios.put(`http://localhost:4000/movies/${_id}`, newAttributes)
       .then(resp => {
-        this.componentDidMount();
+        this.loadMovies();
       })
       .catch(err => {
         console.log(`Error! ${err}`);
