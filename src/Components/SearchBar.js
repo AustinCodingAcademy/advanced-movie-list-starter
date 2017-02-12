@@ -9,13 +9,14 @@ import {
 
 const SearchBar = props => {
   return (
-    <Grid>
-      <Row>
-        <Col xs={12} md={8}>
+    <Grid className="searchbar">
+      <Row >
+        <Col xs={12} md={9} >
           <form>
             <FormGroup
               controlId="formBasicText">
               <FormControl
+                className="searchtext"
                 type="text"
                 placeholder="Search by movie title"
                 onChange={props.handleChange}

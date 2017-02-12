@@ -23,7 +23,6 @@ class App extends Component {
       releasedate: '',
       moviename: `${movie}`,
       API: `https://api.themoviedb.org/3/search/movie?api_key=ee03b33873ec8f42a973e3992deb8b2e&language=en-US&query=${movie}&page=1&include_adult=false`,
-      posterimg: '',
       selectedMovieList: []
     };
   }
@@ -45,7 +44,7 @@ class App extends Component {
     this.setState({
       selectedMovieList: resp.data
     });
-    console.log(this.state.selectedMovieList)
+    console.log(this.state.selectedMovieList);
   });
   }
 
@@ -65,25 +64,44 @@ class App extends Component {
         posterPath: resp.data.results[0].poster_path,
         overview: resp.data.results[0].overview,
         releasedate: resp.data.results[0].release_date,
-        posterimg: `https://image.tmdb.org/t/p/w154` + resp.data.results[0].poster_path
+        posterimg: `https://image.tmdb.org/t/p/w154` + resp.data.results[0].poster_path,
       });
     });
   }
-  handleAddMovie(title) {
-    const newMoviesArray = [...this.state.selectedMovieList, title]
+
+  handleAddMovie(movies) {
+    const newMoviesArray = [...this.state.selectedMovieList, movies];
     this.setState({
       selectedMovieList: newMoviesArray
     });
-  console.log(this.state.selectedMovieList)
+    console.log(this.state.selectedMovieList);
   }
+
+  handleAddMovieNew(movies) {
+    axios.post(`http://localhost:4000/movies`, movies)
+    .then(resp => {
+      this.setState({
+        selectedMovieList: [...this.state.selectedMovieList, resp.data]
+      });
+      console.log(this.state.selectedMovieList);
+    })
+    .catch(err => console.log(err));
+  }
+
 
   render() {
     return (
-      <Grid>
+      <Grid >
         <Row>
-          <Col xs={12} md={8}>
+          <Col xs={12} md={9} >
             <div className="App">
-              <h1>Movie List</h1>
+
+              <h1> Movie List </h1>
+
+              <SearchBar
+                className="searchbar"
+                value={this.state.value} handleChange={this.handleSearchBarChange.bind(this)}
+              />
 
               <Movie
                 movies={this.state.movies}
@@ -92,9 +110,6 @@ class App extends Component {
                 releasedate={this.state.releasedate}
                 posterPath={this.state.posterPath}
                 addmovie={this.handleAddMovie.bind(this)}
-              />
-              <SearchBar
-                value={this.state.value} handleChange={this.handleSearchBarChange.bind(this)}
               />
 
               <SelectedMovieList

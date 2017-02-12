@@ -11,7 +11,7 @@ const Movie = props => {
   return (
     <Grid>
       <Row>
-        <Col xs={12} md={8}>
+        <Col xs={12} md={9} className="movie">
           <div>
             <h2> {props.movieTitle} </h2>
             <Image src={`https://image.tmdb.org/t/p/w154` + props.posterPath} thumbnail />
@@ -19,7 +19,7 @@ const Movie = props => {
             <h4> release date- {props.releasedate} </h4>
           </div>
           <Button
-            onClick={() => props.addmovie(props.movieTitle)} className="addbutton"
+            onClick={() => props.addmovie(props.movies)} className="addbutton"
             bsStyle="success">
             Add to list
           </Button>
@@ -30,6 +30,7 @@ const Movie = props => {
 };
 
 Movie.propTypes = {
+  movies: PropTypes.object.isRequired,
   movieTitle: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   releasedate: PropTypes.string.isRequired,
