@@ -74,13 +74,14 @@ class App extends Component {
   }
 
   handleAddMovie2(attributes) {
-    const added = [...this.state.addedMovies];
     const newMovies = this.state.movies.filter(movie => movie.id !== attributes.id);
-    added.push(attributes);
-    this.setState({
-      addedMovies: added,
-      movies: newMovies
-    });
+    axios.post('http://localhost:4000/addedMovies', attributes)
+      .then(resp => {
+        this.setState({
+          movies: newMovies,
+          addedMovies: [...this.state.addedMovies, resp.data]
+        });
+      });
   }
 
   handleDeleteMovie(id) {
