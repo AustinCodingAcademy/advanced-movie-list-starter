@@ -16,7 +16,7 @@ class MovieList extends Component {
               title={movie.title}
               poster={movie.poster_path}
               desc={movie.overview}
-              onButtonClick={() => this.props.AddMovie(movie.id)}
+              onButtonClick={() => this.props.AddMovie(movie)}
             />
           );
         })}

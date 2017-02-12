@@ -36,7 +36,6 @@ class App extends Component {
       .then(
         resp => this.updateAdded(resp.data.results)
       );
-
   }
 
   updateAdded(data) {
@@ -72,6 +71,16 @@ class App extends Component {
         });
       })
       .catch(err => console.log(err));
+  }
+
+  handleAddMovie2(attributes) {
+    const added = [...this.state.addedMovies];
+    const newMovies = this.state.movies.filter(movie => movie.id !== attributes.id);
+    added.push(attributes);
+    this.setState({
+      addedMovies: added,
+      movies: newMovies
+    });
   }
 
   handleDeleteMovie(id) {
@@ -112,6 +121,7 @@ class App extends Component {
               <PageHeader><small>Search Results</small></PageHeader>
               <MovieList
                 movies={this.state.movies}
+                AddMovie={this.handleAddMovie2.bind(this)}
               />
             </Col>
           </Row>
