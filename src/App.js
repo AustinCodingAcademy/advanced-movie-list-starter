@@ -77,7 +77,8 @@ class App extends Component {
       .then(resp => {
         this.setState({
           movies: [...this.state.movies, resp.data],
-          newMovie: {}
+          newMovie: {},
+          searchText: ""
         });
       })
       .catch(err => {
