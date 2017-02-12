@@ -1,11 +1,16 @@
 import React from 'react';
 import MoviePoster from './MoviePoster';
+import MovieRating from './MovieRating';
 
 const Movie = props => {
     return (
       <div className="movie">
         <MoviePoster poster={props.poster} />
         <h4>{props.title}</h4>
+        <MovieRating
+          rating={props.rating}
+          id={props.id}
+          updateRating={props.updateRating} />
         <div className="remove-movie" onClick={() => props.handleDelete(props.id)}><span>Remove Movie</span></div>
       </div>
     )

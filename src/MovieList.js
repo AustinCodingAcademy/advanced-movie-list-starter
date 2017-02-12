@@ -11,6 +11,8 @@ const MovieList = props => {
               id={movie._id}
               title={movie.title}
               poster={movie.poster_path}
+              rating={movie.rating}
+              updateRating={props.updateRating}
               handleDelete={props.handleDelete}
             />
           )}

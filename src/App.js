@@ -99,6 +99,26 @@ class App extends Component {
       })
   }
 
+  updateRating(_id, rating) {
+    let updatedMovie = this.state.movies.filter(movie => movie._id === _id);
+    updatedMovie[0].rating = rating;
+    console.log(_id);
+    console.log(rating);
+    console.log(updatedMovie);
+
+    this.handleUpdateMovie(_id, updatedMovie[0]);
+  }
+
+  handleUpdateMovie(_id, newAttributes) {
+    axios.put(`http://localhost:4000/movies/${_id}`, newAttributes)
+      .then(resp => {
+        this.componentDidMount();
+      })
+      .catch(err => {
+        console.log(`Error! ${err}`);
+      })
+  }
+
   closeNewMovie(event) {
     event.preventDefault();
 
@@ -120,7 +140,7 @@ class App extends Component {
           handleSearch={this.handleSearch.bind(this)}
           value={this.state.searchText}
           onChange={this.handleSearchChange.bind(this)}/>
-        {this.state.searchResult.length > 1 && this.state.showResults ? <MultiResult
+        {this.state.searchResult.length > 0 && this.state.showResults ? <MultiResult
           searchResult={this.state.searchResult}
           handleMovie={this.handleNewMovie.bind(this)}/> : null}
         {this.state.newMovie.title !== undefined ? <NewMovie
@@ -133,6 +153,7 @@ class App extends Component {
           /> : null}
         {this.state.movies.length > 0 ? <MovieList
             movies={this.state.movies}
+            updateRating={this.updateRating.bind(this)}
             handleDelete={this.handleDeleteMovie.bind(this)}
           /> : null}
       </div>

@@ -5,7 +5,7 @@
       "poster_path": "https://image.tmdb.org/t/p/w154/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg",
       "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
       "release_date": "12/14/2016",
-      "rating": 0,
+      "rating": 5,
       "_id": 1
     },
     {
@@ -13,7 +13,7 @@
       "poster_path": "https://image.tmdb.org/t/p/w154/lZpWprJqbIFpEV5uoHfoK0KCnTW.jpg",
       "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
       "release_date": "03/30/1999",
-      "rating": 0,
+      "rating": 5,
       "_id": 2
     },
     {
@@ -21,7 +21,7 @@
       "poster_path": "https://image.tmdb.org/t/p/w154/1gAnkZNAd3HqgWL7aqSOQFwt7D1.jpg",
       "overview": "Elle Woods has it all. She's the president of her sorority, a Hawaiian Tropic girl, Miss June in her campus calendar, and, above all, a natural blonde. She dates the cutest fraternity boy on campus and wants nothing more than to be Mrs. Warner Huntington III. But, there's just one thing stopping Warner from popping the question: Elle is too blonde.",
       "release_date": "07/13/2001",
-      "rating": 0,
+      "rating": 3,
       "_id": 3
     },
     {
@@ -29,7 +29,7 @@
       "poster_path": "https://image.tmdb.org/t/p/w154/xWlaTLnD8NJMTT9PGOD9z5re1SL.jpg",
       "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
       "release_date": "06/12/2013",
-      "rating": 0,
+      "rating": 5,
       "_id": 4
     },
     {
@@ -37,8 +37,72 @@
       "poster_path": "https://image.tmdb.org/t/p/w154/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg",
       "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
       "release_date": "07/16/2008",
-      "rating": 0,
+      "rating": 5,
       "_id": 5
+    },
+    {
+      "title": "The 40 Year Old Virgin",
+      "poster_path": "https://image.tmdb.org/t/p/w154/wAKUo12pRBGyFJQV27LFJoTvMU5.jpg",
+      "overview": "Andy Stitzer has a pleasant life with a nice apartment and a job stamping invoices at an electronics store. But at age 40, there's one thing Andy hasn't done, and it's really bothering his sex-obsessed male co-workers: Andy is still a virgin. Determined to help Andy get laid, the guys make it their mission to de-virginize him. But it all seems hopeless until Andy meets small business owner Trish, a single mom.",
+      "release_date": "08/11/2005",
+      "rating": 4,
+      "_id": 6
+    },
+    {
+      "title": "Collateral",
+      "poster_path": "https://image.tmdb.org/t/p/w154/fmkv2eRuYCTq7A5jzMBNgoNe1vA.jpg",
+      "overview": "Cab driver Max picks up a man who offers him $600 to drive him around. But the promise of easy money sours when Max realizes his fare is an assassin.",
+      "release_date": "08/04/2004",
+      "rating": 5,
+      "_id": 7
+    },
+    {
+      "title": "Fight Club",
+      "poster_path": "https://image.tmdb.org/t/p/w154/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg",
+      "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+      "release_date": "10/15/1999",
+      "rating": 5,
+      "_id": 8
+    },
+    {
+      "title": "Interstellar",
+      "poster_path": "https://image.tmdb.org/t/p/w154/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg",
+      "overview": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+      "release_date": "11/05/2014",
+      "rating": 5,
+      "_id": 9
+    },
+    {
+      "title": "Gravity",
+      "poster_path": "https://image.tmdb.org/t/p/w154/uPxtxhB2Fy9ihVqtBtNGHmknJqV.jpg",
+      "overview": "Dr. Ryan Stone (Sandra Bullock), a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky (George Clooney) in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes. The Shuttle is destroyed, leaving Stone and Kowalsky completely alone-tethered to nothing but each other and spiraling out into the blackness of space. The deafening silence tells them they have lost any link to Earth and any chance for rescue. As fear turns to panic, every gulp of air eats away at what little oxygen is left. But the only way home may be to go further out into the terrifying expance of space…",
+      "release_date": "09/27/2013",
+      "rating": 4,
+      "_id": 10
+    },
+    {
+      "title": "Leon: The Professional",
+      "poster_path": "https://image.tmdb.org/t/p/w154/gE8S02QUOhVnAmYu4tcrBlMTujz.jpg",
+      "overview": "Leon, the top hit man in New York, has earned a rep as an effective \"cleaner\". But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Leon's footsteps.",
+      "release_date": "09/14/1994",
+      "rating": 5,
+      "_id": 11
+    },
+    {
+      "title": "Crouching Tiger, Hidden Dragon",
+      "poster_path": "https://image.tmdb.org/t/p/w154/2D7kikHUHbecJGoRAspBYiqoxd6.jpg",
+      "overview": "Two warriors in pursuit of a stolen sword and a notorious fugitive are led to an impetuous, physically-skilled, teenage nobleman's daughter, who is at a crossroads in her life.",
+      "release_date": "10/01/2000",
+      "rating": 5,
+      "_id": 12
+    },
+    {
+      "title": "The Bourne Identity",
+      "poster_path": "https://image.tmdb.org/t/p/w154/bXQIL36VQdzJ69lcjQR1WQzJqQR.jpg",
+      "overview": "Wounded to the brink of death and suffering from amnesia, Jason Bourne is rescued at sea by a fisherman. With nothing to go on but a Swiss bank account number, he starts to reconstruct his life, but finds that many people he encounters want him dead. However, Bourne realizes that he has the combat and mental skills of a world-class spy – but who does he work for?",
+      "release_date": "06/14/2002",
+      "rating": 4,
+      "_id": 13
     }
   ]
 }
