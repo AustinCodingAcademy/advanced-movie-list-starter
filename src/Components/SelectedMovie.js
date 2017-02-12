@@ -1,13 +1,12 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import {
-  Image,
-  Grid,
-  Row,
-  Col,
-  Button
+Grid,
+Row,
+Col,
+Image
 } from 'react-bootstrap';
 
-const Movie = props => {
+const SelectedMovie = props => {
   return (
     <Grid>
       <Row>
@@ -18,23 +17,20 @@ const Movie = props => {
             <p> {props.overview}</p>
             <h4> release date- {props.releasedate} </h4>
           </div>
-          <Button
-            onClick={() => props.addmovie(props.movieTitle)} className="addbutton"
-            bsStyle="success">
-            Add to list
-          </Button>
         </Col>
       </Row>
     </Grid>
+
   );
+
 };
 
-Movie.propTypes = {
-  movieTitle: PropTypes.string.isRequired,
-  overview: PropTypes.string.isRequired,
+SelectedMovie.propTypes = {
   releasedate: PropTypes.string.isRequired,
+  movieTitle: PropTypes.string.isRequired,
   posterPath: PropTypes.string.isRequired,
-  addmovie: PropTypes.func.isRequired
+  overview: PropTypes.string.isRequired
+
 };
 
-export default Movie;
+export default SelectedMovie;

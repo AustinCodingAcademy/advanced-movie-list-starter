@@ -1,3 +1,22 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "movieTitle": "The Matrix",
+      "posterPath": "https://image.tmdb.org/t/p/w154/lZpWprJqbIFpEV5uoHfoK0KCnTW.jpg",
+      "releasedate": "1999-03-30",
+      "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth."
+    },
+    {
+      "movieTitle": "The Shawshank Redemption",
+      "posterPath":"https://image.tmdb.org/t/p/w154/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg",
+      "releasedate": "1994-09-10",
+      "overview": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope."
+    },
+    {
+      "movieTitle": "Finding Nemo",
+      "posterPath": "https://image.tmdb.org/t/p/w154/zjqInUwldOBa0q07fOyohYCWxWX.jpg",
+      "releasedate": "2003-05-30",
+      "overview": "A tale which follows the comedic and eventful journeys of two fish, the fretful Marlin and his young son Nemo, who are separated from each other in the Great Barrier Reef when Nemo is unexpectedly taken from his home and thrust into a fish tank in a dentist's office overlooking Sydney Harbor. Buoyed by the companionship of a friendly but forgetful fish named Dory, the overly cautious Marlin embarks on a dangerous trek and finds himself the unlikely hero of an epic journey to rescue his son."
+    }
+  ]
 }
