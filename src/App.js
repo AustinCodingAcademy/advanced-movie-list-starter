@@ -69,16 +69,9 @@ class App extends Component {
     });
   }
 
-  handleAddMovie(movies) {
-    const newMoviesArray = [...this.state.selectedMovieList, movies];
-    this.setState({
-      selectedMovieList: newMoviesArray
-    });
-    console.log(this.state.selectedMovieList);
-  }
 
-  handleAddMovieNew(movies) {
-    axios.post(`http://localhost:4000/movies`, movies)
+  handleAddMovieNew(movie) {
+    axios.post(`http://localhost:4000/movies`, movie)
     .then(resp => {
       this.setState({
         selectedMovieList: [...this.state.selectedMovieList, resp.data]
@@ -88,6 +81,16 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
+  handleDeleteMovie(selectedmovie, id) {
+    axios.delete(`http://localhost:4000/movies/${id}`)
+    .then(() => {
+      this.setState({
+        selectedMovieList: this.state.selectedMovieList.filter(selectedmovie => {
+          return selectedmovie._id !== id;
+        })
+      });
+    });
+  }
 
   render() {
     return (
@@ -108,11 +111,13 @@ class App extends Component {
                 movieTitle={this.state.movieTitle}
                 overview={this.state.overview}
                 releasedate={this.state.releasedate}
+                release_date={this.state.release_date}
                 posterPath={this.state.posterPath}
-                addmovie={this.handleAddMovie.bind(this)}
+                addmovie={this.handleAddMovieNew.bind(this)}
               />
 
               <SelectedMovieList
+                onDeleteMovie={this.handleDeleteMovie.bind(this)}
                 selectedMovieList={this.state.selectedMovieList}
              />
 
