@@ -8,9 +8,17 @@ body {
 #search input {
   font-size: 25px;
   padding: 5px;
-  /*line-height: 20px;*/
 }
 #search button {
   font-size:25px;
   margin-left: 15px;
+  margin-bottom: 20px;
+}
+.search-result {
+  text-align: left;
+}
+.favorites-list {
+  padding-top: 20px;
+
+
 }

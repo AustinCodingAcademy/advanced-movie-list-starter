@@ -2,9 +2,12 @@ import React from 'react';
 
 const MoviePoster = props => {
   return (
-    <section id="movie-poster">
-      <img src={props.posterSource} alt="PosterIMG" />
-    </section>
-  )
-}
- 
+    <img src={`https://image.tmdb.org/t/p/w154${props.posterPath}`} alt="PosterIMG" />
+  );
+};
+
+export default MoviePoster;
+
+MoviePoster.propTypes = {
+  posterPath: React.PropTypes.string.isRequired
+};

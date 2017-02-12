@@ -3,18 +3,30 @@ import React, {
 } from 'react';
 import './App.css';
 import SearchBar from './SearchBar';
+import SearchResult from './SearchResult';
+import Favorites from './Favorites';
 import axios from 'axios';
-
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      searchResult: {},
+      searchResult: null,
       movieTitleSearched: '',
-      searchedMoviePoster: ''
+      favoriteMovies: []
     };
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:4000/movies')
+      .then(resp => {
+        this.setState({
+          favoriteMovies: resp.data
+        });
+        console.log("Returned Favs");
+      })
+      .catch(err => console.log('Local network request error: ' + err));
   }
 
   handleSearchMovie() {
@@ -28,22 +40,66 @@ class App extends Component {
   }
 
   handleSearchTextChange(event) {
-    // console.log(event.target.value)
     this.setState({
       movieTitleSearched: event.target.value
     });
   }
 
+  handleAddToFavorites(attributes) {
+    axios.post('http://localhost:4000/movies', attributes)
+      .then(resp => {
+        this.setState({
+          favoriteMovies: [...this.state.favoriteMovies, resp.data]
+        });
+      });
+  }
+
+  handleCloseSearchResult() {
+    this.setState({
+      searchResult: null,
+      movieTitleSearched: ''
+    });
+  }
+
+
+  //   R E N D E R
+
+  renderSearchResult() {
+    if (this.state.searchResult) {
+      return (
+        <div className="search-result">
+          <h1>Search Result</h1>
+          <SearchResult
+            posterPath={this.state.searchResult.poster_path}
+            searchedMovieTitle={this.state.searchResult.title}
+            searchedMovieOverview={this.state.searchResult.overview}
+            onAddToFavs={this.handleAddToFavorites}
+            onCloseSearchResult={this.handleCloseSearchResult.bind(this)}
+          />
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <h1 > Movie List </h1>
+        <h1> Movie List </h1>
 
         <SearchBar
           searchText={this.state.movieTitleSearched}
           onChange={this.handleSearchTextChange.bind(this)}
           onClick={this.handleSearchMovie.bind(this)}
-        /></div>
+        />
+
+        {this.renderSearchResult()}
+        <hr />
+        <Favorites
+          favoriteMovies={this.state.favoriteMovies}
+        />
+
+
+      </div>
     );
   }
 }
