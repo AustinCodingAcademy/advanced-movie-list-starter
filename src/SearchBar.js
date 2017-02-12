@@ -2,22 +2,26 @@ import React from 'react';
 
 const SearchBar = props => {
   return (
-    <input
-      className="Search-Bar"
-      placeholder="Search for a movie..."
-      aria-hidden="true"
-      type="text"
-      value={props.value}
-      onChange={event => props.onChange(event)}
-    />
+    <div>
+      <input
+        className="searchBarInput"
+        type="text"
+        placeholder="Search for movies..."
+        onChange={event => props.onChange(event)}
+      />
+      <button
+        className="searchBarButton"
+        onSubmit={event => props.onSubmit(event)}>Search
+      </button>
+    </div>
   );
 };
 
 
 // ESLint React prop-type validation
 SearchBar.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired
+  onChange: React.PropTypes.func.isRequired,
+  onSubmit: React.PropTypes.func.isRequired
 };
 
 export default SearchBar;

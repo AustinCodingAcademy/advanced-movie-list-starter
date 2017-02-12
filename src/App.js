@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 import MovieList from './MovieList';
+import axios from 'axios';
 import './App.css';
 
 
@@ -15,7 +16,7 @@ class App extends Component {
   }
 
 
-  // ---------Search Bar function--------- //
+// ---------Search Bar function--------- //
 
   handleSearchBarChange(event) {
     this.setState({
@@ -24,13 +25,22 @@ class App extends Component {
   }
 
 
-  // ---------Axios Movie DB API Request function--------- //
+// ---------Axios Movie DB API Request function--------- //
 
-  componentDidMount() {
-    const movie = '';
+  handleSearchForMovie(event) {
+    const movie = this.state.searchText;
 
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=40691d46fffaf653b832a5813be2e59f&language=en-US&query=${movie}&page=1&include_adult=false`)
-    .then(resp => console.log(resp.data));
+    // GET request to retreive movies from database
+    .then(resp => {
+      // Then callback is passed for a successful request
+      this.setState({
+        movies: resp.data.results[0]
+        // Data is the JSON response
+      });
+    })
+    .catch(err => console.error(`Error! ${err}`));
+    // Catch callback is passed for the bad/errored request
   }
 
 
@@ -38,9 +48,7 @@ class App extends Component {
 
 
 
-
-
-  // ---------Renders to the DOM --------- //
+// ---------Renders to the DOM --------- //
 
   render() {
     return (
@@ -50,6 +58,12 @@ class App extends Component {
           <SearchBar
             value={this.state.searchText}
             onChange={this.handleSearchBarChange.bind(this)}
+            onSubmit={this.handleSearchForMovie.bind(this)}
+          />
+        </div>
+        <div className="movie-list">
+          <MovieList
+            movies={this.state.movies}
           />
         </div>
       </div>

@@ -3,29 +3,24 @@ import Movie from './Movie';
 
 const MovieList = props => {
   return (
-    <ul className="movie-list">
-      {props.movies.map(movie => {
+    <div className="movie-list">
+      {props.movies.map((movie, index) => {
         return (
           <Movie
-            key={movie.id}
-            id={movie.id}
-            poster={movie.poster}
+            key={index}
+            poster={movie.poster_path}
             title={movie.title}
             overview={movie.overview}
-            onCloseMovie={props.onCloseMovie}
-            onAddMovie={props.onAddMovie}
           />
         );
       })};
-    </ul>
+    </div>
   );
 };
 
 // ESLint React prop-type validation
 MovieList.propTypes = {
   movies: React.PropTypes.array.isRequired,
-  onCloseMovie: React.PropTypes.func.isRequired,
-  onAddMovie: React.PropTypes.func.isRequired
 };
 
 export default MovieList;

@@ -3,10 +3,20 @@
 }
 .search-bar input[type="text"] {
   height: 35px;
-  width: 100%;
+  width: 60%;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 18px;
   padding: 0 10px;
-  box-sizing: border-box;
+
+}
+
+.search-bar button {
+  height: 35px;
+  width: 10%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0px 10px;
+  color: white;
+  background-color: black;
 }
