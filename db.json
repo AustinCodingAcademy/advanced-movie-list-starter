@@ -1,30 +1,6 @@
 {
   "addedMovies": [
     {
-      "poster_path": "/xd6yhmtS6mEURZLwUDT5raEMbf.jpg",
-      "adult": false,
-      "overview": "Set between Episode II and III the Clone Wars is the first computer animated Star Wars film. Anakin and Obi Wan must find out who kidnapped Jabba the Hutts son and return him safely. The Seperatists will try anything to stop them and ruin any chance of a diplomatic agreement between the Hutt's and the Republic.",
-      "release_date": "2008-08-05",
-      "genre_ids": [
-        53,
-        16,
-        28,
-        878,
-        12,
-        14
-      ],
-      "id": 12180,
-      "original_title": "Star Wars: The Clone Wars",
-      "original_language": "en",
-      "title": "Star Wars: The Clone Wars",
-      "backdrop_path": "/gmLMaDXi4lFWG8WitaCYOJS5GtL.jpg",
-      "popularity": 2.743055,
-      "vote_count": 275,
-      "video": false,
-      "vote_average": 6,
-      "_id": 2
-    },
-    {
       "poster_path": "/bFXys2nhALwDvpkF3dP3Vvdfn8b.jpg",
       "adult": false,
       "overview": "As Harry begins his sixth year at Hogwarts, he discovers an old book marked as 'Property of the Half-Blood Prince', and begins to learn more about Lord Voldemort's dark past.",
@@ -46,23 +22,67 @@
       "_id": 4
     },
     {
-      "poster_path": "/lDlGPZS0UJYKxVlpyff3BMyPc2H.jpg",
+      "poster_path": "/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg",
       "adult": false,
-      "overview": "Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.",
-      "release_date": "2004-04-30",
+      "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+      "release_date": "2016-12-14",
       "genre_ids": [
-        35
+        28,
+        12,
+        14,
+        878
       ],
-      "id": 10625,
-      "original_title": "Mean Girls",
+      "id": 330459,
+      "original_title": "Rogue One: A Star Wars Story",
       "original_language": "en",
-      "title": "Mean Girls",
-      "backdrop_path": "/106vVW7SD1Lts32GsLy7cVETaeA.jpg",
-      "popularity": 4.388208,
-      "vote_count": 1465,
+      "title": "Rogue One: A Star Wars Story",
+      "backdrop_path": "/tZjVVIYXACV4IIIhXeIM59ytqwS.jpg",
+      "popularity": 18.246981,
+      "vote_count": 2158,
+      "video": false,
+      "vote_average": 7.2,
+      "_id": 6
+    },
+    {
+      "poster_path": "/zjqInUwldOBa0q07fOyohYCWxWX.jpg",
+      "adult": false,
+      "overview": "A tale which follows the comedic and eventful journeys of two fish, the fretful Marlin and his young son Nemo, who are separated from each other in the Great Barrier Reef when Nemo is unexpectedly taken from his home and thrust into a fish tank in a dentist's office overlooking Sydney Harbor. Buoyed by the companionship of a friendly but forgetful fish named Dory, the overly cautious Marlin embarks on a dangerous trek and finds himself the unlikely hero of an epic journey to rescue his son.",
+      "release_date": "2003-05-30",
+      "genre_ids": [
+        16,
+        10751
+      ],
+      "id": 12,
+      "original_title": "Finding Nemo",
+      "original_language": "en",
+      "title": "Finding Nemo",
+      "backdrop_path": "/n2vIGWw4ezslXjlP0VNxkp9wqwU.jpg",
+      "popularity": 8.309522,
+      "vote_count": 3834,
+      "video": false,
+      "vote_average": 7.4,
+      "_id": 7
+    },
+    {
+      "poster_path": "/ewi7gYW22t8T3piRvrXO73GlzuL.jpg",
+      "adult": false,
+      "overview": "A killer known as Ghostface begins killing off teenagers, and as the body count begins rising, one girl and her friends find themselves contemplating the 'rules' of horror films as they find themselves living in a real-life one.",
+      "release_date": "1996-12-19",
+      "genre_ids": [
+        80,
+        27,
+        9648
+      ],
+      "id": 4232,
+      "original_title": "Scream",
+      "original_language": "en",
+      "title": "Scream",
+      "backdrop_path": "/cafeYH18ZoxiZNqmhSrmyLRIx8f.jpg",
+      "popularity": 4.508524,
+      "vote_count": 828,
       "video": false,
       "vote_average": 6.9,
-      "_id": 5
+      "_id": 8
     },
     {
       "poster_path": "/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg",
@@ -82,49 +102,7 @@
       "vote_count": 6053,
       "video": false,
       "vote_average": 8.4,
-      "_id": 6
-    },
-    {
-      "poster_path": "/4N7ukMO7Tjup6o2rDxzZDL7V8E9.jpg",
-      "adult": false,
-      "overview": "Following Hulk's murderous rampage through Manhattan, Dr. Bruce Banner was sentenced to execution, bringing an end to The Hulk . Or did it? When reports of a mysterious creature start creeping in from around the world, Nick Fury starts to get suspicious. Not only is Fury worried about Banner's rage turning him into an unstoppable monster, but his existence is the one secret that can bring down Nick Fury! Turning to the only man he can trust, Fury enlists Wolverine to help, and Wolverine is glad to take down Banner by any means necessary!",
-      "release_date": "2013-09-09",
-      "genre_ids": [
-        28,
-        16,
-        878
-      ],
-      "id": 220848,
-      "original_title": "Ultimate Wolverine vs. Hulk",
-      "original_language": "en",
-      "title": "Ultimate Wolverine vs. Hulk",
-      "backdrop_path": "/mzKfsIV2UAE9c4Sx7KRb4WoZz4r.jpg",
-      "popularity": 1.209372,
-      "vote_count": 3,
-      "video": false,
-      "vote_average": 7.7,
-      "_id": 7
-    },
-    {
-      "poster_path": "/qtBFrsEQ4oXW8sKvRxkKnYuPLg.jpg",
-      "adult": false,
-      "overview": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood.",
-      "release_date": "2004-06-25",
-      "genre_ids": [
-        28,
-        12,
-        14
-      ],
-      "id": 558,
-      "original_title": "Spider-Man 2",
-      "original_language": "en",
-      "title": "Spider-Man 2",
-      "backdrop_path": "/inHzBSWqQhHaamuBSZ0I0YQ1OQf.jpg",
-      "popularity": 2.960359,
-      "vote_count": 2848,
-      "video": false,
-      "vote_average": 6.4,
-      "_id": 8
+      "_id": 9
     }
   ],
   "movies": []

@@ -1,8 +1,9 @@
 #root {
   text-align: center;
+  font-family: Verdana;
 }
 .movie_poster {
-  height:150px;
+  max-height: 150px;
   display:block;
   margin:auto;
   margin-bottom: 8px;
@@ -11,10 +12,11 @@
   border: 1px solid black;
 }
 .movie_panel {
-  margin: auto;
   text-align:center;
   border: 0;
   border-radius: 0px;
+  height: 280px;
+  font-size: 12px;
 }
 .movie_panel:hover {
   box-shadow: 0px 2px 2px 0px silver;
