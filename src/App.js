@@ -33,18 +33,33 @@ class App extends Component {
     const movie = this.state.searchText;
 
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${movie}&page=1&include_adult=false`)
-    // GET request to retreive movies from database
-    .then(resp => {
-      // Then callback is passed for a successful request
-      this.setState({
-        returnedMovies: resp.data.results
+      // GET request to retreive movies from database
+      .then(resp => {
+        // Then callback is passed for a successful request
+        this.setState({
+          returnedMovies: resp.data.results
         // Data is the JSON response
-      });
-    })
-    .catch(err => console.error(`Error! ${err}`));
-    // Catch callback is passed for the bad/errored request
+        });
+      })
+      .catch(err => console.error(`Error! ${err}`));
+      // Catch callback is passed for the bad/errored request
   }
 
+
+// ---------Axios HTTP Delete function --------- //
+
+  handleRemoveMovie(id) {
+    // Deletes movie from movie list
+    axios.delete(`http://localhost:4000/movies/${id}`)
+      .then(resp => {
+        const newRemovedMovies = this.state.movies.filter(movie => movie.id !== id);
+
+        this.setState({
+          returnedMovies: newRemovedMovies
+        });
+      })
+      .catch(err => console.log(`Error! ${err}`));
+  }
 
 
 
@@ -66,6 +81,7 @@ class App extends Component {
         <div className="movie-list">
           <MovieList
             returnedMovies={this.state.returnedMovies}
+            onRemoveMovie={this.handleRemoveMovie.bind(this)}
           />
         </div>
       </div>

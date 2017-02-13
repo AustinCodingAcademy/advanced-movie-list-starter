@@ -11,8 +11,11 @@ const Movie = props => {
       </div>
       <div className="movieTitle">
         <h2>{props.title}</h2>
-        <p>{props.overview}</p>
       </div>
+      <button
+        className="deleteMovieButton"
+        onRemoveMovie={() => props.onRemoveMovie(props.id)}>Remove Movie
+      </button>
     </div>
   );
 };
@@ -23,7 +26,7 @@ Movie.propTypes = {
   id: React.PropTypes.number.isReqiuired,
   poster: React.PropTypes.string.isRequired,
   title: React.PropTypes.string.isReqiuired,
-  overview: React.PropTypes.string.isReqiuired
+  onRemoveMovie: React.PropTypes.func.isReqiuired
 };
 
 export default Movie;
