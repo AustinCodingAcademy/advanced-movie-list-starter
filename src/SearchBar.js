@@ -1,6 +1,6 @@
 import React, { PropTypes, Component} from 'react';
 import {
-
+  Well
 } from 'react-bootstrap';
 
 
@@ -19,17 +19,26 @@ class SearchBar extends Component {
       searchText: text
     });
   }
+
+  componentDidMount() {
+    this.movieInput.focus();
+  }
   render() {
     return (
       <div>
-        <input
-          className="search-bar"
-          type="text"
-          onChange={(event) => this.updateSearchText(event)}
-        />
-        <button onClick={() => this.props.onButtonClick(this.state.searchText)}>
-          Search
-        </button>
+        <Well bsSize="small">
+          <input
+            className="search-bar"
+            type="text"
+            onChange={(event) => this.updateSearchText(event)}
+            onSubmit={() => this.props.onButtonClick(this.state.searchText)}
+            placeholder="search movies"
+            ref={(input) => { this.movieInput = input; }}
+          />
+          <button onClick={() => this.props.onButtonClick(this.state.searchText)}>
+            Search
+          </button>
+        </Well>
       </div>
     );
   }

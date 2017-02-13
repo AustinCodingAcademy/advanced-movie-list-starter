@@ -8,7 +8,11 @@ import {
 } from 'react-bootstrap';
 const MovieItem = props => {
   const popoverTop = (
-    <Popover id="popover-positioned-scrolling-top" title={props.title}>
+    <Popover
+      id="popover-positioned-scrolling-top"
+      title={props.title}
+      className="pop"
+    >
       {props.desc}
     </Popover>
   );

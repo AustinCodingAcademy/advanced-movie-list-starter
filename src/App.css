@@ -31,5 +31,14 @@
 }
 .header {
   font-size:30px;
-  background-color: #7FDBFF;
+  margin:auto;
+  height:80px;
+  margin-bottom: 20px;
+}
+.search-bar {
+  width:200px;
+}
+.pop {
+  height: 200px;
+  overflow: scroll;
 }

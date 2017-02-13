@@ -106,22 +106,19 @@ class App extends Component {
   render() {
     return (
       <div className="container main">
-        <Jumbotron className="header">
-          Welcome
-        </Jumbotron>
+        <PageHeader className="header">Welcome</PageHeader>
         <SearchBar
+          className="search-bar"
           onButtonClick={this.handleSearchBarChange.bind(this)}
         />
         <Grid>
           <Row>
             <Col md={6} mdPush={6}>
               <PageHeader><small>Added Movies</small></PageHeader>
-              <Row>
-                <AddedMovies
-                  movies={this.state.addedMovies}
-                  RemoveMovie={this.handleRemoveMovie.bind(this)}
-                />
-              </Row>
+              <AddedMovies
+                movies={this.state.addedMovies}
+                RemoveMovie={this.handleRemoveMovie.bind(this)}
+              />
             </Col>
             <Col md={6} mdPull={6}>
               <PageHeader><small>Search Results</small></PageHeader>
