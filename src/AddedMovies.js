@@ -12,11 +12,11 @@ class AddedMovies extends Component {
         {this.props.movies.map(movie => {
           return (
             <AddedMovie
-              key={movie.id}
+              key={movie._id}
               title={movie.title}
               poster={movie.poster_path}
               desc={movie.overview}
-              onButtonClick={() => this.props.RemoveMovie(movie.id)}
+              onButtonClick={() => this.props.RemoveMovie(movie._id)}
             />
           );
         })}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import MovieList from './MovieList';
+import SearchBar from './SearchBar';
 import AddedMovies from './AddedMovies';
 import {
   Grid,
@@ -22,17 +23,16 @@ class App extends Component {
     };
   }
 
-  addMovies() {
-    const searchMovie = 'jaws';
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=fde54a01d27516539d182393c4aab6d5&language=en-US&query=${searchMovie}&page=1&include_adult=false`)
-      .then(
-        resp => this.update(resp.data.results)
-      );
-  }
+  // addMovies() {
+  //   const searchMovie = 'jaws';
+  //   axios.get(`https://api.themoviedb.org/3/search/movie?api_key=fde54a01d27516539d182393c4aab6d5&language=en-US&query=${searchMovie}&page=1&include_adult=false`)
+  //     .then(
+  //       resp => this.update(resp.data.results)
+  //     );
+  // }
 
   showAdded() {
-    const searchMovie = 'star wars';
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=fde54a01d27516539d182393c4aab6d5&language=en-US&query=${searchMovie}&page=1&include_adult=false`)
+    axios.get('http://localhost:4000/addedMovies')
       .then(
         resp => this.updateAdded(resp.data.results)
       );
@@ -46,14 +46,14 @@ class App extends Component {
 
   update(data) {
     this.setState({
-      movies: data
+      movies: data,
     });
   }
 
   componentDidMount() {
-    this.addMovies();
+    // this.addMovies();
     this.showAdded();
-    axios.get('http://localhost:4000/movies')
+    axios.get('http://localhost:4000/addedMovies')
       .then(resp => {
         this.setState({
           searchText: this.state.searchText,
@@ -63,17 +63,17 @@ class App extends Component {
       .catch(err => console.log(`Error! ${err}`));
   }
 
-  handleAddMovie(attributes) {
-    axios.post('http://localhost:4000/movies', attributes)
-      .then(resp => {
-        this.setState({
-          movies: [...this.state.movies, resp.data]
-        });
-      })
-      .catch(err => console.log(err));
-  }
+  // handleAddMovie(attributes) {
+  //   axios.post('http://localhost:4000/movies', attributes)
+  //     .then(resp => {
+  //       this.setState({
+  //         movies: [...this.state.movies, resp.data]
+  //       });
+  //     })
+  //     .catch(err => console.log(err));
+  // }
 
-  handleAddMovie2(attributes) {
+  handleAddMovie(attributes) {
     const newMovies = this.state.movies.filter(movie => movie.id !== attributes.id);
     axios.post('http://localhost:4000/addedMovies', attributes)
       .then(resp => {
@@ -84,21 +84,23 @@ class App extends Component {
       });
   }
 
-  handleDeleteMovie(id) {
-    axios.delete(`http://localhost:4000/movies/${id}`)
+  handleRemoveMovie(id) {
+    console.log(id);
+    axios.delete(`http://localhost:4000/addedMovies/${id}`)
       .then(resp => {
-        const newMovies = this.state.movies.filter(movie => movie.id !== id);
+        const newMovies = this.state.addedMovies.filter(movie => movie._id !== id);
         this.setState({
-          movies: newMovies
+          addedMovies: newMovies
         });
       })
       .catch(err => console.log(`ERROR! ${err}`));
   }
-  handleRemoveMovie(id) {
-    const newMovies = this.state.addedMovies.filter(movie => movie.id !== id);
-    this.setState({
-      addedMovies: newMovies
-    });
+
+  handleSearchBarChange(text) {
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=fde54a01d27516539d182393c4aab6d5&language=en-US&query=${text}&page=1&include_adult=false`)
+      .then(
+        resp => this.update(resp.data.results, text)
+      );
   }
 
   render() {
@@ -107,6 +109,9 @@ class App extends Component {
         <Jumbotron className="header">
           Welcome
         </Jumbotron>
+        <SearchBar
+          onButtonClick={this.handleSearchBarChange.bind(this)}
+        />
         <Grid>
           <Row>
             <Col md={6} mdPush={6}>
@@ -122,7 +127,7 @@ class App extends Component {
               <PageHeader><small>Search Results</small></PageHeader>
               <MovieList
                 movies={this.state.movies}
-                AddMovie={this.handleAddMovie2.bind(this)}
+                AddMovie={this.handleAddMovie.bind(this)}
               />
             </Col>
           </Row>
