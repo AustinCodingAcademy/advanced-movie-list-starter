@@ -1,5 +1,10 @@
 import React, {PropTypes} from 'react';
-import {Row, Col, Button, FormControl} from 'react-bootstrap';
+import {
+  Row,
+  Col,
+  Button,
+  FormControl
+} from 'react-bootstrap';
 import './SearchForm.css';
 
 const SearchForm = props => {

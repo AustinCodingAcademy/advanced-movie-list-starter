@@ -1,5 +1,9 @@
 import React, {PropTypes} from 'react';
-import {Row, Col, Button} from 'react-bootstrap';
+import {
+  Row,
+  Col,
+  Button
+} from 'react-bootstrap';
 import './MovieDetails.css';
 
 const MovieDetails = props => {

@@ -57,13 +57,6 @@
       "_id": 11
     },
     {
-      "posterPath": "https://image.tmdb.org/t/p/w154/8fKmBdU1Nl2jN7gmo9U8kEoAd6x.jpg",
-      "title": "Friday",
-      "releaseDate": "1995-04-26",
-      "overview": "Craig and Smokey are two guys in Los Angeles hanging out on their porch on a Friday afternoon, smoking and drinking, looking for something to do.",
-      "_id": 12
-    },
-    {
       "posterPath": "https://image.tmdb.org/t/p/w154/c8Asvr5ORuL9NtaTGZZJsq4heDf.jpg",
       "title": "The Happening",
       "releaseDate": "2008-06-11",
@@ -78,11 +71,18 @@
       "_id": 14
     },
     {
+      "posterPath": "https://image.tmdb.org/t/p/w154/8fKmBdU1Nl2jN7gmo9U8kEoAd6x.jpg",
+      "title": "Friday",
+      "releaseDate": "1995-04-26",
+      "overview": "Craig and Smokey are two guys in Los Angeles hanging out on their porch on a Friday afternoon, smoking and drinking, looking for something to do.",
+      "_id": 15
+    },
+    {
       "posterPath": "https://image.tmdb.org/t/p/w154/lmwGr6J5y6kngFNQuFV2y1yw4OB.jpg",
       "title": "Rocky",
       "releaseDate": "1976-11-21",
       "overview": "When world heavyweight boxing champion, Apollo Creed wants to give an unknown fighter a shot at the title as a publicity stunt, his handlers choose palooka Rocky Balboa, an uneducated collector for a Philadelphia loan shark.",
-      "_id": 15
+      "_id": 16
     }
   ]
 }

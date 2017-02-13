@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Grid} from 'react-bootstrap';
 import axios from 'axios';
 import './App.css';

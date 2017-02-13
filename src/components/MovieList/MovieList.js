@@ -1,5 +1,8 @@
 import React, {PropTypes} from 'react';
-import {Row, Col} from 'react-bootstrap';
+import {
+  Row,
+  Col
+} from 'react-bootstrap';
 import MovieListItem from '../MovieListItem/MovieListItem';
 import './MovieList.css';
 
