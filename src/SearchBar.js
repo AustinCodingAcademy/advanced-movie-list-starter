@@ -11,7 +11,7 @@ const SearchBar = props => {
       />
       <button
         className="searchBarButton"
-        onSubmit={event => props.onSubmit(event)}>Search
+        onClick={event => props.onClick(event)}>Search
       </button>
     </div>
   );
@@ -21,7 +21,7 @@ const SearchBar = props => {
 // ESLint React prop-type validation
 SearchBar.propTypes = {
   onChange: React.PropTypes.func.isRequired,
-  onSubmit: React.PropTypes.func.isRequired
+  onClick: React.PropTypes.func.isRequired
 };
 
 export default SearchBar;

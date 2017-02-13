@@ -1,3 +1,24 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "poster_path": "/yLgfR1bhX6azIKo6FKbDUeA6THy.jpg",
+      "adult": false,
+      "overview": "After avenging the death of his teacher, a Shaolin monk flees China to the American West and helps people while being pursued by bounty hunters.",
+      "release_date": "1972-02-22",
+      "genre_ids": [
+        12,
+        37
+      ],
+      "id": 370843,
+      "original_title": "Kung Fu",
+      "original_language": "en",
+      "title": "Kung Fu",
+      "backdrop_path": null,
+      "popularity": 1.000171,
+      "vote_count": 2,
+      "video": false,
+      "vote_average": 7.5,
+      "_id": 1
+    }
+  ]
 }

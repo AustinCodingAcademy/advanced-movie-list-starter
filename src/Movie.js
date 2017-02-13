@@ -6,7 +6,7 @@ const Movie = props => {
       <div className="poster">
         <img
           alt="poster"
-          src={`https://image.tmdb.org/t/p/w154${props.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w154${props.poster}`}
         />
       </div>
       <div className="movieTitle">
@@ -21,7 +21,7 @@ const Movie = props => {
 // ESLint React prop-type validation
 Movie.propTypes = {
   id: React.PropTypes.number.isReqiuired,
-  poster_path: React.PropTypes.string.isRequired,
+  poster: React.PropTypes.string.isRequired,
   title: React.PropTypes.string.isReqiuired,
   overview: React.PropTypes.string.isReqiuired
 };

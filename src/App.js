@@ -9,9 +9,11 @@ class App extends Component {
   constructor() {
     super();
 
+    this.apiKey = '40691d46fffaf653b832a5813be2e59f';
     this.state = {
       searchText: '',
-      movies: []
+      movies: [],
+      returnedMovies: []
     };
   }
 
@@ -30,12 +32,12 @@ class App extends Component {
   handleSearchForMovie(event) {
     const movie = this.state.searchText;
 
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=40691d46fffaf653b832a5813be2e59f&language=en-US&query=${movie}&page=1&include_adult=false`)
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${movie}&page=1&include_adult=false`)
     // GET request to retreive movies from database
     .then(resp => {
       // Then callback is passed for a successful request
       this.setState({
-        movies: resp.data.results[0]
+        returnedMovies: resp.data.results
         // Data is the JSON response
       });
     })
@@ -58,12 +60,12 @@ class App extends Component {
           <SearchBar
             value={this.state.searchText}
             onChange={this.handleSearchBarChange.bind(this)}
-            onSubmit={this.handleSearchForMovie.bind(this)}
+            onClick={this.handleSearchForMovie.bind(this)}
           />
         </div>
         <div className="movie-list">
           <MovieList
-            movies={this.state.movies}
+            returnedMovies={this.state.returnedMovies}
           />
         </div>
       </div>
