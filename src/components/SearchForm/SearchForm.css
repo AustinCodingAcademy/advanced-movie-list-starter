@@ -1,0 +1,9 @@
+#search-field {
+  display: inline-block;
+  width: 50%;
+  padding-top: 4px;
+}
+
+form {
+  margin-top: 10px;
+}

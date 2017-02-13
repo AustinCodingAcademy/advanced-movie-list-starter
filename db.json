@@ -1,3 +1,60 @@
 {
-  "movies": []
+  "savedMovies": [
+    {
+      "_id": 1,
+      "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+      "posterPath": "https://image.tmdb.org/t/p/w154/lZpWprJqbIFpEV5uoHfoK0KCnTW.jpg",
+      "releaseDate": "1999-03-30",
+      "title": "The Matrix"
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg",
+      "title": "Forrest Gump",
+      "releaseDate": "1994-07-06",
+      "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. 'Forrest Gump' is the story of a man who rose above his challenges, and who proved that determination, courage, and love are more important than ability.",
+      "_id": 3
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/90T7b2LIrL07ndYQBmSm09yqVEH.jpg",
+      "title": "2001: A Space Odyssey",
+      "releaseDate": "1968-04-05",
+      "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+      "_id": 4
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/feEgPqyjzzYI2NyuqM70JsXA6Qy.jpg",
+      "title": "Kazaam",
+      "releaseDate": "1996-07-17",
+      "overview": "Shaquille O'Neal as a rapping genie protects a little boy.",
+      "_id": 6
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/1pHOqpdCYNmtRVJs6pGKQKttrPm.jpg",
+      "title": "The Lego Batman Movie",
+      "releaseDate": "2017-02-08",
+      "overview": "In the irreverent spirit of fun that made “The LEGO® Movie” a worldwide phenomenon, the self-described leading man of that ensemble – LEGO Batman – stars in his own big-screen adventure. But there are big changes brewing in Gotham, and if he wants to save the city from The Joker’s hostile takeover, Batman may have to drop the lone vigilante thing, try to work with others and maybe, just maybe, learn to lighten up.",
+      "_id": 7
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/4qXfjDlDEGuN3xRNawh4WZo5o96.jpg",
+      "title": "The Mighty Ducks",
+      "releaseDate": "1992-10-01",
+      "overview": "After reckless young lawyer Gordon Bombay gets arrested for drunk driving, he must coach a kids hockey team for his community service. Gordon has experience on the ice, but isn't eager to return to hockey, a point hit home by his tense dealings with his own former coach, Jack Reilly. The reluctant Gordon eventually grows to appreciate his team, which includes promising young Charlie Conway, and leads them to take on Reilly's tough players.",
+      "_id": 8
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/tvSlBzAdRE29bZe5yYWrJ2ds137.jpg",
+      "title": "Star Wars",
+      "releaseDate": "1977-05-25",
+      "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+      "_id": 9
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/bKPtXn9n4M4s8vvZrbw40mYsefB.jpg",
+      "title": "The Lion King",
+      "releaseDate": "1994-06-23",
+      "overview": "A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it.",
+      "_id": 10
+    }
+  ]
 }
