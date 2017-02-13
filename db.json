@@ -29,13 +29,6 @@
       "_id": 6
     },
     {
-      "posterPath": "https://image.tmdb.org/t/p/w154/1pHOqpdCYNmtRVJs6pGKQKttrPm.jpg",
-      "title": "The Lego Batman Movie",
-      "releaseDate": "2017-02-08",
-      "overview": "In the irreverent spirit of fun that made “The LEGO® Movie” a worldwide phenomenon, the self-described leading man of that ensemble – LEGO Batman – stars in his own big-screen adventure. But there are big changes brewing in Gotham, and if he wants to save the city from The Joker’s hostile takeover, Batman may have to drop the lone vigilante thing, try to work with others and maybe, just maybe, learn to lighten up.",
-      "_id": 7
-    },
-    {
       "posterPath": "https://image.tmdb.org/t/p/w154/4qXfjDlDEGuN3xRNawh4WZo5o96.jpg",
       "title": "The Mighty Ducks",
       "releaseDate": "1992-10-01",
@@ -55,6 +48,41 @@
       "releaseDate": "1994-06-23",
       "overview": "A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it.",
       "_id": 10
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/lvfgYcK0dpgwCuRX4mTqc1Yg3yF.jpg",
+      "title": "3 Ninjas",
+      "releaseDate": "1992-08-07",
+      "overview": "Each year, three brothers Samuel, Jeffrey and Michael Douglas visits their Japanese grandfather, Mori Shintaro whom the boys affectionately refer to as Grandpa, for the summer. Mori is a highly skilled in the fields of Martial arts and Ninjutsu, and for years he has trained the boys in his techniques. After an organized crime ring proves to be too much for the FBI, it's time for the 3 brother NINJAS! To use their martial arts skills, they team up to battle the crime ring and outwit some very persistent kidnappers!",
+      "_id": 11
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/8fKmBdU1Nl2jN7gmo9U8kEoAd6x.jpg",
+      "title": "Friday",
+      "releaseDate": "1995-04-26",
+      "overview": "Craig and Smokey are two guys in Los Angeles hanging out on their porch on a Friday afternoon, smoking and drinking, looking for something to do.",
+      "_id": 12
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/c8Asvr5ORuL9NtaTGZZJsq4heDf.jpg",
+      "title": "The Happening",
+      "releaseDate": "2008-06-11",
+      "overview": "When a deadly airborne virus threatens to wipe out the northeastern United States, teacher Elliott Moore (Mark Wahlberg) and his wife (Zooey Deschanel) flee from contaminated cities into the countryside in a fight to discover the truth. Is it terrorism, the accidental release of some toxic military bio weapon -- or something even more sinister? John Leguizamo and Betty Buckley co-star in this thriller from writer-director M. Night Shyamalan.",
+      "_id": 13
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/cfO3xEdV0EV8bdrby8aeQrfmT4R.jpg",
+      "title": "Ready to Rumble",
+      "releaseDate": "2000-04-07",
+      "overview": "Two slacker wrestling fans are devastated by the ousting of their favorite character by an unscrupulous promoter.",
+      "_id": 14
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/lmwGr6J5y6kngFNQuFV2y1yw4OB.jpg",
+      "title": "Rocky",
+      "releaseDate": "1976-11-21",
+      "overview": "When world heavyweight boxing champion, Apollo Creed wants to give an unknown fighter a shot at the title as a publicity stunt, his handlers choose palooka Rocky Balboa, an uneducated collector for a Philadelphia loan shark.",
+      "_id": 15
     }
   ]
 }

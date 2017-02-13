@@ -30,11 +30,9 @@ class App extends Component {
         this.setState({
           savedMovies: resp.data
         });
-        console.log(this.state.savedMovies);
       })
       .catch(err => {
-        console.log(`Error! ${err}`);
-        alert('Oh shoot! We ran into an error, sorry!');
+        console.log(`Oh shoot! We ran into an error (${err}), sorry!`);
       });
   }
 
@@ -53,8 +51,6 @@ class App extends Component {
     const movie = this.state.searchText;
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8f7363928141e1fdb53dcac279b42409&language=en-US&query=${movie}&page=1&include_adult=false`)
       .then(resp => {
-        console.log(resp.data);
-        console.log(resp.data.results[0]);
         const searchResult = resp.data.results[0];
 
         if (searchResult) {
@@ -75,13 +71,11 @@ class App extends Component {
             }
           });
         }
-        console.log(this.state.movieDetails);
       }
     );
   }
 
   handleAddMovie(event, attributes) {
-    console.log(attributes);
     axios.post('http://localhost:4000/savedMovies', attributes)
       .then(resp => {
         // console.log(resp.data);

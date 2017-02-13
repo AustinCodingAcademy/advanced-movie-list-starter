@@ -6,6 +6,7 @@ import './MovieList.css';
 const MovieList = props => {
   return (
     <Row>
+      <hr />
       <ul className="movie-list">
         <h1>Movie List</h1>
         {props.savedMovies.map(savedMovie => {
@@ -19,8 +20,6 @@ const MovieList = props => {
             </Col>
           );
         })}
-
-
       </ul>
     </Row>
   );

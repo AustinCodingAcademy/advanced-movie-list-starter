@@ -5,7 +5,7 @@ const MovieListItem = props => {
   return (
     <li>
       <img src={props.posterPath} alt="movie poster" />
-      <h3>{props.title}</h3>
+      <h5>{props.title}</h5>
       <Button
         onClick={event => props.onClickRemoveMovie(event, props._id)}
         type="button"
