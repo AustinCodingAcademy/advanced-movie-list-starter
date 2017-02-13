@@ -1,0 +1,13 @@
+.search-component{
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+.search-bar {
+  width: 80%;
+  float: left;
+}
+
+.search-button{
+  float: left;
+}
