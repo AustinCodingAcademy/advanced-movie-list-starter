@@ -12,6 +12,7 @@ const MovieList = props => {
             poster={movie.poster_path}
             title={movie.title}
             overview={movie.overview}
+            addFavorite={props.addFavorite}
         />
         );
       })}
@@ -22,6 +23,7 @@ const MovieList = props => {
 // Props Validation
 MovieList.propTypes = {
   returnedMovies: React.PropTypes.array.isRequired,
+  addFavorite: React.PropTypes.func.isRequired
 };
 
 

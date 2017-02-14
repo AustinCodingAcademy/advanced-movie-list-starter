@@ -10,7 +10,10 @@ const Movie = props => {
         />
       </div>
       <div className="MovieTitle">
-        <h3>{props.title}</h3>
+        <h2>{props.title}</h2>
+      </div>
+      <div className="AddButton" onSubmit={(event) => props.addFavorite(event)}>
+        <button type="submit">Add to Favorites!</button>
       </div>
     </div>
   );
@@ -21,6 +24,7 @@ const Movie = props => {
 Movie.propTypes = {
   poster: React.PropTypes.string.isRequired,
   title: React.PropTypes.string.isRequired,
+  addFavorite: React.PropTypes.func.isRequired
 };
 
 

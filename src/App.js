@@ -3,6 +3,8 @@ import axios from 'axios';
 import Movie from './Movie';
 import MovieList from './MovieList';
 import SearchBar from './SearchBar';
+// import MovieShowcase from './MovieShowcase';
+
 
 // Movie List app components:
 // search, movie poster, selected movie screen,
@@ -20,8 +22,42 @@ class App extends Component {
     this.state = {
       searchText: '',
       movie: [],
-      returnedMovies: []
+      returnedMovies: [],
+      favorites: []
     };
+  }
+
+
+  componentDidMount() {
+    axios.get('http://localhost:4000/favorites')
+        .then(resp => {
+          this.setState({
+            contacts: resp.data
+          });
+        })
+        .catch(err => {
+          return ('No favorites yet!');
+        });
+  }
+
+  // Adding a Favorite!
+  handleAddFavorite() {
+    axios.post('http://localhost:4000/favorites')
+    .then(resp => {
+      this.setState({
+        favorites: [...this.state.favorites, resp.data]
+      });
+    })
+    .catch(err => console.log(err));
+  }
+
+
+  // Deleting a Favorite. We all make mistakes.
+  handleDeleteFavorite() {
+    axios.delete('http://localhost:4000/favorites')
+    .then(() => {
+      this.setState();
+    });
   }
 
 
@@ -33,6 +69,8 @@ class App extends Component {
       searchText: event.target.value
     });
   }
+
+
 
 // Axios Movie Search Request
   handleMovieSearch(event) {
@@ -47,6 +85,8 @@ class App extends Component {
     })
     .catch(err => console.error('Error! $(err)'));
   }
+
+
 
 // Shows up to User
   render() {
@@ -63,6 +103,7 @@ class App extends Component {
         <div className="MovieList">
           <MovieList
             returnedMovies={this.state.returnedMovies}
+            addFavorite={this.handleAddFavorite.bind(this)}
           />
         </div>
       </div>
