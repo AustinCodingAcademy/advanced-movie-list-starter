@@ -5,13 +5,14 @@ const Favorites = props => {
   return (
     <div className="favorites-list">
       <h1>Favorite Movies</h1>
-      <ul className="favorite-movies-list">
+      <ul className="favorite-movies-list row">
         {props.favoriteMovies.map(movie => {
           return (
             <FavoriteMovie
-              key={movie._id}
-              poster={movie.poster_path}
+              key={movie.id}
+              posterPath={movie.poster_path}
               title={movie.title}
+              onClickRemove={props.onClickRemove}
             />
           );
         })}
@@ -23,5 +24,6 @@ const Favorites = props => {
 export default Favorites;
 
 Favorites.propTypes = {
-  favoriteMovies: React.PropTypes.array
+  favoriteMovies: React.PropTypes.array,
+  onClickRemove: React.PropTypes.func.isRequired
 };

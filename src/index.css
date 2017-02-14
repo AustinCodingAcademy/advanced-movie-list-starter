@@ -5,6 +5,9 @@ body {
   width: 75%;
   margin: 0 auto;
 }
+ul {
+  list-style-type: none;
+}
 #search input {
   font-size: 25px;
   padding: 5px;
@@ -21,4 +24,8 @@ body {
   padding-top: 20px;
 
 
+}
+.favorite-movie {
+  padding: 25px;
+  margin-bottom: 100px;
 }

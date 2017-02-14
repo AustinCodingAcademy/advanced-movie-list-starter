@@ -19,14 +19,14 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // debugger;
     axios.get('http://localhost:4000/movies')
       .then(resp => {
         this.setState({
           favoriteMovies: resp.data
         });
-        console.log("Returned Favs");
       })
-      .catch(err => console.log('Local network request error: ' + err));
+      .catch(err => console.log(err));
   }
 
   handleSearchMovie() {
@@ -36,12 +36,20 @@ class App extends Component {
           searchResult: resp.data.results[0],
 
         });
+        console.log(resp.data.results[0]);
       });
   }
 
   handleSearchTextChange(event) {
     this.setState({
       movieTitleSearched: event.target.value
+    });
+  }
+
+  handleCloseSearchResult() {
+    this.setState({
+      searchResult: null,
+      movieTitleSearched: ''
     });
   }
 
@@ -54,13 +62,13 @@ class App extends Component {
       });
   }
 
-  handleCloseSearchResult() {
+  handleRemoveFavorite(id) {
     this.setState({
-      searchResult: null,
-      movieTitleSearched: ''
+      favoriteMovies: this.state.favoriteMoves.filter(() => {
+        return this.state.favoriteMove.id !== id;
+      })
     });
   }
-
 
   //   R E N D E R
 
@@ -96,6 +104,7 @@ class App extends Component {
         <hr />
         <Favorites
           favoriteMovies={this.state.favoriteMovies}
+          onClickRemove={this.props.handleRemoveFavorite.bind(this)}
         />
 
 

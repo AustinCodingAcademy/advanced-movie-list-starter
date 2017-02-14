@@ -3,11 +3,11 @@ import MoviePoster from './MoviePoster';
 
 const FavoriteMovie = props => {
   return (
-    <li className="favorite-movie">
+    <li className="favorite-movie col-xs-4">
       <MoviePoster
         posterPath={props.posterPath}
       />
-      <h2>{props.title}</h2>
+      <h4>{props.title}</h4>
       <button onClick={() => props.onClickRemove()}>
         Remove
       </button>
