@@ -1,0 +1,8 @@
+.MovieListItem {
+  width: 200px;
+  padding: 25px;
+}
+
+.MovieListItem .btn-remove {
+  width: 100%;
+}
