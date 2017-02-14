@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Movie from './Movie';
 import MovieList from './MovieList';
 import SearchBar from './SearchBar';
 // import MovieShowcase from './MovieShowcase';
@@ -21,28 +20,31 @@ class App extends Component {
 
     this.state = {
       searchText: '',
-      movie: [],
       returnedMovies: [],
       favorites: []
     };
   }
 
 
+
   componentDidMount() {
-    axios.get('http://localhost:4000/favorites')
+    axios.get('http://localhost:4000/movies')
         .then(resp => {
           this.setState({
-            contacts: resp.data
+            favorites: resp.data,
+
+
           });
         })
         .catch(err => {
           return ('No favorites yet!');
         });
+
   }
 
   // Adding a Favorite!
-  handleAddFavorite() {
-    axios.post('http://localhost:4000/favorites')
+  handleAddFavorite(attributes) {
+    axios.post('http://localhost:4000/movies', attributes)
     .then(resp => {
       this.setState({
         favorites: [...this.state.favorites, resp.data]
@@ -94,6 +96,16 @@ class App extends Component {
       <div className="App">
         <h1>The My-terion Collection.</h1>
         <h3>You love it.</h3>
+        <div className="favorites">
+          {this.state.favorites.map(favorite =>
+            <div key={favorite.id}>
+              <h3 key={favorite.id}> {favorite.title}
+              </h3>
+              <img src={`https://image.tmdb.org/t/p/w154${favorite.poster_path}`}
+              />
+            </div>
+         )}
+        </div>
         <SearchBar
           name="searchBar"
           value={this.state.searchText}

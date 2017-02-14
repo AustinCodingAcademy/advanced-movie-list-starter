@@ -12,8 +12,10 @@ const Movie = props => {
       <div className="MovieTitle">
         <h2>{props.title}</h2>
       </div>
-      <div className="AddButton" onSubmit={(event) => props.addFavorite(event)}>
-        <button type="submit">Add to Favorites!</button>
+      <div className="AddButton">
+        <button type="submit"
+          onSubmit={(event) => props.addFavorite(event)}>Add to Favorites!
+          </button>
       </div>
     </div>
   );
