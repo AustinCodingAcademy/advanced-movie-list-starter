@@ -3,9 +3,9 @@ import {
   Row,
   Well
 } from 'react-bootstrap';
-import MovieItem from './MovieItem';
+import AddedMovie from '../AddedMovie';
 
-class MovieList extends Component {
+class AddedMovies extends Component {
 
   render() {
     return (
@@ -13,12 +13,12 @@ class MovieList extends Component {
         <Row className="show-grid">
           {this.props.movies.map(movie => {
             return (
-              <MovieItem
-                key={movie.id}
+              <AddedMovie
+                key={movie._id}
                 title={movie.title}
                 poster={movie.poster_path}
                 desc={movie.overview}
-                onButtonClick={() => this.props.AddMovie(movie)}
+                onButtonClick={() => this.props.RemoveMovie(movie._id)}
               />
             );
           })}
@@ -28,8 +28,8 @@ class MovieList extends Component {
   }
 }
 
-MovieList.propTypes = {
+AddedMovies.propTypes = {
   movies: PropTypes.array.isRequired,
-  AddMovie: PropTypes.func
+  RemoveMovie: PropTypes.func
 };
-export default MovieList;
+export default AddedMovies;

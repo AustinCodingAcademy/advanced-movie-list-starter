@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import MovieList from './MovieList';
-import SearchBar from './SearchBar';
-import AddedMovies from './AddedMovies';
+import MovieList from './components/MovieList';
+import SearchBar from './components/SearchBar';
+import AddedMovies from './components/AddedMovies';
 import {
   Grid,
   Row,
   Col,
-  Jumbotron,
   PageHeader
 } from 'react-bootstrap';
 
@@ -21,21 +20,6 @@ class App extends Component {
       movies: [],
       addedMovies: []
     };
-  }
-
-  // addMovies() {
-  //   const searchMovie = 'jaws';
-  //   axios.get(`https://api.themoviedb.org/3/search/movie?api_key=fde54a01d27516539d182393c4aab6d5&language=en-US&query=${searchMovie}&page=1&include_adult=false`)
-  //     .then(
-  //       resp => this.update(resp.data.results)
-  //     );
-  // }
-
-  showAdded() {
-    axios.get('http://localhost:4000/addedMovies')
-      .then(
-        resp => this.updateAdded(resp.data.results)
-      );
   }
 
   updateAdded(data) {
@@ -51,8 +35,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // this.addMovies();
-    this.showAdded();
     axios.get('http://localhost:4000/addedMovies')
       .then(resp => {
         this.setState({
@@ -62,16 +44,6 @@ class App extends Component {
       })
       .catch(err => console.log(`Error! ${err}`));
   }
-
-  // handleAddMovie(attributes) {
-  //   axios.post('http://localhost:4000/movies', attributes)
-  //     .then(resp => {
-  //       this.setState({
-  //         movies: [...this.state.movies, resp.data]
-  //       });
-  //     })
-  //     .catch(err => console.log(err));
-  // }
 
   handleAddMovie(attributes) {
     const newMovies = this.state.movies.filter(movie => movie.id !== attributes.id);
@@ -85,7 +57,6 @@ class App extends Component {
   }
 
   handleRemoveMovie(id) {
-    console.log(id);
     axios.delete(`http://localhost:4000/addedMovies/${id}`)
       .then(resp => {
         const newMovies = this.state.addedMovies.filter(movie => movie._id !== id);
