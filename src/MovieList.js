@@ -11,6 +11,7 @@ const MovieList = props => {
             id={index}
             poster={movie.poster_path}
             title={movie.title}
+            overview={movie.overview}
         />
         );
       })}

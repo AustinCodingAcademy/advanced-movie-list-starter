@@ -6,7 +6,7 @@ const Movie = props => {
       <div className="Poster">
         <img
           alt="movie poster"
-          src={'https://image.tmdb.org/t/p/w154${props.poster}'}
+          src={`https://image.tmdb.org/t/p/w154${props.poster}`}
         />
       </div>
       <div className="MovieTitle">
