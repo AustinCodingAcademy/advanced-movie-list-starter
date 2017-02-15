@@ -1,3 +1,82 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "poster_path": "/v8ZGSrBhDLR6b3mYYMlAO5X6458.jpg",
+      "adult": false,
+      "overview": "Two divers find a treasure map, which apparently points to a sunken treasure below the ocean. They hire a professional to help them get the gold but this guy turns out to have a few secrets of his own.",
+      "release_date": "1974-03-15",
+      "genre_ids": [
+        18
+      ],
+      "id": 95080,
+      "original_title": "Ein toter Taucher nimmt kein Gold",
+      "original_language": "de",
+      "title": "Deadly Jaws",
+      "backdrop_path": "/tTiSYUFf58vI9aRGxqBJCZxC9JU.jpg",
+      "popularity": 1.000001,
+      "vote_count": 1,
+      "video": false,
+      "vote_average": 0,
+      "_id": 1
+    },
+    {
+      "poster_path": "/v8ZGSrBhDLR6b3mYYMlAO5X6458.jpg",
+      "adult": false,
+      "overview": "Two divers find a treasure map, which apparently points to a sunken treasure below the ocean. They hire a professional to help them get the gold but this guy turns out to have a few secrets of his own.",
+      "release_date": "1974-03-15",
+      "genre_ids": [
+        18
+      ],
+      "id": 95080,
+      "original_title": "Ein toter Taucher nimmt kein Gold",
+      "original_language": "de",
+      "title": "Deadly Jaws",
+      "backdrop_path": "/tTiSYUFf58vI9aRGxqBJCZxC9JU.jpg",
+      "popularity": 1.000001,
+      "vote_count": 1,
+      "video": false,
+      "vote_average": 0,
+      "_id": 2
+    },
+    {
+      "poster_path": "/zzGtimy1mUJYDjFjCmn2dpHREGV.jpg",
+      "adult": false,
+      "overview": "The sequel to the successful blockbuster Jaws. An American horror thriller from 1978 about a great white that brings fear to everyone near the water. The film used it’s predecessor’s success to achieve it’s own and was not directed by Steven Spielberg but Jeannot Szwarc who made an entertaining and thrilling  sequel.",
+      "release_date": "1978-06-16",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 579,
+      "original_title": "Jaws 2",
+      "original_language": "en",
+      "title": "Jaws 2",
+      "backdrop_path": "/pUVaVyWFBRCRSuu6M0rFcyqAwQx.jpg",
+      "popularity": 2.460678,
+      "vote_count": 198,
+      "video": false,
+      "vote_average": 5.5,
+      "_id": 3
+    },
+    {
+      "poster_path": "/ssDizT0itTUaAdHoVrxRElo7Q1A.jpg",
+      "adult": false,
+      "overview": "After another deadly shark attack, Ellen Brody decides she has had enough of New England's Amity Island and moves to the Caribbean to join her son, Michael, and his family. But a great white shark has followed her there, hungry for more lives.",
+      "release_date": "1987-07-17",
+      "genre_ids": [
+        12,
+        53
+      ],
+      "id": 580,
+      "original_title": "Jaws: The Revenge",
+      "original_language": "en",
+      "title": "Jaws: The Revenge",
+      "backdrop_path": "/ySH9Jusrh4zKeQf05Ue0W4lqx3U.jpg",
+      "popularity": 2.347782,
+      "vote_count": 123,
+      "video": false,
+      "vote_average": 3.6,
+      "_id": 4
+    }
+  ]
 }
