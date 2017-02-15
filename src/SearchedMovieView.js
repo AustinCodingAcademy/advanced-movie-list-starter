@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBarForm from './SearchBarForm';
+
 
 const SearchedMovieView = props => {
   return (
@@ -11,7 +11,9 @@ const SearchedMovieView = props => {
       <div className="movieOverview">
         <p>{props.movieOverview}</p>
       </div>
-      <button className="add-button">Add Movie to List</button>
+      <button className="add-button" onClick={() => props.onClick(props.movies)}>
+        Add Movie to List
+      </button>
       <button className="dismiss-button" onClick={() => props.onDelete(props.searchedMovie)}>
         Dismiss
       </button>
@@ -22,7 +24,8 @@ const SearchedMovieView = props => {
 SearchedMovieView.propTypes = {
   movieTitle: React.PropTypes.string.isRequired,
   posterPath: React.PropTypes.string.isRequired,
-  movieOverview: React.PropTypes.string.isRequired
+  movieOverview: React.PropTypes.string.isRequired,
+  onDelete: React.PropTypes.func.isRequired
 };
 
 export default SearchedMovieView;

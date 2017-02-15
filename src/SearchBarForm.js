@@ -22,7 +22,7 @@ class SearchBarForm extends Component {
 
   handleReset() {
     this.setState({
-      title: []
+      title: ''
     });
   }
 

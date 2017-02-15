@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBarForm from './SearchBarForm';
 import SearchedMovieView from './SearchedMovieView';
+import MovieList from './MovieList';
 import axios from 'axios';
 import './App.css';
 
@@ -12,6 +13,18 @@ class App extends Component {
       movies: [],
       searchedMovie: null
     };
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:4000/movies')
+    .then(resp => {
+      this.setState({
+        movies: resp.data
+      });
+    })
+    .catch(err => {
+      console.log(`Error! ${err}`);
+    });
   }
 
 
@@ -28,8 +41,31 @@ class App extends Component {
     this.setState({
       searchedMovie: null
     });
-
   }
+
+  handleAddSearchedMovie() {
+    axios.post('http://localhost:4000/movies/')
+      .then((resp) => {
+        console.log(resp.data);
+        this.setState({
+          movies: [...this.state.movies, resp.data],
+          searchedMovie: null
+        });
+      });
+  }
+
+//  renderAddMovie() {
+  //  if (this.state.movies) {
+  //    return (
+  //      <MovieList
+  //        posterPath={this.state.movies.poster_path}
+  //        movieTitle={this.state.movies.title}
+  //        movieOverview={this.state.movies.overview}
+  //        onClick={this.handleAddSearchedMovie.bind(this)}
+  //      />
+  //    );
+  //  }
+  // }
 
   renderSearchedMovieView() {
     if (this.state.searchedMovie) {
@@ -39,22 +75,23 @@ class App extends Component {
           movieTitle={this.state.searchedMovie.title}
           movieOverview={this.state.searchedMovie.overview}
           onDelete={this.handleDeleteSearchedMovie.bind(this)}
+          onClick={this.handleAddSearchedMovie.bind(this)}
         />
       );
     }
   }
-
 
   render() {
     return (
       <div className="App container-fluid">
         <h1>Movie List</h1>
         <SearchBarForm
-          value={this.state.title}
-        //  movies={this.title}
           handleSearch={this.handleSearch.bind(this)}
-          onSubmit={this.handleSearchMovie}
-
+          handleAddSearchedMovie={this.handleAddSearchedMovie.bind(this)}
+        />
+        <MovieList
+          movies={this.state.movies}
+          onSubmit={this.handleAddSearchedMovie.bind(this)}
         />
         {this.renderSearchedMovieView()}
       </div>
