@@ -1,20 +1,20 @@
 import React, {PropTypes} from 'react';
-import MovieListItem from './MovieListItem';
+import MovieToAdd from './MovieToAdd';
 
 /* eslint-disable camelcase */
-const MovieList = props => {
-  if (props.movies.length > 0) {
+const MovieToAddList = props => {
+  if (props.moviesToAdd.length > 0) {
     return (
       <div>
-        {props.movies.map((movie, index) => {
+        {props.moviesToAdd.map((movie, index) => {
           return (
-            <MovieListItem
+            <MovieToAdd
               key={index}
               poster_path={movie.poster_path}
               title={movie.title}
               release_date={movie.release_date}
               overview={movie.overview}
-              onDeleteMovieClick={() => props.deleteMovie(movie._id)}
+              onAddMovieClick={() => props.addMovie(movie)}
             />
           );
         })}
@@ -23,12 +23,12 @@ const MovieList = props => {
   }
 
   return (
-    <h3>No Movies Selected</h3>
+    <h3>No Results</h3>
   );
 };
 
-MovieList.propTypes = {
-  movies: PropTypes.array.isRequired
+MovieToAddList.propTypes = {
+  moviesToAdd: PropTypes.array.isRequired
 };
 
-export default MovieList;
+export default MovieToAddList;
