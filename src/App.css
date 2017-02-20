@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* Title and Search Bar section */
 .search-bar {
   padding-bottom: 30px;
 }
@@ -24,4 +25,9 @@
   padding: 0px 10px;
   color: white;
   background-color: black;
+}
+
+/* Movie list section */
+.movie-detail {
+  padding: 15px;
 }

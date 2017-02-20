@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Movie = props => {
+const FavMovie = props => {
   return (
-    <div className="movie-detail col-lg-4">
+    <div className="movie-detail col-lg-3">
       <div className="poster">
         <img
           alt="poster"
@@ -14,11 +14,7 @@ const Movie = props => {
         <p>{props.overview}</p>
       </div>
       <button
-        className="addMovieButton"
-        onClick={() => props.onAddMovie(props.id)}>Add to Favorites
-      </button>
-      <button
-        className="removeMovieButton"
+        className="deleteMovieButton"
         onClick={() => props.onRemoveMovie(props.id)}>Remove Movie
       </button>
     </div>
@@ -27,13 +23,12 @@ const Movie = props => {
 
 
 // ESLint React prop-type validation
-Movie.propTypes = {
+FavMovie.propTypes = {
   id: React.PropTypes.number.isReqiuired,
   poster: React.PropTypes.string.isRequired,
   originalTitle: React.PropTypes.string.isReqiuired,
   overview: React.PropTypes.string.isReqiuired,
-  onAddMovie: React.PropTypes.func.isReqiuired,
   onRemoveMovie: React.PropTypes.func.isReqiuired
 };
 
-export default Movie;
+export default FavMovie;

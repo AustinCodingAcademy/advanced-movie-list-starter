@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 import MovieList from './MovieList';
+import FavMovieList from './FavMovieList';
 import axios from 'axios';
 import './App.css';
 
@@ -13,7 +14,8 @@ class App extends Component {
     this.state = {
       searchText: '',
       movies: [],
-      returnedMovies: []
+      returnedMovies: [],
+      selectedFavMovies: []
     };
   }
 
@@ -30,6 +32,8 @@ class App extends Component {
 // ---------Axios Movie DB API Request function--------- //
 
   handleSearchForMovie(event) {
+    event.preventDefault();
+
     const movie = this.state.searchText;
 
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${movie}&page=1&include_adult=false`)
@@ -46,7 +50,18 @@ class App extends Component {
   }
 
 
-// ---------Axios HTTP Delete function --------- //
+// ---------Axios HTTP Post/Delete (add/delete) functions --------- //
+
+  handleAddMovie(attributes) {
+    // Adds movie to favorites list
+    axios.post('http://localhost:4000/movies', attributes)
+      .then(resp => {
+        this.setState({
+          selectedFavMovies: this.state.favoriteMovies.concat([resp.data])
+        });
+      })
+      .catch(err => console.error(err));
+  }
 
   handleRemoveMovie(id) {
     // Deletes movie from movie list
@@ -62,28 +77,41 @@ class App extends Component {
   }
 
 
-
-
-
 // ---------Renders to the DOM --------- //
 
   render() {
     return (
-      <div className="App">
-        <h1>Movie List</h1>
-        <div className="search-bar">
-          <SearchBar
-            value={this.state.searchText}
-            onChange={this.handleSearchBarChange.bind(this)}
-            onClick={this.handleSearchForMovie.bind(this)}
-          />
+      <div className="row App">
+
+        <div className="title-search col-lg-12">
+          <h1>Movie List</h1>
+          <div className="search-bar">
+            <SearchBar
+              value={this.state.searchText}
+              onChange={this.handleSearchBarChange.bind(this)}
+              onSubmit={this.handleSearchForMovie.bind(this)}
+            />
+          </div>
         </div>
-        <div className="movie-list">
-          <MovieList
-            returnedMovies={this.state.returnedMovies}
+
+        <div className="row">
+          <div className="movie-applist col-lg-12">
+            <MovieList
+              returnedMovies={this.state.returnedMovies}
+              onAddMovie={this.handleAddMovie.bind(this)}
+              onRemoveMovie={this.handleRemoveMovie.bind(this)}
+            />
+          </div>
+        </div>
+
+        <div className="row">
+          <h2>Favorite Movies</h2>
+          <FavMovieList
+            selectedFavMovies={this.state.selectedFavMovies}
             onRemoveMovie={this.handleRemoveMovie.bind(this)}
           />
         </div>
+
       </div>
     );
   }

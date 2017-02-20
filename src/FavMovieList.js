@@ -1,18 +1,17 @@
 import React from 'react';
-import Movie from './Movie';
+import FavMovie from './FavMovie';
 
-const MovieList = props => {
+const FavMovieList = props => {
   return (
     <div className="movie-list col-lg-12">
-      {props.returnedMovies.map((movie, index) => {
+      {props.selectedFavMovies.map((movie, index) => {
         return (
-          <Movie
+          <FavMovie
             key={index}
             id={movie.id}
             poster={movie.poster_path}
             originalTitle={movie.original_title}
             overview={movie.overview}
-            onAddMovie={props.onAddMovie}
             onRemoveMovie={props.onRemoveMovie}
           />
         );
@@ -22,10 +21,9 @@ const MovieList = props => {
 };
 
 // ESLint React prop-type validation
-MovieList.propTypes = {
-  returnedMovies: React.PropTypes.array.isRequired,
-  onAddMovie: React.PropTypes.func.isRequired,
+FavMovieList.propTypes = {
+  selectedFavMovies: React.PropTypes.array.isRequired,
   onRemoveMovie: React.PropTypes.func.isRequired
 };
 
-export default MovieList;
+export default FavMovieList;
