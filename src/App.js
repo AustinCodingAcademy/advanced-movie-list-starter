@@ -29,7 +29,17 @@ class App extends Component {
   }
 
 
-// ---------Axios Movie DB API Request function--------- //
+// ---------Axios Movie DB API & localhost Get Request functions--------- //
+
+  componentDidMount() {
+    axios.get('http://localhost:4000/movies')
+      .then(resp => {
+        this.setState({
+          movies: resp.data
+        });
+      })
+      .catch(err => console.log(`Error! ${err}`));
+  }
 
   handleSearchForMovie(event) {
     event.preventDefault();
@@ -57,7 +67,7 @@ class App extends Component {
     axios.post('http://localhost:4000/movies', attributes)
       .then(resp => {
         this.setState({
-          selectedFavMovies: this.state.favoriteMovies.concat([resp.data])
+          selectedFavMovies: this.state.selectedFavMovies.concat([resp.data]),
         });
       })
       .catch(err => console.error(err));
@@ -66,11 +76,11 @@ class App extends Component {
   handleRemoveMovie(id) {
     // Deletes movie from movie list
     axios.delete(`http://localhost:4000/movies/${id}`)
-      .then(resp => {
+      .then(() => {
         const newRemovedMovies = this.state.movies.filter(movie => movie.id !== id);
 
         this.setState({
-          returnedMovies: newRemovedMovies
+          selectedFavMovies: newRemovedMovies
         });
       })
       .catch(err => console.log(`Error! ${err}`));
@@ -99,7 +109,6 @@ class App extends Component {
             <MovieList
               returnedMovies={this.state.returnedMovies}
               onAddMovie={this.handleAddMovie.bind(this)}
-              onRemoveMovie={this.handleRemoveMovie.bind(this)}
             />
           </div>
         </div>

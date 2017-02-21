@@ -2,7 +2,7 @@ import React from 'react';
 
 const Movie = props => {
   return (
-    <div className="movie-detail col-lg-4">
+    <div className="movie-detail col-lg-6">
       <div className="poster">
         <img
           alt="poster"
@@ -12,15 +12,11 @@ const Movie = props => {
       <div className="movieTitle">
         <h2>{props.originalTitle}</h2>
         <p>{props.overview}</p>
+        <button
+          className="addMovieButton"
+          onClick={() => props.onAddMovie(props.id)}>Add to Favorites
+        </button>
       </div>
-      <button
-        className="addMovieButton"
-        onClick={() => props.onAddMovie(props.id)}>Add to Favorites
-      </button>
-      <button
-        className="removeMovieButton"
-        onClick={() => props.onRemoveMovie(props.id)}>Remove Movie
-      </button>
     </div>
   );
 };
@@ -32,8 +28,7 @@ Movie.propTypes = {
   poster: React.PropTypes.string.isRequired,
   originalTitle: React.PropTypes.string.isReqiuired,
   overview: React.PropTypes.string.isReqiuired,
-  onAddMovie: React.PropTypes.func.isReqiuired,
-  onRemoveMovie: React.PropTypes.func.isReqiuired
+  onAddMovie: React.PropTypes.func.isReqiuired
 };
 
 export default Movie;

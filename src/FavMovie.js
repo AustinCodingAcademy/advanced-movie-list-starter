@@ -2,7 +2,7 @@ import React from 'react';
 
 const FavMovie = props => {
   return (
-    <div className="movie-detail col-lg-3">
+    <div className="movie-detail col-lg-6">
       <div className="poster">
         <img
           alt="poster"

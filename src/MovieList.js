@@ -13,7 +13,6 @@ const MovieList = props => {
             originalTitle={movie.original_title}
             overview={movie.overview}
             onAddMovie={props.onAddMovie}
-            onRemoveMovie={props.onRemoveMovie}
           />
         );
       })}
@@ -24,8 +23,7 @@ const MovieList = props => {
 // ESLint React prop-type validation
 MovieList.propTypes = {
   returnedMovies: React.PropTypes.array.isRequired,
-  onAddMovie: React.PropTypes.func.isRequired,
-  onRemoveMovie: React.PropTypes.func.isRequired
+  onAddMovie: React.PropTypes.func.isRequired
 };
 
 export default MovieList;
