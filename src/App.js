@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/movies')
+    axios.get('/movies')
       .then(response => {
         this.setState({
           movies: response.data
@@ -23,11 +23,11 @@ class App extends Component {
   }
 
   handleAddMovie(movie) {
-    console.log(movie);
-    const newList = [movie].concat(this.state.movies);
 
-    axios.post('http://localhost:4000/movies', movie)
-      .then(() => {
+    axios.post('/movies', movie)
+      .then((response) => {
+        console.log(response.data);
+        const newList = [response.data].concat(this.state.movies);
         this.setState({
           movies: newList
         });
@@ -41,7 +41,8 @@ class App extends Component {
     const newList = this.state.movies.filter(movie => {
       return movie._id !== id;
     });
-    axios.delete(`http://localhost:4000/movies/${id}`)
+    console.log(id);
+    axios.delete(`/movies/${id}`)
       .then(() => {
         this.setState({
           movies: newList

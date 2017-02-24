@@ -20,6 +20,13 @@
       "posterPath": "https://image.tmdb.org/t/p/w154/zzGtimy1mUJYDjFjCmn2dpHREGV.jpg",
       "overview": "The sequel to the successful blockbuster Jaws. An American horror thriller from 1978 about a great white that brings fear to everyone near the water. The film used it’s predecessor’s success to achieve it’s own and was not directed by Steven Spielberg but Jeannot Szwarc who made an entertaining and thrilling  sequel.",
       "releaseDate": "1978-06-16"
+    },
+    {
+      "_id": 43074,
+      "title": "Ghostbusters",
+      "posterPath": "https://image.tmdb.org/t/p/w154/4qnJ1hsMADxzwnOmnwjZTNp0rKT.jpg",
+      "overview": "Following a ghost invasion of Manhattan, paranormal enthusiasts Erin Gilbert and Abby Yates, nuclear engineer Jillian Holtzmann, and subway worker Patty Tolan band together to stop the otherworldly threat in a movie that dishonors the source material.",
+      "releaseDate": "2016-07-14"
     }
   ]
 }

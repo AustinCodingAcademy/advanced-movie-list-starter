@@ -28,7 +28,6 @@ class SearchArea extends Component {
       .then(response => {
         if (response.data.results.length > 0) {
           const {
-            id: _id,
             title,
             overview,
             release_date: releaseDate
@@ -38,7 +37,6 @@ class SearchArea extends Component {
 
           this.setState({
             searchResult: {
-              _id,
               title,
               posterPath,
               overview,
