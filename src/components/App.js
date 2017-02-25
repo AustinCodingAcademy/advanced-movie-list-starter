@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   getMoviesFromDB() {
-    axios.get('http://localhost:4000/savedMovies')
+    axios.get('http://localhost:3001/movies')
       .then(resp => {
         this.setState({
           savedMovies: resp.data
@@ -76,7 +76,7 @@ class App extends Component {
   }
 
   handleAddMovie(event, attributes) {
-    axios.post('http://localhost:4000/savedMovies', attributes)
+    axios.post('http://localhost:3001/movies', attributes)
       .then(resp => {
         // console.log(resp.data);
         this.setState({
@@ -87,7 +87,7 @@ class App extends Component {
   }
 
   handleRemoveMovie(event, index) {
-    axios.delete(`http://localhost:4000/savedMovies/${index}`)
+    axios.delete(`http://localhost:3001/movies/${index}`)
       .then(() => {
         const newSavedMovies = this.state.savedMovies.filter(
           savedMovie => savedMovie._id !== index

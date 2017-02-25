@@ -7,25 +7,34 @@ import {
 import './MovieDetails.css';
 
 const MovieDetails = props => {
+  const {movieDetails: {
+    posterPath,
+    title,
+    releaseDate,
+    overview,
+    display
+  }} = props;
+
   let searchResult;
+
   const attributes = {
-    posterPath: props.movieDetails.posterPath,
-    title: props.movieDetails.title,
-    releaseDate: props.movieDetails.releaseDate,
-    overview: props.movieDetails.overview
+    posterPath,
+    title,
+    releaseDate,
+    overview
   };
 
   if (!props.movieDetails.noResultFound) {
     searchResult = (
       <Row className={
-        props.movieDetails.display ? 'movie-details-visible' : 'movie-details-hidden'
+        display ? 'movie-details-visible' : 'movie-details-hidden'
       }>
         <Col>
           <section>
-            <img src={props.movieDetails.posterPath} alt="movie poster" />
-            <h3>{props.movieDetails.title}</h3>
-            <h5>{props.movieDetails.releaseDate}</h5>
-            <p>{props.movieDetails.overview}</p>
+            <img src={posterPath} alt="movie poster" />
+            <h3>{title}</h3>
+            <h5>{releaseDate}</h5>
+            <p>{overview}</p>
           </section>
           <Button
             onClick={event => props.onClickAddMovie(event, attributes)}
@@ -51,7 +60,7 @@ const MovieDetails = props => {
   } else {
     searchResult = (
       <Row className={
-        props.movieDetails.display ? 'movie-details-visible' : 'movie-details-hidden'
+        display ? 'movie-details-visible' : 'movie-details-hidden'
       }>
         <Col>
           <section>

@@ -23,7 +23,7 @@ const MovieListItem = props => {
 MovieListItem.propTypes = {
   posterPath: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  _id: PropTypes.number.isRequired,
+  _id: PropTypes.string.isRequired,
   onClickRemoveMovie: PropTypes.func.isRequired
 };
 
