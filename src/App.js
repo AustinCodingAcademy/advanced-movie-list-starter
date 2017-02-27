@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar';
+import AddMovie from './AddMovie';
 import MovieList from './MovieList';
 import FavMovieList from './FavMovieList';
 import axios from 'axios';
@@ -15,6 +16,7 @@ class App extends Component {
       searchText: '',
       movies: [],
       returnedMovies: [],
+      addMovie: {},
       selectedFavMovies: []
     };
   }
@@ -38,6 +40,7 @@ class App extends Component {
           movies: resp.data
         });
       })
+      /* eslint no-console: 0*/
       .catch(err => console.log(`Error! ${err}`));
   }
 
@@ -62,12 +65,14 @@ class App extends Component {
 
 // ---------Axios HTTP Post/Delete (add/delete) functions --------- //
 
-  handleAddMovie(attributes) {
+  handleAddMovie(movie) {
     // Adds movie to favorites list
-    axios.post('http://localhost:4000/movies', attributes)
+    axios.post('http://localhost:4000/movies', movie)
       .then(resp => {
         this.setState({
-          selectedFavMovies: this.state.selectedFavMovies.concat([resp.data]),
+          selectedFavMovies: [...this.state.selectedFavMovies, resp.data],
+          addMovie: {},
+          searchText: ''
         });
       })
       .catch(err => console.error(err));
