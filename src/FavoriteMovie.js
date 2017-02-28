@@ -8,7 +8,7 @@ const FavoriteMovie = props => {
         posterPath={props.posterPath}
       />
       <h4>{props.title}</h4>
-      <button onClick={() => props.onClickRemove()}>
+      <button onClick={() => props.onClickRemove(props.id)}>
         Remove
       </button>
     </li>
@@ -18,7 +18,8 @@ const FavoriteMovie = props => {
 export default FavoriteMovie;
 
 FavoriteMovie.propTypes = {
-  posterPath: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
-  onClickRemove: React.PropTypes.func.isRequired
+  posterPath: React.PropTypes.string,
+  title: React.PropTypes.string,
+  onClickRemove: React.PropTypes.func.isRequired,
+  id: React.PropTypes.number
 };

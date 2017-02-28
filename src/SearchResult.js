@@ -1,32 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import MoviePoster from './MoviePoster';
 
-const SearchResult = props => {
-  return (
-    <section className="search-result row">
-      <div className="col-xs-4">
+class SearchResult extends Component {
 
-        <MoviePoster posterPath={props.posterPath} />
+  render() {
+    return (
+      <section className="search-result row">
+        <div className="col-xs-4">
 
-      </div>
-      <div className="col-xs-8">
-        <h3 className="searched-movie-title">
-          {props.searchedMovieTitle}
-        </h3>
-        <p className="searched-movie-description">
-          {props.searchedMovieOverview}
-        </p>
-        <br />
-        <button onClick={() => {props.onAddToFavs(event);}}>
-          Add
-        </button>
-        <button onClick={() => {props.onCloseSearchResult();}}>
-          Close
-        </button>
-      </div>
-    </section>
-  );
-};
+          <MoviePoster posterPath={this.props.posterPath} />
+
+        </div>
+        <div className="col-xs-8">
+          <h3 className="searched-movie-title">
+            {this.props.searchedMovieTitle}
+          </h3>
+          <p className="searched-movie-description">
+            {this.props.searchedMovieOverview}
+          </p>
+          <br />
+          <button onClick={this.props.onAddToFavs}>
+            Add
+          </button>
+          <button onClick={() => {this.props.onCloseSearchResult();}}>
+            Close
+          </button>
+        </div>
+      </section>
+    );
+  };
+  }
+
 
 export default SearchResult;
 

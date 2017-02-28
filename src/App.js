@@ -36,7 +36,6 @@ class App extends Component {
           searchResult: resp.data.results[0],
 
         });
-        console.log(resp.data.results[0]);
       });
   }
 
@@ -54,20 +53,31 @@ class App extends Component {
   }
 
   handleAddToFavorites(attributes) {
+    attributes = {
+      title: this.state.searchResult.title,
+      posterPath: this.state.searchResult.poster_path,
+      overview: this.state.searchResult.overview
+    };
     axios.post('http://localhost:4000/movies', attributes)
       .then(resp => {
         this.setState({
           favoriteMovies: [...this.state.favoriteMovies, resp.data]
         });
-      });
+      })
+      .catch(err => console.log(err));
   }
 
-  handleRemoveFavorite(id) {
-    this.setState({
-      favoriteMovies: this.state.favoriteMoves.filter(() => {
-        return this.state.favoriteMove.id !== id;
+  handleRemoveFavorite(_id) {
+    console.log(_id);
+    axios.delete(`http://localhost:4000/movies/${_id}`)
+      .then(() => {
+        const newFavs = this.state.favoriteMovies.filter(movie => movie._id !== _id);
+
+        this.setState({
+          favoriteMovies: newFavs
+        });
       })
-    });
+      .catch(err => console.log(`Error, bish! ${err}`));
   }
 
   //   R E N D E R
@@ -81,7 +91,7 @@ class App extends Component {
             posterPath={this.state.searchResult.poster_path}
             searchedMovieTitle={this.state.searchResult.title}
             searchedMovieOverview={this.state.searchResult.overview}
-            onAddToFavs={this.handleAddToFavorites}
+            onAddToFavs={this.handleAddToFavorites.bind(this)}
             onCloseSearchResult={this.handleCloseSearchResult.bind(this)}
           />
         </div>
@@ -104,7 +114,7 @@ class App extends Component {
         <hr />
         <Favorites
           favoriteMovies={this.state.favoriteMovies}
-          onClickRemove={this.props.handleRemoveFavorite.bind(this)}
+          onClickRemove={this.handleRemoveFavorite.bind(this)}
         />
 
 
