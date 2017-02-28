@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://www.localhost:4000/movies')
+    axios.get('http://www.localhost:3001/movies')
       .then(resp => {
         this.setState({
           movies: resp.data
@@ -35,7 +35,7 @@ class App extends Component {
 
   handleMoviesToAdd(attributes) {
     const newMoviesToAdd = this.state.moviesToAdd.filter(movie => movie.id !== attributes.id);
-    axios.post('http://localhost:4000/movies', attributes)
+    axios.post('http://localhost:3001/movies', attributes)
       .then(resp => {
         this.setState({
           moviesToAdd: newMoviesToAdd,
@@ -46,7 +46,7 @@ class App extends Component {
   }
 
   handleDeleteMovie(_id) {
-    axios.delete(`http://localhost:4000/movies/${_id}`)
+    axios.delete(`http://localhost:3001/movies/${_id}`)
       .then(() => {
         const newMovies = this.state.movies.filter(movie => movie._id !== _id);
         this.setState({
