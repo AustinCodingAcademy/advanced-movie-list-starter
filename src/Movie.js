@@ -8,39 +8,43 @@ const Movie = props => {
     }));
     if (savedMovieIdArr.indexOf(id) >= 0) {
       return 'Remove RocketFave';
-    } else {
-      return 'Add to RocketFaves';
     }
+
+    return 'Add to RocketFaves';
   }
-  function checkLength() {
+  function checkLengthAndRender() {
     // If there are movies in the App.js movie state, then map over them
     if (props.movies.length) {
       return (
-        props.movies.map((movieResult) => {
+        props.movies.map((movieResult, index) => {
           return (
             <div
-              key={movieResult.id}
+              key={index}
               className="col-xs-12 col-sm-6 col-lg-3 movieColumn animated fadeInUp"
             >
               <div className="movieColumnContents flexBoxCenterThis">
                 <div id="movieTitle" className="flexBoxCenterThis">
-                  <h3>{movieResult.original_title}</h3>
+                  <h3>{movieResult.original_title || movieResult.originalTitle}</h3>
                 </div>
                 <div id="posterContainer" className="flexBoxCenterThis">
                   <img
                     className="posterImg animated fadeIn"
                     onError={(event) => props.onError(event)}
                     alt={movieResult.title}
-                    src={`https://image.tmdb.org/t/p/w154/${movieResult.poster_path}`}
+                    src={`https://image.tmdb.org/t/p/w154/${movieResult.poster_path ||
+                      movieResult.posterPath}`}
                   />
                 </div>
                 <div id="movieInfo">
                   <p><strong>Overview:</strong></p>
                   <p>{movieResult.overview}</p>
                   <hr />
-                  <p><strong><u>Released:</u></strong> {movieResult.release_date}</p>
-                  <p><strong><u>Vote Average:</u></strong> {movieResult.vote_average}</p>
-                  <p><strong><u>Vote Count:</u></strong> {movieResult.vote_count}</p>
+                  <p><strong><u>Released:</u></strong>
+                    {' ' + movieResult.release_date || movieResult.releaseDate}</p>
+                  <p><strong><u>Vote Average:</u></strong>
+                    {' ' + movieResult.vote_average || movieResult.voteAverage}</p>
+                  <p><strong><u>Vote Count:</u></strong>
+                    {' ' + movieResult.vote_count || movieResult.voteCount}</p>
                 </div>
                 <div id="saveMovie">
                   <button
@@ -72,7 +76,7 @@ const Movie = props => {
   }
   return (
     <div className="row columnsContainer">
-      {checkLength()}
+      {checkLengthAndRender()}
     </div>
   );
 };

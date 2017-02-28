@@ -18,7 +18,7 @@ class App extends Component {
     this.getSavedMovies();
   }
   getSavedMovies() {
-    axios.get('http://localhost:4000/movies')
+    axios.get('/movies')
       .then(resp => {
         this.setState({
           savedMovies: resp.data
@@ -32,7 +32,7 @@ class App extends Component {
         // Only return popular movies whos IDs are NOT found in my savedMovies
         this.setState({
           movies: resp.data.results.filter(resultsMovie =>
-            !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)])
+            savedMoviesIdArr.indexOf(resultsMovie.id) === -1)
         });
       });
   }
@@ -49,7 +49,7 @@ class App extends Component {
         this.setState({
           // Only return searched movies whos IDs are NOT found in my savedMovies
           movies: resp.data.results.filter(resultsMovie =>
-            !savedMoviesIdArr[savedMoviesIdArr.indexOf(resultsMovie.id)])
+            savedMoviesIdArr.indexOf(resultsMovie.id) === -1)
         });
       })
       .catch(err => {
@@ -69,7 +69,7 @@ class App extends Component {
     }));
     if (savedMovieIdArr.indexOf(id) >= 0) {
       // This movie ID exists in my saved movies ID array, so DELETE it from my db.json
-      axios.delete(`http://localhost:4000/movies/${this.state.savedMovies[movieIdArr.indexOf(id)]._id}`)
+      axios.delete(`/movies/${this.state.savedMovies[movieIdArr.indexOf(id)]._id}`)
           .then(resp => {
             // Remove movie object from both states (from the page and savedMovies)
             const newMovies = this.state.movies.filter(movie => movie.id !==
@@ -83,7 +83,7 @@ class App extends Component {
           });
     } else {
       // This movie ID is not in my saved movies ID array, so POST it to my db.josn
-        axios.post('http://localhost:4000/movies', (this.state.movies[movieIdArr.indexOf(id)]))
+        axios.post('/movies', (this.state.movies[movieIdArr.indexOf(id)]))
           .then(resp => {
             // Remove movie object from movie state (from the page) and
             // concat it to savedMovies state
