@@ -1,92 +1,25 @@
 {
   "addedMovies": [
     {
-      "poster_path": "/uMQJMMpa1fd5QFgaRyplqGySHX6.jpg",
+      "poster_path": "/bFXys2nhALwDvpkF3dP3Vvdfn8b.jpg",
       "adult": false,
-      "overview": "When Ghost Shark returns to terrorize Auckland, Mayor Broody calls in an expert ghost shark hunter to protect the citizens and finally defeat the creature.",
-      "release_date": "2015-07-01",
+      "overview": "As Harry begins his sixth year at Hogwarts, he discovers an old book marked as 'Property of the Half-Blood Prince', and begins to learn more about Lord Voldemort's dark past.",
+      "release_date": "2009-07-07",
       "genre_ids": [
-        35,
-        18,
-        27,
-        53
-      ],
-      "id": 204473,
-      "original_title": "Ghost Shark 2: Urban Jaws",
-      "original_language": "en",
-      "title": "Ghost Shark 2: Urban Jaws",
-      "backdrop_path": null,
-      "popularity": 1.009062,
-      "vote_count": 0,
-      "video": false,
-      "vote_average": 0,
-      "_id": 2
-    },
-    {
-      "poster_path": "/fntcKx0aAvgfUs2dbVzQD7VEZ09.jpg",
-      "adult": false,
-      "overview": "Having taken her first steps into a larger world in Star Wars: The Force Awakens (2015), Rey continues her epic journey with Finn, Poe and Luke Skywalker in the next chapter of the saga.",
-      "release_date": "2017-12-13",
-      "genre_ids": [
-        28,
         12,
         14,
-        878
+        10751
       ],
-      "id": 181808,
-      "original_title": "Star Wars: The Last Jedi",
+      "id": 767,
+      "original_title": "Harry Potter and the Half-Blood Prince",
       "original_language": "en",
-      "title": "Star Wars: The Last Jedi",
-      "backdrop_path": "/m5YrALhx4I8c0Lnu2Gq9W8aeC4.jpg",
-      "popularity": 8.941362,
-      "vote_count": 62,
+      "title": "Harry Potter and the Half-Blood Prince",
+      "backdrop_path": "/mjBjhotXUWc0EFZ5sswu7cu12Sp.jpg",
+      "popularity": 9.974311,
+      "vote_count": 3398,
       "video": false,
-      "vote_average": 0,
-      "_id": 3
-    },
-    {
-      "poster_path": "/140ewbWv8qHStD3mlBDvvGd0Zvu.jpg",
-      "adult": false,
-      "overview": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey.",
-      "release_date": "2001-05-16",
-      "genre_ids": [
-        12,
-        16,
-        35,
-        10751,
-        14
-      ],
-      "id": 808,
-      "original_title": "Shrek",
-      "original_language": "en",
-      "title": "Shrek",
-      "backdrop_path": "/wBG4kHfhwm3bLwKUFNRByXXv4r2.jpg",
-      "popularity": 5.933466,
-      "vote_count": 2387,
-      "video": false,
-      "vote_average": 7.2,
-      "_id": 4
-    },
-    {
-      "poster_path": "/9xzRKUBIqLwhhOYtcE7P1BbWXP9.jpg",
-      "adult": false,
-      "overview": "When scientists discover something in the Arctic that appears to be a buried Pyramid, they send a research team out to investigate. Little do they know that they are about to step into a hunting ground where Aliens are grown as sport for the Predator race.",
-      "release_date": "2004-08-12",
-      "genre_ids": [
-        12,
-        878,
-        28
-      ],
-      "id": 395,
-      "original_title": "AVP: Alien vs. Predator",
-      "original_language": "en",
-      "title": "AVP: Alien vs. Predator",
-      "backdrop_path": "/1vRCFWKPydH82T1wsPMYkRjcZXY.jpg",
-      "popularity": 4.584161,
-      "vote_count": 719,
-      "video": false,
-      "vote_average": 5.5,
-      "_id": 5
+      "vote_average": 7.3,
+      "_id": 9
     }
   ],
   "movies": []

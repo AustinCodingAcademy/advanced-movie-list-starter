@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/addedMovies')
+    axios.get('/addedMovies')
       .then(resp => {
         this.setState({
           searchText: this.state.searchText,
@@ -46,8 +46,13 @@ class App extends Component {
   }
 
   handleAddMovie(attributes) {
+    const newMovie = {
+      title: attributes.title,
+      posterpath: attributes.poster_path,
+      overview: attributes.overview
+    };
     const newMovies = this.state.movies.filter(movie => movie.id !== attributes.id);
-    axios.post('http://localhost:4000/addedMovies', attributes)
+    axios.post('/addedMovies', newMovie)
       .then(resp => {
         this.setState({
           movies: newMovies,
@@ -57,7 +62,7 @@ class App extends Component {
   }
 
   handleRemoveMovie(id) {
-    axios.delete(`http://localhost:4000/addedMovies/${id}`)
+    axios.delete(`/addedMovies/${id}`)
       .then(resp => {
         const newMovies = this.state.addedMovies.filter(movie => movie._id !== id);
         this.setState({

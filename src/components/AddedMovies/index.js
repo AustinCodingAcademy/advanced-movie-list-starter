@@ -12,11 +12,14 @@ class AddedMovies extends Component {
       <Well>
         <Row className="show-grid">
           {this.props.movies.map(movie => {
+            const path = (
+              typeof movie.poster_path !== 'string' ? movie.posterpath : movie.poster_path
+            ); 
             return (
               <AddedMovie
                 key={movie._id}
                 title={movie.title}
-                poster={movie.poster_path}
+                poster={path}
                 desc={movie.overview}
                 onButtonClick={() => this.props.RemoveMovie(movie._id)}
               />
