@@ -40,11 +40,11 @@ const Movie = props => {
                   <p>{movieResult.overview}</p>
                   <hr />
                   <p><strong><u>Released:</u></strong>
-                    {' ' + movieResult.release_date || movieResult.releaseDate}</p>
+                    {' ' + (movieResult.release_date || movieResult.releaseDate)}</p>
                   <p><strong><u>Vote Average:</u></strong>
-                    {' ' + movieResult.vote_average || movieResult.voteAverage}</p>
+                    {' ' + (movieResult.vote_average || movieResult.voteAverage)}</p>
                   <p><strong><u>Vote Count:</u></strong>
-                    {' ' + movieResult.vote_count || movieResult.voteCount}</p>
+                    {' ' + (movieResult.vote_count || movieResult.voteCount)}</p>
                 </div>
                 <div id="saveMovie">
                   <button
