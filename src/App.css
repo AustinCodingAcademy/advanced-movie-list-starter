@@ -76,6 +76,7 @@
   font-size: 25px;
   height: 55px;
   overflow: scroll;
+  color: black;
 }
 
 .movieTitle p {

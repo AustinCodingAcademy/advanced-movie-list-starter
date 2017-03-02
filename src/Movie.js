@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Movie = props => {
   return (
@@ -12,6 +14,12 @@ const Movie = props => {
       <div className="movieTitle">
         <h2>{props.originalTitle}</h2>
         <p>{props.overview}</p>
+        <Link to={`/profile/${props.id}`} className="movie-link">
+          <button
+            className="viewDetailsButton"
+            >View Details
+          </button>
+        </Link>
         <button
           className="addMovieButton"
           onClick={() => props.onAddMovie(props.id)}>Add to Favorites
