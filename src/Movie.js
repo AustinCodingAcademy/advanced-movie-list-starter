@@ -1,11 +1,14 @@
 import React from 'react';
 import MoviePoster from './MoviePoster';
 import MovieRating from './MovieRating';
+import { Link } from 'react-router-dom';
 
 const Movie = props => {
     return (
       <div className="movie">
-        <MoviePoster poster={props.poster} />
+        <Link to={`/profile/${props.id}`}>
+          <MoviePoster poster={props.poster} />
+        </Link>
         <h4>{props.title}</h4>
         <MovieRating
           rating={props.rating}
