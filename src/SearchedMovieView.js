@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const SearchedMovieView = props => {
   return (
     <section id="searched-movie-view">
@@ -10,14 +9,16 @@ const SearchedMovieView = props => {
       </div>
       <div className="movieOverview">
         <p>{props.movieOverview}</p>
+        <p>{props.releaseDate}</p>
       </div>
       <button className="add-button" onClick={() => props.onClick(props.movies)}>
-        Add Movie to List
+          Add Movie to List
       </button>
       <button className="dismiss-button" onClick={() => props.onDelete(props.searchedMovie)}>
-        Dismiss
+          Dismiss
       </button>
     </section>
+
   );
 };
 
@@ -25,6 +26,7 @@ SearchedMovieView.propTypes = {
   movieTitle: React.PropTypes.string.isRequired,
   posterPath: React.PropTypes.string.isRequired,
   movieOverview: React.PropTypes.string.isRequired,
+  releaseDate: React.PropTypes.string.isRequired,
   onDelete: React.PropTypes.func.isRequired
 };
 

@@ -1,18 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Movie = props => {
   return (
     <div className="Movie">
-      <img src={props.movies.posterPath} alt="" />
-      <h2>{props.movies.movieTitle}</h2>
-      <p>{props.movies.movieOverview}</p>
+      <Link to={`/profile/${props.id}`} className="movie-link">
+        <img src={`https://image.tmdb.org/t/p/w154/${props.posterPath}`} alt="" />
+      </Link>
+      <h2>{props.title}</h2>
+
+      <p>{props.releaseDate}</p>
     </div>
   );
 };
 
 Movie.propTypes = {
-  movies: React.PropTypes.object.isRequired
+  title: React.PropTypes.string.isRequired,
+  overview: React.PropTypes.string.isRequired,
+  releaseDate: React.PropTypes.string.isRequired
 };
 
 export default Movie;

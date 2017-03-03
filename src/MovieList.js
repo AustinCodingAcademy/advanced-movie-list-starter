@@ -5,11 +5,16 @@ const MovieList = props => {
 
   return (
     <div className="MovieList">
-      {props.movies.map(movies => {
+      {props.movies.map(movie => {
         return (
           <Movie
-            movies={movies}
-            key={movies._id}
+            movie={movie}
+            title={movie.title}
+            posterPath={movie.poster}
+            overview={movie.overview}
+            releaseDate={movie.releaseDate}
+            key={movie._id}
+            id={movie._id}
           />
         );
       })}

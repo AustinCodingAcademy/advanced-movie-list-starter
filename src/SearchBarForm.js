@@ -41,6 +41,7 @@ class SearchBarForm extends Component {
             title="title"
             value={this.state.title}
             onChange={this.handleInputChange.bind(this)}
+            id={this.state.id}
           />
           <button className="search-button">Search</button>
         </form>
