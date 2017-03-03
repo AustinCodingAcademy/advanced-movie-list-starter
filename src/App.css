@@ -99,6 +99,15 @@ body {
   font-size: 3em;
   text-shadow: .1em .1em .1em black;
   font-weight: bold;
+  text-align: center;
+}
+.noMovies div {
+  width: 100%;
+  font-size: 3em;
+  color: rgb(255,255,100);
+  text-shadow: .05em .05em .1em red;
+  font-family: 'Anton', sans-serif;
+  transition: 1s;
 }
 .movieColumn {
   height: 80vh;
@@ -111,7 +120,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 1em;
+  padding: 2em 1em;
   text-align: center;
   border: .3em double rgba(255,255,255,.5);
   background-color: rgba(0,0,0,.8);
@@ -162,8 +171,8 @@ a#hiddenSaveText:hover {
   display: inline-block;
 }
 #movieTitle {
-  max-height: 15%;
-  min-height: 15%;
+  max-height: 20%;
+  min-height: 20%;
   background-color: rgba(100,50,255, .2);
   border: .1em solid rgba(255,255,255,.5);
   border-radius: 1em;
@@ -216,11 +225,15 @@ a#hiddenSaveText:hover {
 }
 #movieInfo p:nth-of-type(1) {
   background-color: rgba(255,100,100,.5);
+  border-radius: .3em;
+  padding: 0 .3em;
 }
 #movieInfo p:nth-of-type(3),
 #movieInfo p:nth-of-type(4),
 #movieInfo p:nth-of-type(5) {
   background-color: rgba(100,255,100,.5);
+  border-radius: .3em;
+  padding: 0 .3em;
 }
 #movieInfo::-webkit-scrollbar {
   display: none;
@@ -241,24 +254,28 @@ a#hiddenSaveText:hover {
 }
 .profileColumn {
   height: 100%;
-  padding: 1em;
+  padding: 1em 5em;
   margin: 0;
   background-color: rgba(0,0,0,.5);
 }
 
 .profileMovieTitle {
   min-height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .profileMovieTitle > h3 {
-  font-size: 4em;
-  text-align: center;
+  font-size: 5em;
+  text-align: left;
+  color: rgb(255,255,100);
+  text-shadow: .05em .05em .1em red;
   font-family: 'Anton', sans-serif;
-  color: white;
+  transition: 1s;
 }
 .profilePosterContainer {
-  height: 60%;
+  height: 75%;
   width: 100%;
-  padding: 2em 0;
   overflow: hidden;
 }
 .profilePosterContainer img {
@@ -275,29 +292,40 @@ a#hiddenSaveText:hover {
   font-size: 3em;
   font-family: 'Anton', sans-serif;
   color: white;
+  background-color: rgba(0,0,0,.9);
+  border: .1em double rgba(255,255,255,.5);
+  width:100%;
+  border-radius: .5em;
+  text-align: center;
 }
 .profileTagline {
-  min-height: 15%;;
+  min-height: 15%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 .profileTagline > h3 {
-  font-size: 3em;
-  text-align: center;
+  font-size: 4em;
+  text-align: left;
   font-family: 'Anton', sans-serif;
   color: white;
   background-color: rgba(255,0,0,.5);
-  padding: 5px;
+  border-radius: .5em;
+  padding: .3em;
 }
 .profileOverviewContainer {
   height: 60%;
-  padding: 2em 0;
+  padding: 1em 0;
 }
 .profileOverview {
   color: white;
   height: 100%;
-  border: .3em double rgba(255,255,255,.5);
-  border-radius: 1em;
+  border: .5em double rgba(255,255,255,.5);
   padding: 1em 3em;
+  border-radius: 1em;
   overflow-y: scroll;
+  background-color: rgba(0,0,0,.7);
 }
 .profileOverview > h1 {
   font-size: 3em;
@@ -311,6 +339,19 @@ a#hiddenSaveText:hover {
 .profileOverview::-webkit-scrollbar {
   display: none;
 }
+.homePageLink {
+  text-align: right;
+}
+.homePageLink a, .homePageLink a:hover {
+  font-size: 3em;
+  text-decoration: none;
+  color: rgba(255,255,255,.3);
+  font-weight: bold;
+  transition: .3s;
+}
+.homePageLink a:hover {
+  color: rgba(100,255,100,1);
+}
 .profileStats {
   height: 25%;
   display: flex;
@@ -320,6 +361,9 @@ a#hiddenSaveText:hover {
   font-family: 'Anton', sans-serif;
   color: white;
 }
+
 .profileStats span {
   background-color: rgba(100,255,100,.5);
+  padding: 0 .3em;
+  border-radius: .5em;
 }

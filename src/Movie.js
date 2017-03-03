@@ -70,8 +70,8 @@ const Movie = props => {
       )} else {
       // If there are no movies in the movie state, return this placeholder div
       return (
-        <div className="col-xs-12 flexBoxCenterThis noMovies animated fadeIn">
-          <h1>Hmm...</h1>
+        <div className="col-xs-12 flexBoxCenterThis noMovies animated flipInY">
+          <h1>\(o_o)/</h1>
           <p>Nothing to see here</p>
         </div>
       );
