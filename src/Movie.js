@@ -14,7 +14,7 @@ const Movie = props => {
       <div className="movieTitle">
         <h2>{props.originalTitle}</h2>
         <p>{props.overview}</p>
-        <Link to={`/profile/${props.id}`} className="movie-link">
+        <Link to={`/MovieDetail/${props.id}`} className="movie-link">
           <button
             className="viewDetailsButton"
             >View Details

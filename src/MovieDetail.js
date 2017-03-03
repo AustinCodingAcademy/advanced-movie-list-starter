@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
-class Profile extends Component {
+class MovieDetail extends Component {
   constructor() {
     super();
 
@@ -24,9 +24,9 @@ class Profile extends Component {
   }
 
 
-  renderProfile() {
+  renderMovieDetail() {
     return (
-      <div className="profile">
+      <div className="MovieDetail">
         <div className="image-cropper">
           <img src={this.state.movie.poster} alt="poster" />
         </div>
@@ -45,15 +45,15 @@ class Profile extends Component {
       return <h2>Loading...</h2>;
     }
 
-    return this.renderProfile();
+    return this.renderMovieDetail();
   }
 }
 
 
 // ESLint React prop-type validation
-Profile.propTypes = {
+MovieDetail.propTypes = {
   match: React.PropTypes.object.isRequired,
 };
 
 
-export default Profile;
+export default MovieDetail;

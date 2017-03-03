@@ -64,9 +64,13 @@ class Movies extends Component {
 
 // ---------Axios HTTP Post/Delete (add/delete) functions --------- //
 
-  handleAddMovie(movie) {
+  handleAddMovie(id) {
+    const savedMoviesArray = (this.state.returnedMovies.map(movie => {
+      return movie.id;
+    }));
+
     // Adds movie to favorites list
-    axios.post('http://localhost:4000/movies', movie)
+    axios.post('http://localhost:4000/movies', this.state.returnedMovies(savedMoviesArray.indexOf(id)))
       .then(resp => {
         this.setState({
           selectedFavMovies: [...this.state.selectedFavMovies, resp.data],
