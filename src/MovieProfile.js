@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './MovieProfile.css'
 
 class MovieProfile extends Component {
   constructor() {
@@ -22,12 +23,13 @@ class MovieProfile extends Component {
 
   renderMovieProfile() {
     return (
-      <div className="movie-profile">
-        <div className="image-cropper">
-          <img src={this.state.movie.poster_path} alt="poster" />
+      <div id="movie-profile">
+        <div className="movie-backdrop">
+          <img src={this.state.movie.backdrop_path}/>
+          <h1>{this.state.movie.title}</h1>
         </div>
         <div className="movie-info">
-          <h2>{this.state.movie.title}</h2>
+          <h3>Released: {this.state.movie.release_date}</h3>
           <span>{this.state.movie.overview}</span>
         </div>
       </div>

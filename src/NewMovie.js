@@ -8,15 +8,16 @@ class NewMovie extends React.Component {
   }
 
   addSelectedMovie () {
-    const { title, poster_path, overview, release_date, rating } = {
+    const { title, poster_path, overview, release_date, backdrop_path, rating } = {
       title: this.props.title,
       poster_path: this.props.poster,
       overview: this.props.overview,
       release_date: this.props.releaseDate,
+      backdrop_path: this.props.backdrop_path,
       rating: 0
     };
     console.log({title, poster_path, overview, release_date});
-    this.props.addMovie({title, poster_path, overview, release_date, rating});
+    this.props.addMovie({ title, poster_path, overview, release_date, backdrop_path, rating });
   }
 
   render() {
@@ -39,6 +40,7 @@ NewMovie.propTypes = {
   title: React.PropTypes.string.isRequired,
   poster: React.PropTypes.string.isRequired,
   overview: React.PropTypes.string.isRequired,
+  releaseDate: React.PropTypes.string,
   addSelectedMovie: React.PropTypes.func,
   closeMovie: React.PropTypes.func.isRequired
 };

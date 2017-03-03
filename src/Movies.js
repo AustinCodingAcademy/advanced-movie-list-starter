@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import MultiResult from './MultiResult';
 import NewMovie from './NewMovie';
 import MovieList from './MovieList'
-import './App.css';
+import './Movies.css';
 
 class Movies extends Component {
   constructor() {
@@ -45,7 +45,8 @@ class Movies extends Component {
             title: resultMovie.title,
             poster_path: 'https://image.tmdb.org/t/p/w154' + resultMovie.poster_path,
             overview: resultMovie.overview,
-            release_date: this.formatDate(resultMovie.release_date)
+            release_date: this.formatDate(resultMovie.release_date),
+            backdrop_path: 'https://image.tmdb.org/t/p/w1280' + resultMovie.backdrop_path
           }
         )
       });
@@ -139,7 +140,7 @@ class Movies extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="movies">
         <h1>Movie List</h1>
         <SearchBar
           handleSearch={this.handleSearch.bind(this)}
@@ -153,6 +154,7 @@ class Movies extends Component {
           poster={this.state.newMovie.poster_path}
           overview={this.state.newMovie.overview}
           releaseDate={this.state.newMovie.release_date}
+          backdrop_path={this.state.newMovie.backdrop_path}
           addMovie={this.handleMovieListAdd.bind(this)}
           closeMovie={this.closeNewMovie.bind(this)}
           /> : null}

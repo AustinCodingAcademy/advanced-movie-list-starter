@@ -1,4 +1,4 @@
-.App {
+.movies {
   text-align: center;
 }
 
@@ -90,7 +90,7 @@ input {
 .movie-rating {
   color: #fc0;
   position: absolute;
-  left: 43.5px;
+  left: 18px;
   bottom: 45px;
 }
 
