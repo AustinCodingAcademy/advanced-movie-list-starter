@@ -1,10 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const SearchBar = props => {
   return (
     <div className="row header animated slideInDown">
       <div className="col-xs-12">
-        <h1 onClick={() => props.getPopularMovies()}>RocketShippDB</h1>
+        <h1 onClick={() => props.getPopularMovies()}><Link className="linkTo" to={'/'}>RocketShippDB</Link></h1>
         <i
           className="fa fa-rocket"
           aria-hidden="false"

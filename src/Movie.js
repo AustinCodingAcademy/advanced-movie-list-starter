@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Movie = props => {
   function rocketFavText(id) {
@@ -26,20 +27,22 @@ const Movie = props => {
                 <div id="movieTitle" className="flexBoxCenterThis">
                   <h3>{movieResult.original_title || movieResult.originalTitle}</h3>
                 </div>
-                <div id="posterContainer" className="flexBoxCenterThis">
-                  <img
-                    className="posterImg animated fadeIn"
-                    onError={(event) => props.onError(event)}
-                    alt={movieResult.title}
-                    src={`https://image.tmdb.org/t/p/w154/${movieResult.poster_path ||
-                      movieResult.posterPath}`}
-                  />
-                </div>
+                <Link to={`/profile/${movieResult.id}`} className="linkTo">
+                  <div id="posterContainer" className="flexBoxCenterThis">
+                    <img
+                      className="posterImg animated fadeIn"
+                      onError={(event) => props.onError(event)}
+                      alt={movieResult.title}
+                      src={`https://image.tmdb.org/t/p/w154/${movieResult.poster_path ||
+                        movieResult.posterPath}`}
+                    />
+                  </div>
+                </Link>
                 <div id="movieInfo">
                   <p><strong>Overview:</strong></p>
                   <p>{movieResult.overview}</p>
                   <hr />
-                  <p><strong><u>Released:</u></strong>
+                  <p><strong><u>Release:</u></strong>
                     {' ' + (movieResult.release_date || movieResult.releaseDate)}</p>
                   <p><strong><u>Vote Average:</u></strong>
                     {' ' + (movieResult.vote_average || movieResult.voteAverage)}</p>

@@ -11,13 +11,14 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
 .flexBoxCenterThis {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.row, .App, .columnsContainer, .header > div {
+.container, .row, .App, .columnsContainer, .header > div {
   margin: 0;
   padding: 0;
 }
@@ -29,6 +30,7 @@ body {
   text-shadow: 0 0 .5em black;
   height: 20vh;
   background-color: rgba(0,0,0,.5);
+  overflow: hidden;
 }
 .header > div > h1 {
   font-size: 3.5em;
@@ -178,6 +180,10 @@ a#hiddenSaveText:hover {
   font-size: 2em;
   font-family: 'Anton', sans-serif;
 }
+.linkTo, .linkTo:hover, .linkTo:focus {
+  text-decoration: none;
+  color: inherit;
+}
 #posterContainer {
   height: 60%;
   width: 100%;
@@ -218,4 +224,102 @@ a#hiddenSaveText:hover {
 }
 #movieInfo::-webkit-scrollbar {
   display: none;
+}
+#profileHeader {
+  padding: 0;
+  margin: 0;
+}
+#profileHeader > div {
+  height: 9.5vh;
+  padding: 0;
+  margin: 0;
+}
+.profileContents {
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+.profileColumn {
+  height: 100%;
+  padding: 1em;
+  margin: 0;
+  background-color: rgba(0,0,0,.5);
+}
+
+.profileMovieTitle {
+  min-height: 15%;
+}
+.profileMovieTitle > h3 {
+  font-size: 4em;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+.profilePosterContainer {
+  height: 60%;
+  width: 100%;
+  padding: 2em 0;
+  overflow: hidden;
+}
+.profilePosterContainer img {
+  height: 100%;
+  margin: 1em 0;
+  border: .3em double rgba(255,255,255,.5);
+  transition: .2s;
+}
+.profileDetails {
+  height: 25%;
+  width: 100%;
+}
+.profileDetails p {
+  font-size: 3em;
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+.profileTagline {
+  min-height: 15%;;
+}
+.profileTagline > h3 {
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  background-color: rgba(255,0,0,.5);
+  padding: 5px;
+}
+.profileOverviewContainer {
+  height: 60%;
+  padding: 2em 0;
+}
+.profileOverview {
+  color: white;
+  height: 100%;
+  border: .3em double rgba(255,255,255,.5);
+  border-radius: 1em;
+  padding: 1em 3em;
+  overflow-y: scroll;
+}
+.profileOverview > h1 {
+  font-size: 3em;
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+.profileOverview > p {
+  font-size: 2em;
+  line-height: 2em;
+}
+.profileOverview::-webkit-scrollbar {
+  display: none;
+}
+.profileStats {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2em;
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+.profileStats span {
+  background-color: rgba(100,255,100,.5);
 }

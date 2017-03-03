@@ -3,8 +3,8 @@ import Movie from './Movie';
 
 const MovieList = props => {
   return (
-    <div className="row mainContainerRow">
-      <div className="row resultMovieRow">
+    <div id="row mainContainerRow">
+      <div id="row resultMovieRow">
         <Movie
           movies={props.movies}
           savedMovies={props.savedMovies}
