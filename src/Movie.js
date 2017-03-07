@@ -27,27 +27,27 @@ const Movie = props => {
                 <div id="movieTitle" className="flexBoxCenterThis">
                   <h3>{movieResult.original_title || movieResult.originalTitle}</h3>
                 </div>
-                <Link to={`/profile/${movieResult.id}`} className="linkTo">
-                  <div id="posterContainer" className="flexBoxCenterThis">
+                <div id="posterContainer" className="flexBoxCenterThis">
+                  <a href={`/profile/${movieResult.id}`} className="flexBoxCenterThis">
                     <img
                       className="posterImg animated fadeIn"
-                      onError={(event) => props.onError(event)}
+                      onError={(event) => (event.target.src = 'http://i.imgur.com/40NGAaC.png')}
                       alt={movieResult.title}
                       src={`https://image.tmdb.org/t/p/w154/${movieResult.poster_path ||
                         movieResult.posterPath}`}
                     />
-                  </div>
-                </Link>
+                  </a>
+                </div>
                 <div id="movieInfo">
                   <p><strong>Overview:</strong></p>
                   <p>{movieResult.overview}</p>
                   <hr />
                   <p><strong><u>Release:</u></strong>
-                    {' ' + (movieResult.release_date || movieResult.releaseDate)}</p>
+                    {' ' + (movieResult.release_date || movieResult.releaseDate || 'N/A')}</p>
                   <p><strong><u>Vote Average:</u></strong>
-                    {' ' + (movieResult.vote_average || movieResult.voteAverage)}</p>
+                    {' ' + (movieResult.vote_average || movieResult.voteAverage || '0')}</p>
                   <p><strong><u>Vote Count:</u></strong>
-                    {' ' + (movieResult.vote_count || movieResult.voteCount)}</p>
+                    {' ' + (movieResult.vote_count || movieResult.voteCount || '0')}</p>
                 </div>
                 <div id="saveMovie">
                   <button
@@ -71,7 +71,7 @@ const Movie = props => {
       // If there are no movies in the movie state, return this placeholder div
       return (
         <div className="col-xs-12 flexBoxCenterThis noMovies animated flipInY">
-          <h1>\(o_o)/</h1>
+          <h1>(o_o)</h1>
           <p>Nothing to see here</p>
         </div>
       );

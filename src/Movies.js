@@ -14,8 +14,8 @@ class Movies extends Component {
     };
   }
   componentDidMount() {
-    this.getPopularMovies();
     this.getSavedMovies();
+    this.getPopularMovies();
   }
   getSavedMovies() {
     axios.get('/movies')
@@ -57,7 +57,7 @@ class Movies extends Component {
       });
   }
   handleImgError(event) {
-    event.target.src = 'http://i.imgur.com/SUynOc5.png';
+    event.target.src = 'http://i.imgur.com/40NGAaC.png';
   }
   rocketFaveHandle(event, id) {
     event.preventDefault();
