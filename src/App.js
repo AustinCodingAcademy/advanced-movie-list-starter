@@ -28,18 +28,18 @@ class App extends Component {
 
 
   //
-  // componentDidMount() {
-  //   axios.get('http://localhost:4000/movies')
-  //       .then(resp => {
-  //         this.setState({
-  //           favorites: resp.data,
-  //         });
-  //       })
-  //       .catch(err => {
-  //         return ('No favorites yet!');
-  //       });
-  //
-  // }
+  componentDidMount() {
+    axios.get('http://localhost:4000/movies')
+        .then(resp => {
+          this.setState({
+            favorites: resp.data,
+          });
+        })
+        .catch(() => {
+          return ('No favorites yet!');
+        });
+
+  }
 
   // Adding a Favorite!
   handleAddFavorite(attributes) {
