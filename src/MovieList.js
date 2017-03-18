@@ -6,14 +6,21 @@ const MovieList = props => {
     <div className="MovieList">
       {props.returnedMovies.map((movie, index) => {
         return (
-          <Movie
-            key={index}
-            id={index}
-            poster={movie.poster_path}
-            title={movie.title}
-            overview={movie.overview}
-            addFavorite={props.addFavorite}
+          <div key={index}>
+            <Movie
+              key={index}
+              id={index}
+              poster={movie.poster_path}
+              title={movie.title}
+              overview={movie.overview}
+              onClick={props.onClick}
         />
+            <div className="AddButton">
+              <button type="submit"
+                onSubmit={(event) => props.onClick(event)}>Add to Favorites!
+              </button>
+            </div>
+          </div>
         );
       })}
     </div>
@@ -23,7 +30,7 @@ const MovieList = props => {
 // Props Validation
 MovieList.propTypes = {
   returnedMovies: React.PropTypes.array.isRequired,
-  addFavorite: React.PropTypes.func.isRequired
+  onClick: React.PropTypes.func.isRequired
 };
 
 

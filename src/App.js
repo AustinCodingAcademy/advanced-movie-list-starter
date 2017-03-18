@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MovieList from './MovieList';
+import Favorites from './Favorites';
 import SearchBar from './SearchBar';
 // import MovieShowcase from './MovieShowcase';
 
@@ -26,25 +27,23 @@ class App extends Component {
   }
 
 
-
-  componentDidMount() {
-    axios.get('http://localhost:4000/movies')
-        .then(resp => {
-          this.setState({
-            favorites: resp.data,
-
-
-          });
-        })
-        .catch(err => {
-          return ('No favorites yet!');
-        });
-
-  }
+  //
+  // componentDidMount() {
+  //   axios.get('http://localhost:4000/movies')
+  //       .then(resp => {
+  //         this.setState({
+  //           favorites: resp.data,
+  //         });
+  //       })
+  //       .catch(err => {
+  //         return ('No favorites yet!');
+  //       });
+  //
+  // }
 
   // Adding a Favorite!
   handleAddFavorite(attributes) {
-    axios.post('http://localhost:4000/movies', attributes)
+    axios.post('http://localhost:4000/movies/', attributes)
     .then(resp => {
       this.setState({
         favorites: [...this.state.favorites, resp.data]
@@ -55,8 +54,8 @@ class App extends Component {
 
 
   // Deleting a Favorite. We all make mistakes.
-  handleDeleteFavorite() {
-    axios.delete('http://localhost:4000/favorites')
+  handleDeleteFavorite(_id) {
+    axios.delete(`http://localhost:4000/movies/${_id}`)
     .then(() => {
       this.setState();
     });
@@ -94,30 +93,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>The My-terion Collection.</h1>
-        <h3>You love it.</h3>
-        <div className="favorites">
-          {this.state.favorites.map(favorite =>
-            <div key={favorite.id}>
-              <h3 key={favorite.id}> {favorite.title}
-              </h3>
-              <img src={`https://image.tmdb.org/t/p/w154${favorite.poster_path}`}
-              />
-            </div>
-         )}
-        </div>
+        <Favorites
+          favorites={this.state.favorites}
+          onClick={this.handleDeleteFavorite.bind(this)}
+         />
         <SearchBar
           name="searchBar"
           value={this.state.searchText}
           onChange={this.handleSearchBarChange.bind(this)}
           handleSubmit={this.handleMovieSearch.bind(this)}
         />
-        <div className="MovieList">
-          <MovieList
-            returnedMovies={this.state.returnedMovies}
-            addFavorite={this.handleAddFavorite.bind(this)}
-          />
-        </div>
+        <MovieList
+          returnedMovies={this.state.returnedMovies}
+          onClick={this.handleAddFavorite.bind(this)}
+        />
       </div>
     );
   }
