@@ -7,19 +7,19 @@ const Favorites = props => {
       <h1>The My-terion Collection.</h1>
       <h3>You love it.</h3>
       <ul className="Favorites">
-        {props.favorites.map((movie, index) => {
+        {props.favorites.map((movie) => {
           return (
-            <div key={index}>
+            <div key={movie.id}>
               <Movie
-                key={index}
-                id={index}
+                key={movie.id}
+                id={movie.id}
                 poster={movie.poster_path}
                 title={movie.title}
                 overview={movie.overview}
           />
               <div className="deleteButton">
                 <button type="submit"
-                  onClick={(event) => props.onClick(event)}>Delete from Favorites!
+                  onClick={() => props.onClick()}>Delete from Favorites!
               </button>
               </div>
             </div>

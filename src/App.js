@@ -42,8 +42,8 @@ class App extends Component {
   }
 
   // Adding a Favorite!
-  handleAddFavorite(attributes) {
-    axios.post('http://localhost:4000/movies', attributes)
+  handleAddFavorite(favorite) {
+    axios.post('http://localhost:4000/movies', favorite)
     .then((resp) => {
       this.setState({
         favorites: [...this.state.favorites, resp.data]
