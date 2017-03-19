@@ -16,8 +16,8 @@ import SearchBar from './SearchBar';
 
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       searchText: '',
@@ -42,9 +42,9 @@ class App extends Component {
   }
 
   // Adding a Favorite!
-  handleAddFavorite(poster, title, overview) {
-    axios.post('http://localhost:4000/movies', poster, title, overview)
-    .then(resp => {
+  handleAddFavorite(attributes) {
+    axios.post('http://localhost:4000/movies', attributes)
+    .then((resp) => {
       this.setState({
         favorites: [...this.state.favorites, resp.data]
       });
@@ -105,7 +105,7 @@ class App extends Component {
         />
         <MovieList
           returnedMovies={this.state.returnedMovies}
-          onClick={this.handleAddFavorite.bind(this)}
+          onAddFavorite={this.handleAddFavorite.bind(this)}
         />
       </div>
     );

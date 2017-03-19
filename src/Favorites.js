@@ -16,7 +16,6 @@ const Favorites = props => {
                 poster={movie.poster_path}
                 title={movie.title}
                 overview={movie.overview}
-                removeFavorite={props.onClick}
           />
               <div className="deleteButton">
                 <button type="submit"

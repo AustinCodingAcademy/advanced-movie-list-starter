@@ -1,28 +1,28 @@
 import React from 'react';
 
-const Movie = props => {
+const Movie = movie => {
   return (
     <div className="Movie">
       <div className="Poster">
         <img
           alt="movie poster"
-          src={`https://image.tmdb.org/t/p/w154${props.poster}`}
+          src={`https://image.tmdb.org/t/p/w154${movie.poster}`}
         />
       </div>
       <div className="MovieTitle">
-        <h2>{props.title}</h2>
+        <h2>{movie.title}</h2>
       </div>
     </div>
   );
 };
 
 // PropTypes Validation
-
-Movie.propTypes = {
-  poster: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
-  addFavorite: React.PropTypes.func.isRequired
-};
+//
+// Movie.propTypes = {
+//   poster: React.PropTypes.string.isRequired,
+//   title: React.PropTypes.string.isRequired,
+//   addFavorite: React.PropTypes.func.isRequired
+// };
 
 
 
