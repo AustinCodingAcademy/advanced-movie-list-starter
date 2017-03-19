@@ -19,7 +19,7 @@ const Favorites = props => {
           />
               <div className="deleteButton">
                 <button type="submit"
-                  onSubmit={(event) => props.onClick(event)}>Delete from Favorites!
+                  onClick={(event) => props.onClick(event)}>Delete from Favorites!
               </button>
               </div>
             </div>

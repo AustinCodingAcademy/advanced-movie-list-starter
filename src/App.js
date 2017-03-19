@@ -84,7 +84,7 @@ class App extends Component {
       });
 
     })
-    .catch(err => console.error('Error! $(err)'));
+    .catch(() => console.error('Error! $(err)'));
   }
 
 

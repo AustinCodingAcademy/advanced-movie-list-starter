@@ -4,12 +4,12 @@ import Movie from './Movie';
 const MovieList = props => {
   return (
     <div className="MovieList">
-      {props.returnedMovies.map((movie, index) => {
+      {props.returnedMovies.map((movie) => {
         return (
-          <div key={index}>
+          <div key={movie.id}>
             <Movie
-              key={index}
-              id={index}
+              key={movie.id}
+              id={movie.id}
               poster={movie.poster_path}
               title={movie.title}
               overview={movie.overview}
