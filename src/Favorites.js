@@ -17,8 +17,8 @@ const Favorites = props => {
                 title={movie.title}
                 overview={movie.overview}
           />
-              <div className="deleteButton">
-                <button type="submit"
+              <div className="deleteButton" key={movie.id}>
+                <button type="submit" key={movie.id}
                   onClick={() => props.onClick()}>Delete from Favorites!
               </button>
               </div>
@@ -32,6 +32,11 @@ const Favorites = props => {
 
 // Props Validation
 Favorites.propTypes = {
+  // overview: React.PropTypes.string.isRequired,
+  // title: React.PropTypes.string.isRequired,
+  // id: React.PropTypes.string.isRequired,
+  // key: React.PropTypes.string.isRequired,
+  // poster: React.PropTypes.string.isRequired,
   favorites: React.PropTypes.array.isRequired,
   onClick: React.PropTypes.func.isRequired
 };

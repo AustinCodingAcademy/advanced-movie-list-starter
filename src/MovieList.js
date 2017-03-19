@@ -17,7 +17,9 @@ const MovieList = props => {
             <div className="AddButton">
               <button
                 type="submit"
-                onClick={() => props.onAddFavorite({title: movie.title, poster: movie.poster})}>
+                onClick={() => props.onAddFavorite(
+                  {title: movie.title, poster: `https://image.tmdb.org/t/p/w154${movie.poster_path}`}
+                )}>
                   Add to Favorites!
               </button>
             </div>

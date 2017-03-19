@@ -35,15 +35,15 @@ class App extends Component {
             favorites: resp.data,
           });
         })
-        .catch(() => {
-          return ('No favorites yet!');
-        });
+        .catch(err => console.log(err));
 
   }
 
+
+
   // Adding a Favorite!
   handleAddFavorite(favorite) {
-    axios.post('http://localhost:4000/movies', favorite)
+    axios.post('http://localhost:4000/movies', {title: favorite.title, poster: favorite.poster})
     .then((resp) => {
       this.setState({
         favorites: [...this.state.favorites, resp.data]
@@ -94,6 +94,7 @@ class App extends Component {
     return (
       <div className="App">
         <Favorites
+          key={this.state.id}
           favorites={this.state.favorites}
           onClick={this.handleDeleteFavorite.bind(this)}
          />
