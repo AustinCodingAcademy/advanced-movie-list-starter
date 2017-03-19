@@ -1,3 +1,9 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "title": "Willow",
+      "poster": "https://image.tmdb.org/t/p/w154/uxB76XmAMEFeeaRqsPAVumn6rTE.jpg",
+      "_id": 1
+    }
+  ]
 }
