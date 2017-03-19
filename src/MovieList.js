@@ -17,7 +17,7 @@ const MovieList = props => {
             <div className="AddButton">
               <button
                 type="submit"
-                onClick={() => props.onAddFavorite()}>
+                onClick={() => props.onAddFavorite({title: movie.title, poster: movie.poster})}>
                   Add to Favorites!
               </button>
             </div>
