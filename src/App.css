@@ -110,7 +110,7 @@ i.fa-rocket:hover {
   transition: 1s;
 }
 .movieColumn {
-  height: 80vh;
+  height: 79vh;
   padding: 1em;
 }
 .placeHolderText {
@@ -120,7 +120,7 @@ i.fa-rocket:hover {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 2em 1em;
+  padding: 1em;
   text-align: center;
   border: .3em double rgba(255,255,255,.5);
   background-color: rgba(0,0,0,.8);
@@ -200,18 +200,18 @@ a#hiddenSaveText:hover {
   padding: 2em 0;
   overflow: hidden;
 }
-#posterContainer > a {
+#posterContainer > .linkTo {
   text-decoration: none;
   height: 100%;
 }
-#posterContainer > a > img {
+#posterContainer > .linkTo > img {
   height: 100%;
   margin: 1em 0;
   border: .3em double rgba(255,255,255,.5);
   filter: opacity(75%);
   transition: .2s;
 }
-#posterContainer > a > img:hover {
+#posterContainer > .linkTo > img:hover {
   filter: opacity(100%);
   box-shadow: 0 0 3em rgba(255,255,255,.5);
 }

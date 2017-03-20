@@ -83,7 +83,7 @@ class Movies extends Component {
           });
     } else {
       // This movie ID is not in my saved movies ID array, so POST it to my db
-        axios.post('/movies', (this.state.movies[movieIdArr.indexOf(id)]))
+      axios.post('/movies', (this.state.movies[movieIdArr.indexOf(id)]))
           .then(resp => {
             // Remove movie object from movie state (from the page) and
             // concat it to savedMovies state
@@ -96,7 +96,8 @@ class Movies extends Component {
           });
     }
   }
-  showRocketFavs() {
+  showRocketFavs(event) {
+    event.preventDefault();
     this.setState({
       movies: this.state.savedMovies
     });

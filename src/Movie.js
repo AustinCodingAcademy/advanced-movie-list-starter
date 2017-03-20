@@ -28,7 +28,7 @@ const Movie = props => {
                   <h3>{movieResult.original_title || movieResult.originalTitle}</h3>
                 </div>
                 <div id="posterContainer" className="flexBoxCenterThis">
-                  <a href={`/profile/${movieResult.id}`} className="flexBoxCenterThis">
+                  <Link to={`/profile/${movieResult.id}`} className="flexBoxCenterThis linkTo">
                     <img
                       className="posterImg animated fadeIn"
                       onError={(event) => (event.target.src = 'http://i.imgur.com/40NGAaC.png')}
@@ -36,7 +36,7 @@ const Movie = props => {
                       src={`https://image.tmdb.org/t/p/w154/${movieResult.poster_path ||
                         movieResult.posterPath}`}
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div id="movieInfo">
                   <p><strong>Overview:</strong></p>
