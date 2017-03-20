@@ -6,17 +6,17 @@ const MovieList = props => {
     <div className="MovieList">
       {props.returnedMovies.map((movie) => {
         return (
-          <div key={movie.id}>
+          <div key={movie._id}>
             <Movie
-              key={movie.id}
-              id={movie.id}
+              key={movie._id}
+              id={movie._id}
               poster={`https://image.tmdb.org/t/p/w154${movie.poster_path}`}
               title={movie.title}
               overview={movie.overview}
         />
             <div className="AddButton">
               <button
-                type="submit"
+                type="submit" 
                 onClick={() => props.onAddFavorite(
                   {title: movie.title, poster: `https://image.tmdb.org/t/p/w154${movie.poster_path}`}
                 )}>

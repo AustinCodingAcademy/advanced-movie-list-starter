@@ -57,11 +57,22 @@ class App extends Component {
   handleDeleteFavorite(_id) {
     axios.delete(`http://localhost:4000/movies/${_id}`)
     .then(() => {
-      this.setState();
+      const newFavorites = this.state.favorites.filter(movie => movie._id !== _id);
+      this.setState({
+        favorites: newFavorites
+      });
     });
   }
 
-
+  // handleDeleteContact(_id) {
+  //   axios.delete(`http://localhost:4000/contacts/${_id}`)
+  //   .then(() => {
+  //     const newContacts = this.state.contacts.filter(contact => contact._id !== _id);
+  //
+  //     this.setState({
+  //       contacts: newContacts
+  //     });
+  //   })
 // SearchBar
 
   handleSearchBarChange(event) {
@@ -96,7 +107,7 @@ class App extends Component {
         <Favorites
           key={this.state.id}
           favorites={this.state.favorites}
-          onClick={this.handleDeleteFavorite.bind(this)}
+          onDelete={this.handleDeleteFavorite.bind(this)}
          />
         <SearchBar
           name="searchBar"

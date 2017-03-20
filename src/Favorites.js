@@ -9,17 +9,18 @@ const Favorites = props => {
       <ul className="Favorites">
         {props.favorites.map((movie) => {
           return (
-            <div key={movie.id}>
+            <div key={movie._id}>
               <Movie
-                key={movie.id}
-                id={movie.id}
+                key={movie._id}
+                id={movie._id}
                 poster={movie.poster}
                 title={movie.title}
                 overview={movie.overview}
           />
-              <div className="deleteButton" key={movie.id}>
-                <button type="submit" key={movie.id}
-                  onClick={() => props.onClick()}>Delete from Favorites!
+              <div className="deleteButton">
+                <button type="submit" id={movie._id}
+                  onClick={() =>
+                    props.onDelete({id: movie._id})}>Delete from Favorites!
               </button>
               </div>
             </div>
@@ -38,7 +39,7 @@ Favorites.propTypes = {
   // key: React.PropTypes.string.isRequired,
   // poster: React.PropTypes.string.isRequired,
   favorites: React.PropTypes.array.isRequired,
-  onClick: React.PropTypes.func.isRequired
+  onDelete: React.PropTypes.func.isRequired
 };
 
 
