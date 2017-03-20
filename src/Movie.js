@@ -6,7 +6,7 @@ const Movie = movie => {
       <div className="Poster">
         <img
           alt="movie poster"
-          src={`https://image.tmdb.org/t/p/w154${movie.poster}`}
+          src={movie.poster}
         />
       </div>
       <div className="MovieTitle">

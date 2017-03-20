@@ -13,7 +13,7 @@ const Favorites = props => {
               <Movie
                 key={movie.id}
                 id={movie.id}
-                poster={movie.poster_path}
+                poster={movie.poster}
                 title={movie.title}
                 overview={movie.overview}
           />

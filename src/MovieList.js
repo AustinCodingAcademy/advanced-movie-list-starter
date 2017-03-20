@@ -10,7 +10,7 @@ const MovieList = props => {
             <Movie
               key={movie.id}
               id={movie.id}
-              poster={movie.poster_path}
+              poster={`https://image.tmdb.org/t/p/w154${movie.poster_path}`}
               title={movie.title}
               overview={movie.overview}
         />
