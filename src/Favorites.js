@@ -16,19 +16,21 @@ const Favorites = props => {
                 poster={movie.poster}
                 title={movie.title}
                 overview={movie.overview}
-          />
+                onDelete={props.onDelete}
+                />
               <div className="deleteButton">
-                <button type="submit" id={movie._id}
+                <button type="submit"
                   onClick={() =>
-                    props.onDelete({id: movie._id})}>Delete from Favorites!
-              </button>
+                    props.onDelete(movie._id)
+                  }>
+                    Delete from Favorites!
+                </button>
               </div>
             </div>
           );
         })}
       </ul>
-    </div>
-  );
+    </div>);
 };
 
 // Props Validation
