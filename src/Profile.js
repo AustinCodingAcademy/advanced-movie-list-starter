@@ -8,7 +8,8 @@ class Profile extends Component {
     super();
 
     this.state = {
-      movie: null
+      movie: null,
+      trailers: null
     };
   }
   componentDidMount() {
@@ -16,6 +17,13 @@ class Profile extends Component {
       .then(resp => {
         this.setState({
           movie: resp.data
+        });
+      })
+      .catch(err => console.log(`Error ${err}`));
+    axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}/videos?api_key=2dba200e2682e0f8903ed87b9c9e02d1&language=en-US`)
+      .then(resp => {
+        this.setState({
+          trailers: resp.data.results
         });
       })
       .catch(err => console.log(`Error ${err}`));
@@ -121,11 +129,17 @@ class Profile extends Component {
                 <hr />
                 <p>{this.state.movie.overview}</p>
                 <hr />
-                <div className="homePageLink">
-                  <a href={this.state.movie.homepage} target="_blank">
-                    {'Go to site '}
-                    <i className="fa fa-share-square" aria-hidden="true" />
-                  </a>
+                <div className="trailerLink">
+                  <button
+                    className="modalLauncher"
+                    type="button"
+                    onClick={(event) => event.preventDefault()}
+                    data-toggle="modal"
+                    data-target="#trailer-modal"
+                  >
+                    {'Launch Trailers '}
+                    <i className="fa fa-youtube-square" aria-hidden="true" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -137,6 +151,30 @@ class Profile extends Component {
             </div>
           </div>
         </div>
+
+        <div className="modal fade"
+          id="trailer-modal"
+          tabIndex="-1"
+          role="dialog"
+          aria-labelledby="myLargeModalLabel"
+        >
+          <div className="modal-dialog modal-lg" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div className="modal-body">
+              {this.state.trailers.map(trailer => {
+                if (trailer.site === "YouTube") {
+                  return <iframe width="100%" height="480" src={`https://www.youtube.com/embed/${trailer.key}`} frameBorder="0" allowFullScreen></iframe>
+                }
+              })}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -145,7 +183,7 @@ class Profile extends Component {
       return (
         <div className="col-xs-12 flexBoxCenterThis noMovies animated flipInY">
           <h1>(*-*)</h1>
-          <p>{'Uh oh, I don\'t see that movie...'}</p>
+          <p>{'Looking for that movie...'}</p>
           <div className="flexBoxCenterThis">
             <Link className="linkTo" to={'/'}>Get me outta here!</Link>
           </div>
