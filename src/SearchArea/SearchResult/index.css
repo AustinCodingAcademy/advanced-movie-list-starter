@@ -1,0 +1,41 @@
+.SearchResult {
+  display: flex;
+  margin: auto;
+  position: relative;
+  width: 60%;
+}
+
+.SearchResult div {
+  margin: 10px;
+}
+
+.SearchResult .image-holder {
+  border: 1px solid black;
+}
+
+.SearchResult .body-holder {
+  text-align: left;
+}
+
+.SearchResult .ex {
+  font-size: 2em;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.SearchResult .add-movie {
+  font-size: 1.1em;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 16px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
