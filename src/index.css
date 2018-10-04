@@ -3,3 +3,44 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.addbutton{
+  margin-bottom: 10px;
+}
+
+
+.selected{
+  color:white;
+  padding:10px;
+  background-color: #474747;
+  border:2px solid black;
+  border-radius: 4px;
+  margin-left:5px;
+  margin-top:5px;
+}
+
+.movie{
+  color:white;
+  background-color: #2D2D2D;
+  border-radius: 4px;
+}
+
+.well{
+  color:black;
+}
+
+.searchbar{
+margin-top:20px;
+text-align: center;
+}
+
+.searchtext{
+background-color:rgb(214, 245, 247);
+}
+.list{
+  padding-right:58px
+}
+
+.deletebutton{
+  margin-left:4px;
+}
