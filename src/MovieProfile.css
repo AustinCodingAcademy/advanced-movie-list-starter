@@ -1,0 +1,19 @@
+#movie-profile {
+  width: 1000px;
+  margin: 0 auto;
+}
+.movie-backdrop {
+  position: relative;
+}
+.movie-backdrop h1 {
+  position: absolute;
+  font-size: 50px;
+  padding: 3px 50px;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, .5);
+}
+.movie-backdrop img {
+  width: 100%;
+  height: auto;
+}

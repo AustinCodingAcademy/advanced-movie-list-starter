@@ -1,3 +1,58 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "title": "Rogue One: A Star Wars Story",
+      "poster_path": "https://image.tmdb.org/t/p/w154/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg",
+      "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+      "release_date": "12/14/2016",
+      "backdrop_path": "https://image.tmdb.org/t/p/w1280/tZjVVIYXACV4IIIhXeIM59ytqwS.jpg",
+      "rating": 5,
+      "_id": 1
+    },
+    {
+      "title": "Man of Steel",
+      "poster_path": "https://image.tmdb.org/t/p/w154/xWlaTLnD8NJMTT9PGOD9z5re1SL.jpg",
+      "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
+      "release_date": "06/12/2013",
+      "backdrop_path": "https://image.tmdb.org/t/p/w1280/jYLh4mdOqkt30i7LTFs3o02UcGF.jpg",
+      "rating": 5,
+      "_id": 2
+    },
+    {
+      "title": "Guardians of the Galaxy",
+      "poster_path": "https://image.tmdb.org/t/p/w154/y31QB9kn3XSudA15tV7UWQ9XLuW.jpg",
+      "overview": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
+      "release_date": "07/30/2014",
+      "backdrop_path": "https://image.tmdb.org/t/p/w1280/bHarw8xrmQeqf3t8HpuMY7zoK4x.jpg",
+      "rating": 4,
+      "_id": 3
+    },
+    {
+      "title": "Collateral",
+      "poster_path": "https://image.tmdb.org/t/p/w154/fmkv2eRuYCTq7A5jzMBNgoNe1vA.jpg",
+      "overview": "Cab driver Max picks up a man who offers him $600 to drive him around. But the promise of easy money sours when Max realizes his fare is an assassin.",
+      "release_date": "08/04/2004",
+      "backdrop_path": "https://image.tmdb.org/t/p/w1280/whhU7492W0fcZE73r1HNhfyc5uV.jpg",
+      "rating": 5,
+      "_id": 4
+    },
+    {
+      "title": "The 40 Year Old Virgin",
+      "poster_path": "https://image.tmdb.org/t/p/w154/wAKUo12pRBGyFJQV27LFJoTvMU5.jpg",
+      "overview": "Andy Stitzer has a pleasant life with a nice apartment and a job stamping invoices at an electronics store. But at age 40, there's one thing Andy hasn't done, and it's really bothering his sex-obsessed male co-workers: Andy is still a virgin. Determined to help Andy get laid, the guys make it their mission to de-virginize him. But it all seems hopeless until Andy meets small business owner Trish, a single mom.",
+      "release_date": "08/11/2005",
+      "backdrop_path": "https://image.tmdb.org/t/p/w1280/rjDrnIzQGR7A3fik2RlLesVo4NY.jpg",
+      "rating": 4,
+      "_id": 5
+    },
+    {
+      "title": "The Dark Knight",
+      "poster_path": "https://image.tmdb.org/t/p/w154/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg",
+      "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+      "release_date": "07/16/2008",
+      "backdrop_path": "https://image.tmdb.org/t/p/w1280/nnMC0BM6XbjIIrT4miYmMtPGcQV.jpg",
+      "rating": 4,
+      "_id": 6
+    }
+  ]
 }
