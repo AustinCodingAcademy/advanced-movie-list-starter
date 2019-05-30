@@ -1,3 +1,19 @@
+body{
+  background-color: black;
+  color: white;
+}
+
 .App {
   text-align: center;
+}
+
+.Movie{
+  float: left;
+  padding: 5px;
+}
+
+.MovieList{
+  overflow-x: scroll;
+  padding: 5px;
+  border-bottom: 5px solid white;
 }

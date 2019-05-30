@@ -1,0 +1,11 @@
+{
+  "name": "testytest",
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "axios": "^0.15.3"
+  }
+}
