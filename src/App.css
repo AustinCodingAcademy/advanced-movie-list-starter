@@ -1,3 +1,388 @@
-.App {
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1em;
+  background-image: url('http://i.imgur.com/zRWE6N7.png');
+  background-repeat: repeat-y;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.flexBoxCenterThis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container, .row, .App, .columnsContainer, .header > div {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  border-bottom: .3em double rgba(255,0,0,.5);
+}
+.header > div {
   text-align: center;
+  text-shadow: 0 0 .5em black;
+  height: 20vh;
+  background-color: rgba(0,0,0,.5);
+  overflow: hidden;
+}
+.header > div > h1 {
+  font-size: 3.5em;
+  color: rgb(255,255,100);
+  text-shadow: .05em .05em .1em red;
+  font-family: 'Anton', sans-serif;
+  transition: 1s;
+  display: inline-block;
+}
+.header > div > h1:hover {
+  color: white;
+}
+i.fa-rocket {
+  display: inline-block;
+  font-size: 3.5em;
+  margin-left: .2em;
+  color: rgba(255,0,0,.7);
+  transition: .5s;
+}
+i.fa-rocket:hover {
+  color: rgba(255,255,255,1);
+}
+.header > div > form > button {
+  border: .2em solid rgba(255,255,100,.5);
+  border-radius: 1.5em;
+  background-color: black;
+  color: rgba(255,0,0,.7);
+  font-weight: bold;
+  outline: none;
+  padding: .5em;
+  font-size: 1.5em;
+  transition: .2s;
+}
+.header > div > form > button:hover {
+  border: .2em solid rgba(255,255,255,.5);
+}
+.searchBar {
+  color: white;
+  background-color: black;
+  margin: 0 1em 0 auto;
+  border: .2em solid rgba(255,255,100,.5);
+  border-radius: 2em;
+  width: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: .5em;
+  outline: none;
+  text-align: left;
+  transition: .5s;
+}
+.searchBar:hover {
+  border: .2em solid rgba(255,255,255,.5);
+}
+.noMovies {
+  height: 79vh;
+}
+.noMovies h1 {
+  font-size: 10em;
+  color: rgb(255,255,100);
+  text-shadow: .05em .05em .1em red;
+  font-family: 'Anton', sans-serif;
+  transition: 1s;
+}
+.noMovies p {
+  color: white;
+  font-size: 3em;
+  text-shadow: .1em .1em .1em black;
+  font-weight: bold;
+  text-align: center;
+}
+.noMovies div {
+  width: 100%;
+  font-size: 3em;
+  color: rgb(255,255,100);
+  text-shadow: .05em .05em .1em red;
+  font-family: 'Anton', sans-serif;
+  transition: 1s;
+}
+.movieColumn {
+  height: 79vh;
+  padding: 1em;
+}
+.placeHolderText {
+  color: white;
+}
+.movieColumnContents {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  border: .3em double rgba(255,255,255,.5);
+  background-color: rgba(0,0,0,.8);
+  border-radius: 2em;
+  color: white;
+  font-size: 1.2em;
+  overflow: hidden;
+  transition: .5s;
+}
+.movieColumnContents:hover {
+  background-color: rgba(0,0,0,.95);
+}
+#saveMovie {
+  font-size: 1em;
+  width: 100%;
+  max-height: 5%;
+  min-height: 5%;
+  padding: .5em 0;
+  margin: 0;
+  margin-top: 1em;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+a#hiddenSaveText {
+  color: rgba(255,255,100,1);
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: none;
+  display: none;
+  transition: .5s;
+}
+a#hiddenSaveText:hover {
+  text-shadow: 2px 2px 5px red;
+}
+#saveMovie button {
+  color: red;
+  padding: .2em;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: .5em;
+  display: inline-block;
+  outline: none;
+}
+.movieColumnContents:hover > #saveMovie a#hiddenSaveText {
+  display: inline-block;
+}
+#movieTitle {
+  max-height: 20%;
+  height: 20%;
+  background-color: rgba(100,50,255, .2);
+  border: .1em solid rgba(255,255,255,.5);
+  border-radius: 1em;
+  width: 100%;
+  padding: .5em 1em;
+  overflow: hidden;
+  transition: .5s;
+}
+.movieColumnContents:hover > #movieTitle {
+  background-color: rgba(100,50,255, .5);
+  text-shadow: .25em .3em .1em black;
+}
+#movieTitle h3 {
+  font-size: 2em;
+  font-family: 'Anton', sans-serif;
+}
+.linkTo, .linkTo:hover, .linkTo:focus {
+  text-decoration: none;
+  color: inherit;
+}
+#posterContainer {
+  max-height: 60%;
+  height: 60%;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+#posterContainer > .linkTo {
+  text-decoration: none;
+  height: 100%;
+}
+#posterContainer > .linkTo > img {
+  height: 100%;
+  margin: 1em 0;
+  border: .3em solid rgba(255,255,255,.5);
+  border-radius: .3em;
+  filter: opacity(75%);
+  transition: .2s;
+}
+#posterContainer > .linkTo > img:hover {
+  filter: opacity(100%);
+  box-shadow: 0 0 3em rgba(255,255,255,.5);
+}
+#movieInfo {
+  text-align: left;
+  border: .1em solid rgba(255,255,255,.5);
+  border-radius: .5em;
+  min-height: 20%;
+  max-height: 20%;
+  width: 100%;
+  padding: .5em 1em;
+  font-size: 1.2em;
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  overflow-y: scroll;
+}
+#movieInfo p:nth-of-type(1) {
+  background-color: rgba(255,100,100,.5);
+  border-radius: .3em;
+  padding: 0 .3em;
+}
+#movieInfo p:nth-of-type(3),
+#movieInfo p:nth-of-type(4),
+#movieInfo p:nth-of-type(5) {
+  background-color: rgba(100,255,100,.5);
+  border-radius: .3em;
+  padding: 0 .3em;
+}
+#movieInfo::-webkit-scrollbar {
+  display: none;
+}
+#profileHeader {
+  padding: 0;
+  margin: 0;
+}
+#profileHeader > div {
+  height: 9.5vh;
+  padding: 0;
+  margin: 0;
+}
+.profileContents {
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+.profileColumn {
+  height: 100%;
+  padding: 1em 5em;
+  margin: 0;
+  background-color: rgba(0,0,0,.5);
+}
+
+.profileMovieTitle {
+  min-height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.profileMovieTitle > h3 {
+  font-size: 5em;
+  text-align: left;
+  color: rgb(255,255,100);
+  text-shadow: .05em .05em .1em red;
+  font-family: 'Anton', sans-serif;
+  transition: 1s;
+}
+.profilePosterContainer {
+  height: 75%;
+  width: 100%;
+  overflow: hidden;
+}
+.profilePosterContainer img {
+  height: 100%;
+  margin: 1em 0;
+  border: .3em double rgba(255,255,255,.5);
+  transition: .2s;
+}
+.profileDetails {
+  height: 25%;
+  width: 100%;
+}
+.profileDetails p {
+  font-size: 2.5em;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  width:100%;
+  border-radius: .5em;
+  text-align: center;
+}
+.profileTagline {
+  height: 15%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.profileTagline > h3 {
+  font-size: 3em;
+  text-align: left;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  background-color: rgba(255,0,0,.5);
+  border-radius: .5em;
+  padding: .3em;
+}
+.profileOverviewContainer {
+  height: 60%;
+  padding: 1em 0;
+}
+.profileOverview {
+  color: white;
+  height: 100%;
+  border: .5em double rgba(255,255,255,.5);
+  padding: 1em 3em;
+  border-radius: 1em;
+  overflow-y: scroll;
+  background-color: rgba(0,0,0,.7);
+}
+.profileOverview > h1 {
+  font-size: 3em;
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+.profileOverview > p {
+  font-size: 2em;
+  line-height: 2em;
+}
+.profileOverview::-webkit-scrollbar {
+  display: none;
+}
+.trailerLink {
+  text-align: right;
+}
+.trailerLink button, .trailerLink button:active, .trailerLink button:hover {
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  font-size: 3em;
+  text-decoration: none;
+  color: rgba(255,255,255,.3);
+  font-weight: bold;
+  transition: .3s;
+}
+.trailerLink button:hover {
+  color: rgba(100,255,100,1);
+}
+.profileStats {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2em;
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+
+.profileStats span {
+  background-color: rgba(100,255,100,.5);
+  padding: 0 .3em;
+  border-radius: .5em;
+}
+.modal-header, .modal-content, .modal-dialog {
+  background-color: transparent;
+  border: 0;
+}
+.modal-dialog {
+  border: .3em solid rgba(255,255,255,.5);
+  border-radius: 2em;
+  background-color: rgba(0,0,0,.8);
+}
+.close > span {
+  color: white;
 }
