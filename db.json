@@ -1,3 +1,88 @@
 {
-  "movies": []
+  "savedMovies": [
+    {
+      "_id": 1,
+      "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+      "posterPath": "https://image.tmdb.org/t/p/w154/lZpWprJqbIFpEV5uoHfoK0KCnTW.jpg",
+      "releaseDate": "1999-03-30",
+      "title": "The Matrix"
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg",
+      "title": "Forrest Gump",
+      "releaseDate": "1994-07-06",
+      "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. 'Forrest Gump' is the story of a man who rose above his challenges, and who proved that determination, courage, and love are more important than ability.",
+      "_id": 3
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/90T7b2LIrL07ndYQBmSm09yqVEH.jpg",
+      "title": "2001: A Space Odyssey",
+      "releaseDate": "1968-04-05",
+      "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+      "_id": 4
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/4qXfjDlDEGuN3xRNawh4WZo5o96.jpg",
+      "title": "The Mighty Ducks",
+      "releaseDate": "1992-10-01",
+      "overview": "After reckless young lawyer Gordon Bombay gets arrested for drunk driving, he must coach a kids hockey team for his community service. Gordon has experience on the ice, but isn't eager to return to hockey, a point hit home by his tense dealings with his own former coach, Jack Reilly. The reluctant Gordon eventually grows to appreciate his team, which includes promising young Charlie Conway, and leads them to take on Reilly's tough players.",
+      "_id": 8
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/tvSlBzAdRE29bZe5yYWrJ2ds137.jpg",
+      "title": "Star Wars",
+      "releaseDate": "1977-05-25",
+      "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+      "_id": 9
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/bKPtXn9n4M4s8vvZrbw40mYsefB.jpg",
+      "title": "The Lion King",
+      "releaseDate": "1994-06-23",
+      "overview": "A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it.",
+      "_id": 10
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/lvfgYcK0dpgwCuRX4mTqc1Yg3yF.jpg",
+      "title": "3 Ninjas",
+      "releaseDate": "1992-08-07",
+      "overview": "Each year, three brothers Samuel, Jeffrey and Michael Douglas visits their Japanese grandfather, Mori Shintaro whom the boys affectionately refer to as Grandpa, for the summer. Mori is a highly skilled in the fields of Martial arts and Ninjutsu, and for years he has trained the boys in his techniques. After an organized crime ring proves to be too much for the FBI, it's time for the 3 brother NINJAS! To use their martial arts skills, they team up to battle the crime ring and outwit some very persistent kidnappers!",
+      "_id": 11
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/8fKmBdU1Nl2jN7gmo9U8kEoAd6x.jpg",
+      "title": "Friday",
+      "releaseDate": "1995-04-26",
+      "overview": "Craig and Smokey are two guys in Los Angeles hanging out on their porch on a Friday afternoon, smoking and drinking, looking for something to do.",
+      "_id": 15
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/s7bE0OOBX1d54pFoEyobwPHuT0X.jpg",
+      "title": "WWE Elimination Chamber 2017",
+      "releaseDate": "2017-02-12",
+      "overview": "Elimination Chamber (2017) is a professional wrestling pay-per-view (PPV) event and WWE Network event produced by WWE for the SmackDown brand. It takes place on February 12, 2017, at the Talking Stick Resort Arena in Phoenix, Arizona. This is the seventh event under the Elimination Chamber chronology, the first to be held since 2015, and the first to have three women's matches.",
+      "_id": 16
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/ny0lBB66RdnhIkfzsqpLl2suQaY.jpg",
+      "title": "Air Bud",
+      "releaseDate": "1997-08-01",
+      "overview": "A young boy and a talented stray dog with an amazing basketball playing ability become instant friends. Rebounding from his father's accidental death, 12-year-old Josh Framm moves with his family to the small town of Fernfield, Washington. The new kid in town, Josh has no friends and is too shy to try out for the school basketball team. Instead he prefers to practice alone on an abandoned court, he befriends a runaway golden retriever named Buddy. Josh is amazed when he realizes that Buddy loves basketball...that is playing basketball...and he is GOOD! Josh eventually makes the school team and Buddy is named the Team Mascot. Josh and Buddy become the stars of halftime. Buddy's half-time talent draws media attention. Unfortunately, when Buddy's mean former owner, Norm Snively, comes along with a scheme to cash in on the pup's celebrity, it looks like they are going to be separated.",
+      "_id": 17
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/xBO8R3CZfrJ9rrwrZoJ68PgJyAR.jpg",
+      "title": "True Romance",
+      "releaseDate": "1993-09-09",
+      "overview": "Clarence marries hooker Alabama, steals cocaine from her pimp, and tries to sell it in Hollywood, while the owners of the coke try to reclaim it.",
+      "_id": 18
+    },
+    {
+      "posterPath": "https://image.tmdb.org/t/p/w154/c8Asvr5ORuL9NtaTGZZJsq4heDf.jpg",
+      "title": "The Happening",
+      "releaseDate": "2008-06-11",
+      "overview": "When a deadly airborne virus threatens to wipe out the northeastern United States, teacher Elliott Moore (Mark Wahlberg) and his wife (Zooey Deschanel) flee from contaminated cities into the countryside in a fight to discover the truth. Is it terrorism, the accidental release of some toxic military bio weapon -- or something even more sinister? John Leguizamo and Betty Buckley co-star in this thriller from writer-director M. Night Shyamalan.",
+      "_id": 19
+    }
+  ]
 }
