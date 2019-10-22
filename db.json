@@ -1,3 +1,10 @@
 {
-  "movies": []
+  "movies": [
+    {
+      "title": "The Hobbit: An Unexpected Journey",
+      "posterPath": "/w29Guo6FX6fxzH86f8iAbEhQEFC.jpg",
+      "overview": "Bilbo Baggins, a hobbit enjoying his quiet life, is swept into an epic quest by Gandalf the Grey and thirteen dwarves who seek to reclaim their mountain home from Smaug, the dragon.",
+      "_id": 1
+    }
+  ]
 }
