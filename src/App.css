@@ -1,3 +1,102 @@
-.App {
+.App, .row {
   text-align: center;
+  margin: 0 auto;
+}
+
+/* Title and Search Bar section */
+.title-search {
+  background-color: #39424e;
+  height: 120px;
+  position: fixed;
+  z-index: 2;
+}
+
+.title-search h1 {
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+  color: white;
+}
+
+.search-bar {
+  padding-bottom: 30px;
+}
+
+.search-bar input[type="text"] {
+  height: 35px;
+  width: 40%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 18px;
+  padding:0 10px;
+
+}
+
+.search-bar button {
+  height: 35px;
+  width: 10%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 0px 10px;
+  color: white;
+  background-color: black;
+}
+
+/* Movie list section */
+.movie-applist {
+  padding: 0px;
+  margin-top: 120px;
+}
+
+.movie-list {
+  padding: 15px;
+}
+
+.movie-detail {
+  padding: 0px;
+  margin: 15px 18px;
+  width: 47%;
+  display: -webkit-box;
+  text-align: left;
+  box-shadow: 0px 2px 8px 0px #888888;
+}
+
+.poster, img {
+  height: 269px;
+  width: 188px;
+}
+
+.movieTitle {
+  padding: 15px;
+  width: 398px;
+}
+
+.movieTitle h2 {
+  margin: 0px 0px 10px 0px;
+  width: 358px;
+  font-size: 25px;
+  height: 55px;
+  overflow: scroll;
+  color: black;
+}
+
+.movieTitle p {
+  height: 100px;
+  width: 368px;
+  overflow: auto;
+  color: #888888;
+}
+
+.movieTitle button {
+  margin: 35px 15px 0px 0px;
+  background-color: #08457e;
+  border: 2px solid #08457e;
+  color: white;
+  border-radius: 5px;
+}
+
+.movieTitle button:hover {
+  background-color: white;
+  border: 2px solid #08457e;
+  color: #08457e;
+  box-shadow: 0px 2px 8px 0px #888888;
 }
